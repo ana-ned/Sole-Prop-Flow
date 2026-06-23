@@ -1,0 +1,12 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "cd Assets-Uncapped/front-portal-develop && corepack enable && pnpm install --no-frozen-lockfile",
+  "buildCommand": "cd Assets-Uncapped/front-portal-develop && pnpm build",
+  "outputDirectory": "Assets-Uncapped/front-portal-develop/dist",
+  "redirects": [
+    { "source": "/", "destination": "/prototypes/asc-sole-prop", "permanent": false }
+  ],
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
