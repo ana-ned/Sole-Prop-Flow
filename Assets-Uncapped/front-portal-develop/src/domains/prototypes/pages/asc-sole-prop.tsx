@@ -2311,6 +2311,7 @@ const AGREEMENTS = [
 const SignatoryScreen = ({ onComplete }: { onComplete: () => void }) => {
   const [signedCount, setSignedCount] = useState(0)
   const [activeDoc, setActiveDoc] = useState<number | null>(null)
+  const [redirecting, setRedirecting] = useState(false)
   const allSigned = signedCount >= AGREEMENTS.length
 
   return (
@@ -2377,14 +2378,21 @@ const SignatoryScreen = ({ onComplete }: { onComplete: () => void }) => {
       </div>
 
       {allSigned && (
-        <div className="asc-enter flex flex-col gap-2">
+        <div className="asc-enter">
           <Notice variant="brand" icon={<HugeiconsIcon icon={CheckmarkCircle02SolidRounded} />}>
-            All agreements signed. You can continue to identity verification.
+            <div className="flex items-center gap-2">
+              <span>All agreements signed — taking you to verify your identity…</span>
+              {redirecting && <Loader size="xxs" className="!h-auto shrink-0" />}
+            </div>
+            <button
+              type="button"
+              onClick={onComplete}
+              className="mt-1 inline-flex items-center gap-1 text-sm font-semibold text-text-link underline-offset-2 hover:underline focus-visible:shadow-[0_0_0_2px_#a5d3d4] focus:outline-none rounded-sm"
+            >
+              Continue now
+              <HugeiconsIcon icon={ArrowRight01SolidStandard} size={16} />
+            </button>
           </Notice>
-          <Button type="button" variant="primary" fullWidth onClick={onComplete}>
-            Continue to verify your identity
-            <HugeiconsIcon icon={ArrowRight01SolidStandard} size={18} />
-          </Button>
         </div>
       )}
 
@@ -2393,8 +2401,14 @@ const SignatoryScreen = ({ onComplete }: { onComplete: () => void }) => {
           docName={AGREEMENTS[activeDoc].name}
           onClose={() => setActiveDoc(null)}
           onSigned={() => {
-            setSignedCount((c) => Math.max(c, (activeDoc ?? 0) + 1))
+            const next = (activeDoc ?? 0) + 1
+            setSignedCount((c) => Math.max(c, next))
             setActiveDoc(null)
+            // Last document just signed: show the confirmation, then auto-advance
+            if (next >= AGREEMENTS.length) {
+              setRedirecting(true)
+              window.setTimeout(onComplete, 1300)
+            }
           }}
         />
       )}
@@ -2524,13 +2538,18 @@ const VerifyIdentityScreen = ({ onComplete }: { onComplete: () => void }) => {
   const [phase, setPhase] = useState<KycPhase>("intro")
   const done = phase === "done"
 
-  // Simulate Sumsub running its checks
+  // Simulate Sumsub running its checks, then auto-advance once verified
   useEffect(() => {
-    if (phase !== "verifying") return
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    const t = window.setTimeout(() => setPhase("done"), reduce ? 0 : 2600)
-    return () => window.clearTimeout(t)
-  }, [phase])
+    if (phase === "verifying") {
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      const t = window.setTimeout(() => setPhase("done"), reduce ? 0 : 2600)
+      return () => window.clearTimeout(t)
+    }
+    if (phase === "done") {
+      const t = window.setTimeout(onComplete, 1300)
+      return () => window.clearTimeout(t)
+    }
+  }, [phase, onComplete])
 
   return (
     <div className="flex flex-col gap-y-4">
@@ -2544,10 +2563,16 @@ const VerifyIdentityScreen = ({ onComplete }: { onComplete: () => void }) => {
         <SumsubWidget phase={phase} setPhase={setPhase} />
       </div>
 
-      {/* Screen-level continue — enabled once Sumsub reports success */}
-      <div className="flex justify-end">
+      {/* Auto-advances once Sumsub reports success; manual fallback below */}
+      <div className="flex items-center justify-end gap-3">
+        {done && (
+          <span className="flex items-center gap-2 text-sm text-text-secondary">
+            <Loader size="xxs" className="!h-auto shrink-0" />
+            Taking you to withdraw your funds…
+          </span>
+        )}
         <Button type="button" variant="primary" disabled={!done} onClick={onComplete}>
-          Complete
+          {done ? "Continue now" : "Complete"}
         </Button>
       </div>
     </div>
