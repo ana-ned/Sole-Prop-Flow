@@ -1,0 +1,67 @@
+# =====================================================================
+# Vibe Designing Environment — gitignore
+# Scope: the FULL runnable prototyping app + design system + AI helpers.
+# Real secrets and build/dependency output are excluded; the safe sandbox
+# .env and the icon-registry .npmrc are intentionally committed.
+# =====================================================================
+
+# OS / editor noise
+.DS_Store
+**/.DS_Store
+.idea/
+*.swp
+*.swo
+*~
+
+# ---------------------------------------------------------------------
+# Secrets — real environment files are NEVER committed.
+# The safe sandbox `.env` and `.env.example` ARE committed (no secrets).
+# ---------------------------------------------------------------------
+**/.env.local
+**/.env.development
+**/.env.test
+**/.env.production
+**/.env.*.local
+
+# Dependencies / build output
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+build/
+**/build/
+.cache/
+**/.cache/
+*.log
+*.tsbuildinfo
+
+# Claude Code local state — per-user permissions and ephemeral worktrees
+.claude/settings.local.json
+.claude/worktrees/
+
+# Internal working notes — not part of the shared environment
+docs/journey-prototype-plan.md
+docs/sharing-plan.md
+
+# Local deploy snapshots / zip exports
+share/*.zip
+
+# ---------------------------------------------------------------------
+# Assets-Uncapped/ holds several separate Uncapped repos on disk.
+# Share ONLY the prototyping app (front-portal-develop). Everything else
+# (back-office admin, marketing site, libraries, etc.) stays excluded.
+# ---------------------------------------------------------------------
+Assets-Uncapped/*
+!Assets-Uncapped/front-portal-develop/
+
+# ---------------------------------------------------------------------
+# Test / CI / container tooling — not needed for designing prototypes,
+# and keeps dev-environment config (cypress, etc.) out of the share.
+# ---------------------------------------------------------------------
+**/cypress/
+**/cypress.config.ts
+**/docker-scripts/
+**/*.test.ts
+**/*.test.tsx
+**/*.spec.ts
+**/*.spec.tsx

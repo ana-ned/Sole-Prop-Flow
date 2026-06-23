@@ -1,0 +1,19 @@
+name: dev tests (full suite)
+
+on:
+  schedule:
+    - cron: "0 7,11,14 * * *"
+  workflow_dispatch: {}
+
+concurrency: e2e
+
+jobs:
+  default:
+    uses: weareuncapped-com/automated-qa/.github/workflows/smoke-tests-common.yml@develop
+    with:
+      ID: "dev-tests-full"
+      CYPRESS_CONFIG: baseUrl=https://dev.weareuncapped.com
+      INCIDENT_WEBHOOK_URL: "DEV_INCIDENT_WEBHOOK_URL"
+      PROJECT_ID: "zru1ge"
+      RECORD: true
+    secrets: inherit

@@ -1,0 +1,181 @@
+{
+  "transactionDetails": {
+    "status": "Status",
+    "sendDate": "Send date",
+    "reference": "Reference",
+    "accountNumber": "Account number",
+    "accountIban": "IBAN",
+    "accountSwiftBic": "SWIFT/BIC",
+    "routingNumber": "Routing number",
+    "sortCode": "Sort code",
+    "convertedAmount": "Converted amount",
+    "amount": "Amount",
+    "fees": {
+      "CONVENIENCE_FEE": "Convenience fee",
+      "TRANSFER_FEE": "Transfer fee",
+      "CURRENCY_EXCHANGE_FEE": "Exchange fee",
+      "CARD_FEE": "Card fee",
+      "CASH_TRANSFER_FEE": "Cash transfer fee"
+    },
+    "total": "Total amount",
+    "statuses": {
+      "CANCELED": "Cancelled",
+      "PENDING": "Pending"
+    },
+    "reason": "Reason"
+  },
+  "repaymentDetails": {
+    "title": "Uncapped payment",
+    "titleEarlyRepayment": "Uncapped early payment",
+    "marcusRepayment": "Marcus payment",
+    "uncappedRefund": "Uncapped refund",
+    "statuses": {
+      "PENDING": "Pending",
+      "MISSED": "Missed - daily late fees added"
+    }
+  },
+  "transactionsV2": {
+    "title": "Transactions",
+    "viewLoans": "Filter by agreement",
+    "allActiveLoans": "All active agreements",
+    "viewAllLoans": "View all agreements ({{count}})",
+    "viewTransactionType": "Filter by transaction type",
+    "repayLoanEarly": "Pay agreement early",
+    "downloadRepaymentBreakdown": "Download payment breakdown",
+    "completed": "Completed",
+    "table": {
+      "headers": {
+        "date": "Date",
+        "type": "Type",
+        "status": "Status",
+        "loan": "Agreement",
+        "amount": "Amount"
+      }
+    },
+    "pagination": {
+      "of": "of",
+      "previousPage": "Previous page",
+      "nextPage": "Next page"
+    },
+    "transactionTypeFilter": {
+      "all": "Payments & Advances",
+      "payments": "Payments",
+      "advances": "Advances"
+    },
+    "feesWaived": "Fees waived",
+    "transactionTypeDraw": "Advance",
+    "transactionTypePayment": "Payment",
+    "transactionTypeAdvance": "Advance",
+    "BalanceBox": {
+      "totalBalance": "Total outstanding",
+      "acrossActiveLoans_one": "(across {{count}} active agreement)",
+      "acrossActiveLoans_other": "(across {{count}} active agreements)",
+      "includesPrincipalBalance": "Includes principal balance of:",
+      "includesInterestBalance": "Includes interest balance of:",
+      "includesDailyFeesBalance": "Includes fees balance of:",
+      "includesLateFeesBalance": "Includes fees balance of:",
+      "totalBalanceIncludes": "Total balance includes your principal balance across agreements, fees and any interest accrued",
+      "includesInitialLoan": "This includes your initial agreement amount and fees",
+      "includesInitialAdvance": "This includes your initial advance amount and fees"
+    },
+    "RepaymentsBox": {
+      "nextUpcoming_one": "Your next upcoming payment",
+      "nextUpcoming_other": "Your next upcoming payments",
+      "on": "on",
+      "noUpcomingRepayments": "You have no upcoming payments",
+      "earlyRepaymentProcessing": "Your <b>{{repaidAmount}} early payment</b> is processing. The remaining <b>{{leftToRepay}}</b> will be charged on the payment date.",
+      "earlyRepaymentProcessingFull": "Your early payment of <b>{{repaidAmount}}</b> is currently being processed. Once complete, it will fully cover your upcoming scheduled payment.",
+      "earlyRepaymentSuccess": "You repaid <b>{{repaidAmount}} early</b>. The remaining <b>{{leftToRepay}}</b> will be charged on the payment date.",
+      "earlyRepaymentFailed": "Your <b>early payment failed</b>. The full amount scheduled will be charged on the payment date. You won’t be charged any late fees for this failed payment",
+      "rbf": {
+        "sales": "{{percentage}} of {{frequency}} sales",
+        "salesAlternative": "{{percentage}} of sales {{frequency}}"
+      }
+    },
+    "DetailsModal": {
+      "repaymentStatus": "Payment status:",
+      "status": "Status",
+      "repaymentDate": "Payment date",
+      "amount": "Amount",
+      "linkedTransactions": "Transactions linked to payment",
+      "linkedLateFees": "Late fees linked to payment",
+      "dailyLateFee": "Daily late fee",
+      "collected": "Collected",
+      "lateFeeCharges_one": "Late fee charge ({{count}} day)",
+      "lateFeeCharges_other": "Late fee charges ({{count}} days)",
+      "loanActivationDate": "Agreement activation date",
+      "viewLoanOverview": "View agreement overview",
+      "amountDue": "Amount due",
+      "pastDue": "Past due",
+      "fees": "Fees",
+      "totalRepaymentAmount": "Total payment amount",
+      "paidToInterest": "Paid to interest",
+      "paidToPrincipal": "Paid to principal",
+      "repaymentTotal": "Payment Total",
+      "repaymentBreakdown": "Payment breakdown",
+      "paidToFees": "Paid to fees",
+      "principal": "Principal",
+      "interest": "Interest",
+      "date": "Date",
+      "lateFeesAlert": {
+        "header": "Late fees are added to your account daily when you miss payments.",
+        "copy": "If you miss a payment <button>contact customer support</button> to discuss next steps."
+      },
+      "rbf": {
+        "period": "Period",
+        "sales": "Sales",
+        "repayWith": "Pay with",
+        "ofYourSalesEvery14Days": "{{percent}} of sales biweekly",
+        "ofYourSalesEvery15Days": "{{percent}} of every 15 days sales",
+        "ofYourSalesDefault": "{{percent}} of sales {{frequency}}"
+      }
+    }
+  },
+  "loanProductTypes": {
+    "RBF": {
+      "short": "CA",
+      "full": "Cash Advance (CA)"
+    },
+    "CORE": {
+      "short": "BL",
+      "full": "Business Loan (BL)"
+    },
+    "AMAZON": {
+      "short": "AMZ",
+      "full": "Amazon"
+    },
+    "FIXED": {
+      "short": "TL",
+      "full": "Term Loan (TL)"
+    },
+    "INTEREST_RATE": {
+      "short": "IR",
+      "full": "Interest Rate Loan (IR)"
+    },
+    "LOC": {
+      "short": "LoC",
+      "full": "Line of Credit (LoC)"
+    },
+    "DAILY_PAYOUT": {
+      "short": "DP",
+      "full": "Daily Payout (DP)"
+    },
+    "SELLERSFI": {
+      "RBF": "SellersFi CommercePay",
+      "TERM_LOAN": "SellersFi Term Loan",
+      "CAPITAL_LOAN": "SellersFi Capital Loan"
+    },
+    "MARCUS": {
+      "TERM_LOAN": "Goldman Sachs Term Loan"
+    },
+    "UNKNOWN": "Unknown"
+  },
+  "OverdueBox": {
+    "title": "You have overdue payments",
+    "totalOverdue": "total overdue",
+    "automaticSettlement": "We are automatically attempting to settle your overdue balance",
+    "manualSettlement": "You are overdue <b>{{amount}}</b>. Settle the remaining amount as soon as possible",
+    "settleOverdueAmount": "Settle overdue amount",
+    "overdue": "Overdue"
+  }
+}

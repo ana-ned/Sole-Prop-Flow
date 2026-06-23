@@ -1,0 +1,16 @@
+body.ReactModal__Body--open {
+  overflow: hidden;
+
+  #root {
+    filter: blur(4px);
+  }
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: all 100ms ease-in;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}

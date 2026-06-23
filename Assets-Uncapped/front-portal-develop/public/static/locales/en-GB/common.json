@@ -1,0 +1,425 @@
+{
+  "menu": {
+    "dashboard": "Dashboard",
+    "loans": "Agreements",
+    "transactions": "Transactions",
+    "connections": "Connections",
+    "referrals": "Referral link",
+    "documents": "Documents",
+    "profile": "Profile"
+  },
+  "select": {
+    "placeholder": "Please select"
+  },
+  "listHeader": {
+    "seeAll": "See all"
+  },
+  "datePicker": {
+    "today": "Today"
+  },
+  "fileUploadSubmit": "Upload",
+  "filters": {
+    "accountNotFound": "Unfortunately, we did not find such an account!"
+  },
+  "clipboard": {
+    "copied": "Copied to clipboard",
+    "error": "Could not copy to cliboard"
+  },
+  "pdf": {
+    "error": "Error downloading PDF file"
+  },
+  "download": {
+    "error": "Unexpected error during downloading the file."
+  },
+  "validation": {
+    "alphanumeric": "Only letters and numbers are allowed",
+    "available-funds": "Insufficient funds available to send payment",
+    "aba-routing-number": "${path} is not valid ABA routing number",
+    "exact": "${path} must be ${length} digits long",
+    "between-length": "${path} must be between ${min} to ${max} digits long",
+    "between-amount": "${path} must be between {{min}} to {{max}}.",
+    "only-digits": "${path} can have only digits",
+    "iban": "This is not valid IBAN",
+    "swiftBic": "This is not valid SWIFT/BIC",
+    "date-format": "Must be a valid date",
+    "date-past": "This date must be in the past",
+    "date-future": "This must be a future date",
+    "phone-format": "Phone number is not valid",
+    "percentage": "Must be ${min} or more",
+    "at-least-18-yo": "Must be over 18 years old",
+    "ssn": "Invalid Social Security number",
+    "url": "Invalid website address",
+    "currency-cloud-minimum-amount": "Minimum amount must be {{min}}",
+    "unique-alphanumeric-chars": "Must consist at least ${count} unique alphanumeric characters.",
+    "modulr-allowed-reference-chars": "Only alphanumeric characters and following special characters are allowed: space, hyphen(-), full stop(.), comma(,), ampersand(&) and forward slash(/)."
+  },
+  "error": {
+    "fetching": "We’re sorry but we couldn’t fetch the data. Please try again or contact customer service.",
+    "delete": "Sorry, we couldn’t process your deletion request successfully. Please try again or contact customer service."
+  },
+  "defaultErrorMessage": "Something went wrong",
+  "errorCodes": {
+    "INVITATION_REGISTERED_USER": "This email has already been registered.",
+    "USER_ALREADY_EXIST": "This email has already been registered."
+  },
+  "apiErrorAlert": {
+    "errorId": "Error ID",
+    "contactSupport": "Contact support"
+  },
+  "currencies": {
+    "usd": "US Dollar",
+    "gbp": "Pound Sterling",
+    "eur": "Euro",
+    "aud": "Australian Dollar",
+    "cad": "Canadian Dollar",
+    "pln": "Polish zloty",
+    "jpy": "Japanese yen",
+    "dkk": "Denmark krone",
+    "sek": "Swedish Krona",
+    "myr": "Malaysian ringgit",
+    "zar": "South African Rand",
+    "php": "Philippine Peso",
+    "nzd": "New Zealand Dollar",
+    "ron": "Romanian Leu",
+    "chf": "Swiss franc",
+    "nok": "Norwegian krone",
+    "bhd": "Bahrain dinar",
+    "bgn": "Bulgarian lev",
+    "czk": "Czech krone",
+    "hkd": "Hong Kong dollar",
+    "huf": "Hungarian forint",
+    "inr": "Indian rupee",
+    "idr": "Indonesian rupiah",
+    "ils": "New Israeli sheqel",
+    "kes": "Kenian schilling",
+    "kwd": "Kuwaiti dinar",
+    "mxn": "Mexican peso",
+    "omr": "Omani rial",
+    "qar": "Qatari rial",
+    "sar": "Saudi rial",
+    "sgd": "Singapore dollar",
+    "thb": "Thai baht",
+    "try": "Turkish lira",
+    "ugx": "Ugandan schilling",
+    "aed": "Arabic dirham"
+  },
+  "convenienceFees": {
+    "label": "fee",
+    "inventory": "Inventory",
+    "marketing": "Marketing",
+    "cash_withdrawal": "Cash withdrawal",
+    "other": "Other"
+  },
+  "googleAutocompleteInput": {
+    "enterLocation": "Enter a location"
+  },
+  "addressAutocompleteFields": {
+    "location": "Search for the first line of your address",
+    "manualMode": "Enter address manually",
+    "searchMode": "Search for address",
+    "country": "Country",
+    "addressLine1": "Line 1",
+    "addressLine2": "Line 2 (optional)",
+    "street": "Street",
+    "buildingNumber": "Building number",
+    "apartmentNumber": "Apartment number (optional)",
+    "city": "City",
+    "state": "State",
+    "region": "Region",
+    "province": "Province",
+    "zipCode": "Zip code",
+    "postcode": "Postcode"
+  },
+  "multipleRadio": {
+    "yes": "Yes",
+    "no": "No"
+  },
+  "fees": {
+    "BILL_EXCHANGE_FEE": "Exchange fee",
+    "BILL_OTHER_FEE": "Convenience fee",
+    "BILL_MARKETING_FEE": "Convenience fee",
+    "BILL_INVENTORY_FEE": "Convenience fee",
+    "BILL_CONVENIENCE_FEE": "Convenience fee",
+    "BILL_TRANSFER_FEE": "Transfer fee",
+    "PAYMENT_WIRE_FEE": "Transfer fee",
+    "BILL_CURRENCY_EXCHANGE_FEE": "Exchange fee",
+    "BILL_UNKNOWN": "Unknown fee"
+  },
+  "registrationSidebar": {
+    "header": "<0>Easy application</0> and fast decisions. I recommend Uncapped to every founder.”",
+    "sub": "<0>Kevin</0>, Co-founder"
+  },
+  "fileUpload": {
+    "title": "Drag and drop or click to browse",
+    "titleLoading": "Uploading…",
+    "subtitleAny": "Any file format or screenshot",
+    "subtitleFormats": "Format should be {{formats}}",
+    "subtitleLoading": "This may take a few seconds",
+    "extensionSeparator": "or",
+    "addFile": "Add file",
+    "addFiles": "Add files"
+  },
+  "actionButtons": {
+    "moreOptions": "More options",
+    "chat": "Speak to an expert",
+    "logout": "Log out",
+    "inviteMembers": "Invite team members",
+    "backToDashboard": "Back to dashboard"
+  },
+  "provideFeedbackCta": "Provide feedback",
+  "SearchableList": {
+    "placeholder": "Search",
+    "noResults": "No results",
+    "frequentlySelected": "Frequently selected"
+  },
+  "SigningFormSteps": {
+    "authorityStep": {
+      "title": "Agreement signatory",
+      "header": "Are you an authorised signatory?",
+      "copy": "Must be a director, beneficial owner, CEO or CFO with permission to sign from the CEO",
+      "add": "Add contact details",
+      "submit": "Review and sign",
+      "sendAgreement": "Send agreement",
+      "continue": "Continue",
+      "goBack": "Go back",
+      "locModal": {
+        "line1": "Your {{type}} agreement will be sent to you by email. Look out for an email from our partner Dropbox Sign.",
+        "line2": "Your draw agreement is ready to sign online now.",
+        "lineOfCredit": "line of credit",
+        "flexibleCreditLine": "flexible credit line",
+        "cta": "Continue"
+      },
+      "ReviewOfferStep": {
+        "title": "Review and sign agreement",
+        "signTheAgreement_one": "Review and sign the agreement on our partner site Dropbox Sign",
+        "signTheAgreement_other": "Review and sign the agreements on our partner site Dropbox Sign",
+        "nextSteps": [
+          "We will complete our due diligence checks",
+          "Your funds will be available in your account to start spending once your application has been approved"
+        ],
+        "whatHappensNow": "What happens next?",
+        "goBack": "Go back"
+      }
+    },
+    "detailsStep": {
+      "title": "Contact details",
+      "content": [
+        "We require either a director, beneficial owner, CEO or CFO with permission from CEO to sign the agreement",
+        "They will receive an email from our partner Dropbox Sign."
+      ],
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email address",
+      "submit": "Continue"
+    },
+    "reviewStep": {
+      "details": "Contact details",
+      "edit": "Edit",
+      "name": "Name",
+      "submit": "Send agreement",
+      "submitWithDraw": "Send agreements",
+      "continue": "Continue"
+    },
+    "errors": {
+      "SIGNED": "Your agreement is already signed.",
+      "INVALID_USER": "Only user that selected offer can sign agreement."
+    }
+  },
+  "DocumentsSigningList": {
+    "document": {
+      "loanAgreement": "Loan Agreement",
+      "drawAgreement": "Draw Agreement",
+      "disclosure": "Disclosure Agreement",
+      "uniformCommercialCode": "Uniform Commercial Code",
+      "personalGuarantee": "Personal guarantee",
+      "debenture": "Debenture",
+      "deedsOfPriority": "Deeds of Priority",
+      "crossCorporateSingle": "Cross Corporate Single Guarantee",
+      "crossCorporateMultiple": "Cross Corporate Multiple Guarantee",
+      "document": "Document",
+      "rbfAgreement": "Cash Advance Agreement",
+      "dailyPayoutAgreement": "Daily Payout Agreement"
+    },
+    "documentStatus": {
+      "availableAfterDisclosureSigned": "Available after Disclosure Agreement is signed",
+      "pending": "Pending signature",
+      "completed": "Completed",
+      "failed": "Failed"
+    },
+    "availableAfterFlexibleCreditLimit": "Available after Flexible Credit Limit Agreement is signed",
+    "availableAfterLineOfCredit": "Available after Line of Credit Agreement is signed",
+    "flexibleCreditLimitAgreement": "Flexible Credit Limit Agreement",
+    "lineOfCreditAgreement": "Line of Credit Agreement",
+    "disabled": "Disabled",
+    "availableAfterDisclosureSigned": "Available after Disclosure Agreement is signed",
+    "toSign": "To sign",
+    "signCta": "Sign"
+  },
+  "AddBankAccountForm": {
+    "title": "Select bank account",
+    "countryOfAccount": "Country of account",
+    "currency": "Currency",
+    "bankDetails": "Bank details",
+    "iban": "IBAN",
+    "transferTypes": {
+      "SORT_CODE": "Sort code",
+      "IBAN": "IBAN"
+    },
+    "accountNumber": "Account number",
+    "swiftBic": "SWIFT/BIC",
+    "sortCode": "Sort code",
+    "routingNumber": "Routing number",
+    "branchCode": "Branch code",
+    "bankCode": "Bank code",
+    "ifscCode": "IFSC code",
+    "bsbCode": "BSB code",
+    "submit": "Submit",
+    "accountAdded": "Bank account added",
+    "institiutionNumber": "Institution number",
+    "transitNumber": "Transit number"
+  },
+  "UploadBankAccountStatementForm": {
+    "title": "Upload bank statement",
+    "copy": "This will allow us to verify that this account belongs to your company",
+    "submit": "Submit",
+    "VerifyInfo": {
+      "title": "Why we ask for verification",
+      "copy": "We ask customers to upload their bank statement when requesting cash to an unverified bank account to validate the identity and ownership",
+      "list": [
+        "Better fraud protection",
+        "Ensure funds are sent securely and only to accounts owned by you",
+        "Only needs to be done <b>once per bank account</b>"
+      ]
+    }
+  },
+  "BankAccountSelection": {
+    "verified": "Verified",
+    "unverified": "Unverified"
+  },
+  "DrawDepositMethodForm": {
+    "bankTransferCopy": "Would you like us to send the amount you request via bank transfer, immediately once your application has been approved?",
+    "bankTransferCopyLoc": "Where would you like us to send your capital via bank transfer once your application has been approved?",
+    "withdrawCash": "Withdraw cash",
+    "amountToDraw": "Amount to draw",
+    "amountToWithdraw": "Amount to withdraw",
+    "additionalCapital": "Additional capital",
+    "selectBankAccount": "Select bank account",
+    "addNewBank": "Add new bank account",
+    "addBankAccount": "Add bank account",
+    "withdrawLater": "Withdraw cash later",
+    "cta": "Continue"
+  },
+  "DrawDepositMethodFormAmazon": {
+    "title": "Withdraw funds",
+    "advanceAmount": "Advance amount to withdraw",
+    "confirmBankDetails": "Confirm bank details",
+    "fundsCanBeSent": "Funds can only <b>be sent</b> to the bank account that is linked to your Amazon seller account. Confirm your account number ending in {{accountNumber}}",
+    "accountNumber": "Account number ending in {{accountNumber}}",
+    "bank": "Bank",
+    "routingNumber": "Routing number",
+    "alert": "If you wish to change the bank account where we’ll send your funds please <cta>contact our support</cta>",
+    "verificationError": "Account number does not match the details registered with your Amazon seller account",
+    "cta": "Continue"
+  },
+  "DrawDepositMethodFormAmazonVerified": {
+    "title": "Withdraw funds",
+    "advanceAmount": "Advance amount to withdraw",
+    "whereWeSend": "Where we’ll send your funds",
+    "fundsCanBeSent": "Funds can only <b>be sent</b> to the bank account that is linked to your Amazon seller account",
+    "verified": "Verified with Amazon",
+    "alert": "If you wish to change the bank account where we’ll send your funds please <cta>contact our support</cta>",
+    "cta": "Continue"
+  },
+  "LocDrawForm": {
+    "title": "New draw",
+    "chooseDrawAmount": "Choose draw amount",
+    "chooseDrawAmountDescription": "Choose the amount you’d like to have deposited as your first draw once your application is approved",
+    "amount": "Amount to draw",
+    "minDrawValidationError": "Minimum draw must be at least {{amount}}",
+    "maxDrawValidationError": "Maximum draw must be at most {{amount}}",
+    "repaymentsSection": "Repayments",
+    "repaymentsDescription": "The available options <strong>will depend</strong> on the <strong>repayment term</strong> you select",
+    "repaymentsTerms": "Repayment term",
+    "repaymentsTermsValue_one": "{{count}} month",
+    "repaymentsTermsValue_other": "{{count}} months",
+    "repaymentFrequency": "Repayment frequency",
+    "drawFeeMonthly": "Draw fee per month",
+    "drawFee": "Draw fee ({{rate}})",
+    "totalPayback": "Total to payback",
+    "cta": "Continue",
+    "goBack": "Go back",
+    "scheduleTitle": "About this plan",
+    "repaymentDetails": "Repayment details",
+    "repaymentDetailsSection": "Repayment details",
+    "totalDrawFee": "Total draw fee",
+    "totalDrawFeeSubText": "draw fee",
+    "paymentHolidayFee": "Payment holiday fee",
+    "totalRepayable": "Total repayable"
+  },
+  "sidebars": {
+    "EligibilityOne": {
+      "title": "Getting funded",
+      "content": "Fill in your business details, connect your accounts and provide a full picture of your business finances to receive a funding decision within 24 hours",
+      "content2": "Our verification methods detect gaps in your data. Missing data can limit our ability to provide the funding you need"
+    },
+    "EligibilityOneVariant": {
+      "discoverTitle": "Discover your potential",
+      "connectTitle": "Connect your data",
+      "offersTitle": "Receive offers"
+    },
+    "EligibilityTwo": {
+      "title": "Whats next?",
+      "content": "To provide you with a better, faster offer,  we’ll ask you to authorise secure, read-only connections to your banking, sales and accounting platforms."
+    },
+    "EligibilityTwoSmallTier": {
+      "title": "Whats next?",
+      "content": "To provide you with a better, faster offer,  we’ll ask you to authorise secure, read-only connections to your Amazon store data and your business bank accounts."
+    },
+    "EligibilityTwoVariant": {
+      "title": "You could be eligible for up to",
+      "titlePreQualified": "You’re pre-qualified for up to",
+      "subtitle": "Your final offer will be based on the data you submit during your application",
+      "features": [
+        "Control the amount and term of your offer",
+        "Top-ups as you repay or as your business grows",
+        "Unlock access to our line of credit as your business scales",
+        "Clear, fixed cost with early prepayment options",
+        "Real support from real people"
+      ],
+      "belowExpectations": {
+        "title": "Less than what you’re looking for?",
+        "features": [
+          "As you repay, you can automatically access top-up offers",
+          "Your offer amount will increase with your revenue",
+          "Unlock access to our line of credit as your business scales",
+          "Clear, fixed cost with early prepayment options",
+          "Real support from real people"
+        ]
+      }
+    },
+    "ReadyForFunding": {
+      "title": "You’re ready for funding!",
+      "subtitle": "Based on the information you’ve provided. You have a high chance of receiving an offer of up to <strong>{{amount}}</strong>",
+      "readinessCheck": "Funding readiness check complete",
+      "readinessCheckDescription": "You’re ready to successfully apply for funding from Uncapped",
+      "offers": "Highly likely to receive an offer",
+      "offersDescription": "Your profile suggests you are highly likely to receive an offer when you complete an application"
+    }
+  },
+  "CustomCombobox": {
+    "loading": "Finding a match",
+    "searchInstead": "Search instead"
+  },
+  "BookCallBox": {
+    "title": "Book a call with your account manager",
+    "content": "We want to ensure we fully understand the unique needs of your business. Book a call with your account manager today to discuss your application.",
+    "success": {
+      "title": "Call booked!",
+      "content": "We’ve sent you an email confirming the details",
+      "button": "Continue application"
+    }
+  },
+  "ButtonGroup": {
+    "goBack": "Go back"
+  }
+}

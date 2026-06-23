@@ -1,0 +1,140 @@
+name: continuous-deployment
+
+on:
+  push:
+    branches:
+      - develop
+
+concurrency: deploy
+
+jobs:
+  deploy-app:
+    runs-on: ubuntu-22.04
+    # TODO: remove this once we have a production environment
+    # environment:
+    #   name: production
+    #   url: "https://portal.weareuncapped.com"
+    permissions:
+      contents: "read"
+      id-token: "write"
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - env:
+          REACT_APP_VERSION: ${{ github.sha }}
+        run: pnpm build
+
+      - id: auth
+        uses: google-github-actions/auth@v3
+        with:
+          token_format: access_token
+          workload_identity_provider: ${{ vars.WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ vars.WORKLOAD_IDENTITY_PROVIDER_SVC }}
+          access_token_lifetime: 300s
+
+      - uses: docker/setup-qemu-action@v3
+
+      - uses: docker/setup-buildx-action@v3
+
+      - name: Docker metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: |
+            ${{ github.event.repository.name }}
+          tags: |
+            type=schedule
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern={{major}}
+            type=sha
+
+      - uses: docker/login-action@v3
+        with:
+          registry: europe-west2-docker.pkg.dev
+          username: oauth2accesstoken
+          password: ${{ steps.auth.outputs.access_token }}
+
+      - uses: docker/build-push-action@v6
+        with:
+          context: ${{ github.workspace }}
+          tags: europe-west2-docker.pkg.dev/uncapped-ci-cd/applications/${{ github.event.repository.name }}:${{ github.run_id	}}
+          push: true
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: europe-west2-docker.pkg.dev/uncapped-ci-cd/applications/${{ github.event.repository.name }}:latest
+          cache-to: type=inline
+
+      - name: "Create release on Sentry"
+        env:
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
+        run: |-
+          npx sentry-cli releases new ${{ github.sha }}
+          npx sentry-cli releases set-commits ${{ github.sha }} --auto
+          npx sentry-cli sourcemaps upload build/static --release ${{ github.sha }} --url-prefix "~/static"
+          npx sentry-cli releases finalize ${{ github.sha }}
+          npx sentry-cli deploys new --release ${{ github.sha }} --env production
+          npx sentry-cli deploys new --release ${{ github.sha }} --env development
+
+  deploy-storybook:
+    runs-on: ubuntu-22.04
+    environment:
+      name: storybook
+      url: "https://storybook.dev.internal.weareuncapped.com"
+    permissions:
+      contents: "read"
+      id-token: "write"
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - run: NODE_OPTIONS="--max-old-space-size=4096" pnpm storybook:build
+
+      - id: auth
+        uses: google-github-actions/auth@v3
+        with:
+          token_format: access_token
+          workload_identity_provider: ${{ vars.WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ vars.WORKLOAD_IDENTITY_PROVIDER_SVC }}
+          access_token_lifetime: 300s
+
+      - uses: docker/setup-qemu-action@v3
+
+      - uses: docker/setup-buildx-action@v3
+
+      - uses: docker/login-action@v3
+        with:
+          registry: europe-west2-docker.pkg.dev
+          username: oauth2accesstoken
+          password: ${{ steps.auth.outputs.access_token }}
+
+      - uses: docker/build-push-action@v6
+        with:
+          context: ${{ github.workspace }}
+          tags: europe-west2-docker.pkg.dev/uncapped-ci-cd/applications/front-storybook:${{ github.run_id }}
+          push: true
+          build-args: PROJECT_DIR=./storybook-static
+          cache-from: type=registry,ref=europe-west2-docker.pkg.dev/uncapped-ci-cd/applications/front-storybook:latest
+          cache-to: type=inline

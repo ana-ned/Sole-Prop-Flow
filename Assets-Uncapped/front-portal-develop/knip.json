@@ -1,0 +1,20 @@
+{
+  "ignore": [
+    ".claude/worktrees/**",
+    "oxlint.config.ts",
+    "cypress/global.d.ts",
+    "public/config/env.js",
+    "scripts/e2e-test-api.js",
+    "scripts/parse-test-results.ts",
+    "src/docs/ThemedColorPalette.tsx",
+    "src/services/api/**/*.ts",
+    "src/hooks/useTrackExperiment.tsx",
+    "src/components/UI/Tabs/index.ts"
+  ],
+  "ignoreDependencies": [
+    "@types/google.maps",
+    "@types/grecaptcha",
+    "@tailwindcss/typography",
+    "tailwindcss"
+  ]
+}

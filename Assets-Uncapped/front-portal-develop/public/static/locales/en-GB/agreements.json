@@ -1,0 +1,344 @@
+{
+  "list": {
+    "active": "Active",
+    "closed": "Closed",
+    "selectLoan": "Select agreement",
+    "empty": {
+      "active": {
+        "title": "No active agreements",
+        "copy": "If you keep your data sources connected and your business remains healthy, we’ll offer you additional funding to help scale your business"
+      },
+      "past": {
+        "title": "No past agreements",
+        "copy": "Your past agreements will appear here"
+      }
+    }
+  },
+  "AgreementCard": {
+    "cashAdvance": "Cash Advance",
+    "termLoan": "Term Loan",
+    "lineOfCredit": "Line of Credit",
+    "lineOfCreditDraw": "Line of Credit Draw",
+    "revenueLoan": "Revenue Loan",
+    "dailyPayout": "Daily Payout",
+    "totalOutstanding": "Total outstanding",
+    "totalRepaid": "Total repaid",
+    "capital": "Capital",
+    "advanceRate": "Advance rate",
+    "drawAmount": "Draw amount",
+    "paymentTerm": "Payment term",
+    "paymentFrequency": "Payment frequency",
+    "activationDate": "Activation date",
+    "maximumCreditLimit": "Maximum Credit Limit",
+    "months_one": "{{count}} month",
+    "months_other": "{{count}} months",
+    "view": "View {{type}}",
+    "agreement": "Agreement",
+    "rbfPaymentFrequency": "{{share}} of {{frequencyLabel}} sales",
+    "viewTransfer": "View",
+    "transferredFrom": "Transferred from {{sourceType}}",
+    "fromGoldman": "Transferred from Goldman Sachs Bank USA",
+    "balanceTransfer": "Balance transfer",
+    "sellersfiAccountType": {
+      "termLoan": "SellersFi Term Loan",
+      "commercePay": "SellersFi CommercePay",
+      "capitalLoan": "SellersFi Capital Loan"
+    }
+  },
+  "AgreementListItem": {
+    "termLoan": "Term Loan",
+    "revenueLoan": "Revenue",
+    "lineOfCredit": "Line of Credit",
+    "cashAdvance": "Cash Advance",
+    "facilityLimit": "Facility limit",
+    "advance": "{{value}} advance",
+    "totalRepaid": "Total repaid",
+    "totalBalance": "Total outstanding",
+    "balanceTransfer": "Balance transfer",
+    "fromGoldman": "Transferred from Goldman Sachs Bank USA",
+    "transferredFrom": "Transferred from {{sourceType}}",
+    "activated": "Activated: {{date}}",
+    "viewLoan": "View loan",
+    "repayLoan": "Repay loan",
+    "sellersfiAccountType": {
+      "termLoan": "SellersFi Term Loan",
+      "commercePay": "SellersFi CommercePay",
+      "capitalLoan": "SellersFi Capital Loan"
+    }
+  },
+  "AgreementHeader": {
+    "loanOverview": "Loan overview",
+    "leftToRepay": "Left to repay",
+    "totalRepaid": "Total repaid",
+    "repayLoanEarly": "Repay loan early",
+    "totalOutstandingBalance": "Total outstanding balance",
+    "lineOfCredit": "Line of Credit",
+    "months_one": "{{count}} month",
+    "months_other": "{{count}} months",
+    "activationDate": "Activation date"
+  },
+  "AgreementInfo": {
+    "title": "Loan information",
+    "loanAmount": "Loan amount",
+    "previousBalance": "Previous balance",
+    "repaymentTypeTerm": "Repayment type / Term",
+    "repaymentFrequency": "{{value}} repayment",
+    "activationDate": "Activation date",
+    "closedDate": "Closed date",
+    "termLoan": "Term loan",
+    "revenueLoan": "Revenue loan",
+    "share": "share",
+    "month_one": "{{count}} month",
+    "month_other": "{{count}} months",
+    "repayLoanEarly": "Repay loan early"
+  },
+  "AgreementRepayments": {
+    "title": "Repayments",
+    "seeAll": "See all",
+    "tabs": {
+      "scheduled": "Scheduled",
+      "paid": "Paid"
+    }
+  },
+  "AgreementLeftToRepayChart": {
+    "title": "Repayments breakdown",
+    "viewBreakdown": "View",
+    "repaid": "Repaid",
+    "pending": "Pending",
+    "loanLateFees": "Loan late fees",
+    "leftToRepay": "Left to repay",
+    "transferredBalance": "Transferred repayments",
+    "transferredFromGoldman": "{{value}} transferred from Goldman Sachs Bank USA",
+    "transferredFromSellersfi": "{{value}} transferred from SellersFi",
+    "transferredFromLoan": "{{value}} transferred from a previous loan",
+    "transferredToLoan": "Transferred balance has moved to a new loan",
+    "restructuredToLoan": "Transferred repayments have moved to a new loan",
+    "viewLoan": "View loan"
+  },
+  "AgreementBreakdown": {
+    "title": "Total repayable breakdown",
+    "loanDetails": "Loan details",
+    "creditLine": "Your credit line",
+    "leftToRepay": "Left to repay",
+    "repaid": "Repaid",
+    "amountRepaid": "Amount repaid to date",
+    "totalRepayable": "Total repayable",
+    "initialLoan": "Initial loan + all fees",
+    "loanAmount": "Loan amount",
+    "fixedFee": "Fixed fee",
+    "earlyRepaymentRebate": "Early repayment rebate",
+    "balanceTransferFee": "Balance transfer fee",
+    "additionalFees": "Additional fees",
+    "previousLoans": "Previous balance",
+    "card": "Card",
+    "billPay": "BillPay",
+    "cash": "Cash",
+    "lateFees": "Late fees"
+  },
+  "EarlyRepayment": {
+    "titleSelection": "Choose loan to repay early",
+    "title": "Make an early payment",
+    "copy": "You’re able to repay your balance early. You’ll be entitled to the early repayment rebate outlined in your offer letter terms and conditions.",
+    "amountToBeCollected": "Amount to be collected via direct debit",
+    "remainingBalance": "Remaining loan balance",
+    "rebate": "Early repayment rebate",
+    "alert": "If you’re unable to repay the full amount, the early repayment rebate won’t be deducted from your balance.",
+    "agreement": "I agree to Uncapped collecting the total balance left to repay via direct debit. I understand that the agreement will be closed once payment is received.",
+    "cta": "Confirm repayment"
+  },
+  "EarlyRepaymentPartial": {
+    "title": "Repay loan early",
+    "copy": "You’re able to repay your balance early. You can choose to do so either in full or specify any amount over $100",
+    "amountToRepay": "Amount to repay",
+    "outstandingPrincipalBalance": "Outstanding principal balance",
+    "interestBalance": "Interest balance",
+    "payOffFull": "To pay off loan in full",
+    "repaymentAmount": "Repayment amount",
+    "paidToInterest": "Paid to interest",
+    "fees": "Fees",
+    "paidToPrincipal": "Paid to principal",
+    "agreementMax": "I agree to Uncapped collecting the amount to repay via direct debit. I understand that the agreement will be closed once payment is received.",
+    "agreement": "I agree to Uncapped collecting the amount to repay via direct debit",
+    "cta": "Confirm repayment"
+  },
+  "EarlyRepaymentSuccessModal": {
+    "title": "Early repayment processed",
+    "copy": "We’ve requested to collect the remaining amount via direct debit. The amount will be settled within the next 5 working days",
+    "cta": "Continue"
+  },
+  "MarcusClosedAgreementInfo": {
+    "loanDetails": "Loan details",
+    "viewDetails": "View details",
+    "loanAmount": "Loan amount",
+    "principalPaidBefore": "Principal paid before loan transferred",
+    "interestPaidBefore": "Interest paid before loan transferred",
+    "breakdownTitle": "Goldman Sachs Bank USA agreement breakdown"
+  },
+  "InterestRateProductInfo": {
+    "loanDetails": "Loan details",
+    "viewDetails": "View details",
+    "outstandingBalance": "Outstanding principal balance",
+    "interestBalance": "Interest balance",
+    "principal": "Principal paid to date",
+    "totalBalance": "Total balance",
+    "feeBalance": "Fee balance",
+    "viewLoanDetails": "View loan details",
+    "includesPrincipalBalance": "Includes principal balance of",
+    "includesInterestBalance": "Includes interest balance of",
+    "includesLateFees": "Includes late fees balance of"
+  },
+  "Breakdown": {
+    "title": "{{product}} breakdown"
+  },
+  "LocV2Breakdown": {
+    "repaymentAmount": "Repayment<br/>amount",
+    "ofPrincipal": "of principal",
+    "facilityDetails": "Facility details",
+    "facilityLimit": "Facility limit",
+    "interestRatePerAnnum": "Interest rate (per annum)",
+    "repaymentFrequency": "Repayment frequency",
+    "facilityFee": "Facility fee",
+    "drawPhase": "Draw phase",
+    "minimumDraw": "Minimum draw",
+    "ends": "Ends",
+    "ended": "Ended",
+    "active": "Active",
+    "repaymentPhase": "Repayment phase",
+    "repaymentPhaseDuration": "Repayment phase duration",
+    "outstandingBalanceAmortized": "Outstanding balance amortized",
+    "month_one": "{{count}} month",
+    "month_other": "{{count}} months"
+  },
+  "common": {
+    "goBack": "Go back",
+    "totalOutstanding": "Total outstanding",
+    "paid": "Paid",
+    "leftToPay": "Left to pay",
+    "transferred": "Transferred",
+    "totalRepaid": "Total repaid",
+    "pending": "Pending",
+    "paymentDetails": "Payment details",
+    "paymentFrequency": "Payment frequency",
+    "activationDate": "Activation date",
+    "interestRate": "Interest rate (APR)",
+    "paymentTerm": "Payment term",
+    "month_one": "{{count}} month",
+    "month_other": "{{count}} months",
+    "totalPayable": "Total payable",
+    "capitalPlusFees": "Capital + all fees",
+    "capital": "Capital",
+    "fixedFee": "Fixed Fee",
+    "payments": "Payments",
+    "nextPayments": "Next payments",
+    "ofYourSales": "of your $t(salesFrequency.{{frequency}})",
+    "noUpcoming": "No scheduled payments"
+  },
+  "InterestRate": {
+    "Breakdown": {
+      "product": "Balance",
+      "sellersfiProduct": "SellersFi Term Loan",
+      "outstandingBalance": "Outstanding principal balance",
+      "principalBalance": "Principal balance",
+      "interestBalance": "Interest balance",
+      "feeBalance": "Fee balance",
+      "principalPaid": "Principal paid to date",
+      "totalPrincipal": "Total principal",
+      "totalFees": "Total fees"
+    },
+    "PaymentDetails": {
+      "projectedPayOff": "Projected loan pay off"
+    }
+  },
+  "Fixed": {
+    "Breakdown": {
+      "product": "Term Loan",
+      "sellersfiProduct": "SellersFi Revenue Advance"
+    },
+    "PaymentDetails": {
+      "paymentAmount": "Payment amount"
+    }
+  },
+  "Rbf": {
+    "Breakdown": {
+      "product": "Cash Advance"
+    },
+    "PaymentDetails": {
+      "payWith": "Pay with"
+    }
+  },
+  "DailyPayout": {
+    "Breakdown": {
+      "product": "Daily Payout",
+      "advanceRate": "Advance rate",
+      "advanceRateDescription": "Receive an initial {{share}} lump sum of your available and deferred balance, then {{share}} of marketplace sales daily, with up\u00A0to\u00A0{{limit}} advanced at any time",
+      "dailyFee": "Daily fee",
+      "dailyFeeDescription": "This is applied to the principal balance each day",
+      "repayments": "Repayments",
+      "repaymentsDescription": "When your marketplace pays out, we collect our fees and only what\u2019s needed to keep us at {{share}} of your new marketplace balance"
+    }
+  },
+  "AgreementTransactions": {
+    "title": "Transactions",
+    "payments": "Payments",
+    "advances": "Advances",
+    "viewAll": "View all",
+    "completed": "Completed",
+    "pending": "Pending",
+    "noPayments": "No payments yet",
+    "noAdvances": "No advances yet"
+  },
+  "LineOfCreditFixed": {
+    "Breakdown": {
+      "product": "Draw",
+      "drawAmount": "Draw amount",
+      "drawFee": "Draw fee",
+      "repayments": "{{count}} {{frequency}} repayments"
+    },
+    "Details": {
+      "title": "Credit line details",
+      "drawFee": "Draw fee",
+      "repaymentTerm": "Repayment term per draw",
+      "repaymentCycle": "Repayment cycle",
+      "minimumDraw": "Minimum draw",
+      "facilityFee": "Facility fee",
+      "drawFundsUntil": "Draw funds until"
+    }
+  },
+  "LineOfCreditInterestRate": {
+    "Breakdown": {
+      "product": "Line of Credit",
+      "drawPhase": "Draw phase",
+      "repaymentPhase": "Repayment phase",
+      "started": "started {{date}}",
+      "startsOn": "starts on {{date}}",
+      "active": "Active",
+      "inactive": "Inactive",
+      "drawDescription": "You can draw from your available limit within this initial phase of your loan (minimum draw is {{minimumDraw}})",
+      "drawRepaymentDescription": "Your repayments during this period will vary as it is calculated as <strong>{{percentage}} of the principal balance due</strong> at the time of payment.",
+      "repaymentNoDrawDescription": "You will not be able to draw during this period.",
+      "repaymentAmortizedDescription": "Your total remaining balance is amortized over the payment phase duration into equal payments."
+    },
+    "PaymentDetails": {
+      "drawPhasePlusRepaymentPhase": "$t(LineOfCreditInterestRate.Breakdown.drawPhase) + $t(LineOfCreditInterestRate.Breakdown.repaymentPhase)",
+      "maximumCreditLimit": "Maximum Credit Limit"
+    }
+  },
+  "salesFrequency": {
+    "DAILY": "daily sales",
+    "WEEKLY": "weekly sales",
+    "EVERY_14_DAYS": "biweekly sales",
+    "EVERY_15_DAYS": "sales every 15 days",
+    "MONTHLY": "monthly sales",
+    "ON_DEMAND": "on demand sales",
+    "UNKNOWN": "unknown sales"
+  },
+  "frequency": {
+    "DAILY": "Daily",
+    "WEEKLY": "Weekly",
+    "EVERY_14_DAYS": "Biweekly",
+    "EVERY_15_DAYS": "Every 15 days",
+    "MONTHLY": "Monthly",
+    "ON_DEMAND": "After every marketplace payout",
+    "UNKNOWN": "Unknown"
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "stepIntroduceClient": {
+    "title": "Introduce client",
+    "content": "This information will be used by the client in order to access their account",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "phoneNumber": "Phone number (optional)",
+    "email": "Email address",
+    "submit": "Continue",
+    "sidebar": {
+      "title": "Partner benefits",
+      "content": [
+        "Submit a referral in 2 minutes",
+        "Speed up your client’s application by providing business details & additional documents (optional)",
+        "Earn commission on successful deals",
+        "Have full visibility over your referrals using our dashboard"
+      ]
+    }
+  },
+  "stepIntroduceOrganisation": {
+    "title": "Check eligibility",
+    "businessName": "Business name",
+    "businessWebsite": "Business website",
+    "country": "Country of incorporation",
+    "region": "{{region}} of legal registration",
+    "state": "State",
+    "province": "Province",
+    "businessEntity": "Business entity",
+    "mainEcommercePlatform": "What platform do you primarily use to sell?",
+    "revenue": "Monthly revenue",
+    "businessModel": "Business model",
+    "businessModelOptions": {
+      "ECOMMERCE_AMAZON_MARKETPLACE": "Ecommerce / Marketplace / Amazon",
+      "RETAIL_WHOLESALE": "Retail stores / Wholesale",
+      "SUBSCRIPTION_SAAS": "Subscription / SaaS",
+      "OTHER": "Other"
+    },
+    "businessModelHelpText": "Select all that apply to the business",
+    "skip": "Skip and let client complete",
+    "submit": "Let’s find out",
+    "sidebar": {
+      "title": "Why complete our eligibility check?",
+      "content": [
+        "Make sure your client is eligible before they’re invited to apply",
+        "Speed up the process of getting an offer for your clients",
+        "Generate a preliminary offer for your client"
+      ]
+    }
+  },
+  "stepIntroduceOrganisationSkipModal": {
+    "title": "Are you sure you want to skip viewing their preliminary offer?",
+    "content": "If you skip, we’ll send them an email invite to complete their funding application",
+    "goBack": "Go back",
+    "send": "Send email invite to client"
+  },
+  "stepBallparkOffer": {
+    "eligible": {
+      "title": "Your client could be eligible for up to",
+      "content": "This amount is based on provided data. The final amount is subject to the application process",
+      "saveAsDraft": "Save as draft",
+      "continue": "Continue"
+    },
+    "confirmationModal": {
+      "title": "Your client has been introduced",
+      "content": "We have sent them an email where they can start their application",
+      "submit": "Got it!"
+    },
+    "ineligible": {
+      "LOW_REVENUE": {
+        "title": "Funding isn’t possible yet",
+        "content": "Right now we are not funding businesses with revenues below 100K per month"
+      },
+      "UNSUPPORTED_US_STATE": {
+        "title": "We cannot lend in your state",
+        "content": "Unfortunately there are some limits to who we can support today"
+      },
+      "UNSUPPORTED_PROVINCE": {
+        "title": "We cannot lend in your province",
+        "content": "Unfortunately there are some limits to who we can support today"
+      },
+      "fallback": {
+        "title": "Funding isn’t possible yet",
+        "content": [
+          "Unfortunately there are some limits to who we can support today.",
+          "You’ll be the first to know when we can work together"
+        ]
+      },
+      "submit": "Go back to dashboard"
+    }
+  },
+  "applicationsTable": {
+    "companyName": "Company name",
+    "dealStage": "Deal stage",
+    "dateCreated": "Date created",
+    "offer": "Offer"
+  },
+  "applicationDetails": {
+    "status": "Status",
+    "created": "Created",
+    "offer": "Offer"
+  },
+  "statusBadge": {
+    "statuses": {
+      "DRAFT": "Draft",
+      "SUBMITTED": "Submitted",
+      "NOT_ELIGIBLE": "Ineligible",
+      "MEETING_BOOKED": "Explore call booked",
+      "AWAITING_DATA": "Missing data",
+      "RISK_DECISION": "Credit committee",
+      "OFFER": "Offer",
+      "DUE_DILIGENCE": "Contract signed",
+      "FUNDS_DISBURSED": "Funds disbursed",
+      "CLOSED_LOST": "Closed / Lost",
+      "PENDING": "Pending",
+      "AWAITING_CREDIT_CALL": "Awaiting credit call",
+      "OTHER": "Other",
+      "DUPLICATE": "Duplicate",
+      "ACCEPTED": "In progress",
+      "INVITED": "Invited",
+      "UNDERWRITING": "Underwriting",
+      "CLOSED": "Closed",
+      "ABANDONED": "Abandoned",
+      "REJECTED": "Rejected",
+      "ACTIVE": "Active",
+      "CREATED": "Created",
+      "STARTED": "Started",
+      "APPROVED": "Approved"
+    },
+    "tooltips": {
+      "DRAFT": "You have not finished the introduction of the customer is not complete yet. You can continue by selecting the referral on the dashboard",
+      "SUBMITTED": "You have successfully submitted the introduction. Your client receives an email invitation to create an account with Uncapped to continue the application process",
+      "NOT_ELIGIBLE": "Your referral does not meet our eligibility criteria. We only provide capital to customers of a certain size and industry and country",
+      "MEETING_BOOKED": "Your client has booked a call with one of our account executives to share their requirements",
+      "AWAITING_DATA": "Your client is requested to provide additional data",
+      "RISK_DECISION": "Uncapped is in the process of evaluating the company to provide a decision",
+      "OFFER": "Your client has explored the offer and has to whether to accept or decline the offer",
+      "DUE_DILIGENCE": "Your client has signed his contract with Uncapped",
+      "FUNDS_DISBURSED": "Your client has received the agreed amount of funds in his account and can now manage his funds at https://portal.weareuncapped.com/",
+      "CLOSED_LOST": "Your client has been lost, either your client has decided not to pursue funding with Uncapped or has been rejected by Uncapped",
+      "PENDING": "The client already has an account with Uncapped. If they accept your email invitation to re-apply for funding, your introduction will be complete",
+      "AWAITING_CREDIT_CALL": "Awaiting credit call",
+      "OTHER": "",
+      "DUPLICATE": "Duplicate",
+      "ACCEPTED": "Your client is currently filling out their application",
+      "INVITED": "An invitation email has been sent to your client to sign up with Uncapped. Once they complete the registration, your introduction will be complete",
+      "UNDERWRITING": "",
+      "CLOSED": "",
+      "ABANDONED": "",
+      "REJECTED": "",
+      "ACTIVE": "",
+      "CREATED": "",
+      "STARTED": "",
+      "APPROVED": ""
+    }
+  },
+  "offerAmount": {
+    "estimated": "est"
+  },
+  "businessDetails": {
+    "skip": "Skip this step",
+    "businessDetailsInfo": {
+      "header": "Find your client’s business",
+      "copy": "If your client is part of a group, please use the parent company name"
+    },
+    "businessDetailsRegisteredAddress": {
+      "header": "Client’s registered address",
+      "headerUsa": "Client’s legal business address"
+    },
+    "businessDetailsReview": {
+      "forInput": "For client to input"
+    }
+  },
+  "documentsUpload": {
+    "header": "Client documents",
+    "copy": "To process your application faster, please upload your client’s following documents",
+    "skip": "Skip this step"
+  }
+}

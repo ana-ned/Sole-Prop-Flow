@@ -1,0 +1,12 @@
+{
+  "header": "Verify your identity",
+  "instruction": "Use our secure verification partner SumSub to confirm your identity. Continuing on your phone is the easiest way to complete these steps.",
+  "setupAccountsHeader": "Setup your withdrawal and repayment bank accounts to access your funds",
+  "setupAccountsBody": "Now that a beneficial owner has been verified, you’re almost ready to access your funds!",
+  "mainUserReminder": "If you’re the main user of your Uncapped account, remember to log back into your portal and complete the final steps",
+  "setupButton": "Continue with final steps",
+  "StatusModalsDenied": {
+    "header": "Unfortunately, we haven’t been able to complete our checks",
+    "copy": "We will be in touch by email with more information about next steps. If you don’t hear from us in the next 48 hours, please get in touch at support@weareuncapped.com"
+  }
+}

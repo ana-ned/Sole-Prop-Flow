@@ -1,0 +1,19 @@
+name: continuous-integration
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+
+jobs:
+  ci:
+    uses: weareuncapped-com/actions-configuration/.github/workflows/fe-ci.yaml@develop
+    with:
+      lint_command: "pnpm lint:js && pnpm exec tsc --project cypress/tsconfig.json --noEmit && pnpm exec knip"
+      e2e: true
+      preview: true
+      cypress_project_id: "zru1ge"
+      dev_env_url: "https://dev.weareuncapped.com/config/env.js"
+    secrets: inherit

@@ -1,0 +1,7 @@
+*/node_modules/*
+*/.idea/*
+.gitignore
+.gitlab-ci.yml
+README.md
+*/cypress/
+**/*.map

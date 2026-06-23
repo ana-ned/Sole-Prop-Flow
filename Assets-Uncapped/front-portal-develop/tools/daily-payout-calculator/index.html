@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uncapped: Daily Advance Calculator</title>
+<link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Sora', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: #f7f4f2;
+    color: #193a43;
+    line-height: 1.5;
+    padding-bottom: 40px;
+  }
+
+  /* ── Centering wrapper ───────────────────── */
+  .page-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 12px;
+  }
+
+  /* ── Banner — matches LOC header exactly ── */
+  .header-wrap {
+    margin: 8px auto 0;
+    max-width: 1200px;
+    padding: 8px 12px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+  }
+  .header-wrap img { height: 52px; }
+
+  /* ── Page title ─────────────────────────── */
+  h1 {
+    font-family: 'Commissioner', sans-serif;
+    font-size: 40px; font-weight: 700; color: #193a43;
+    margin: 10px auto 12px; padding: 0 12px; max-width: 1200px;
+  }
+
+  /* ── Hero blurb ─────────────────────────── */
+  .hero {
+    background: #fbfaf9; border-radius: 16px;
+    margin: 6px auto 12px; padding: 16px 12px 16px 18px; max-width: 1200px;
+  }
+  .hero h2 {
+    font-family: 'Commissioner', sans-serif;
+    font-size: 17px; font-weight: 600; margin-bottom: 4px;
+  }
+  .hero p { font-size: 14px; color: #5b6785; }
+
+  /* ── Main grid — sidebar + chart/summary ── */
+  main {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    align-items: stretch;
+    gap: 12px;
+    margin: 0 auto 12px;
+    max-width: 1200px;
+  }
+  .right-pane {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-self: stretch;
+  }
+
+  /* ── Funding Snapshot ───────────────────── */
+  .snapshot-bar {
+    display: flex;
+    gap: 0;
+    overflow: visible;
+    width: 100%;
+  }
+  /* Higher specificity to beat .panel's padding/align-self */
+  .panel.snapshot-bar {
+    padding: 0;
+    align-self: stretch;
+  }
+  .snap-group {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .snap-group:last-child { flex: 2; }
+  .snap-group + .snap-group { border-left: 1px solid #e9edf3; }
+  .snap-group-label {
+    font-size: 11px; font-weight: 600; color: #128081;
+    text-transform: uppercase; letter-spacing: 0.6px;
+    margin-bottom: 12px;
+  }
+  .snap-tiles {
+    display: flex;
+    gap: 8px;
+  }
+  .snap-tile {
+    flex: 1;
+    background: #f7f9fa; border-radius: 10px;
+    padding: 10px 12px;
+    display: flex; flex-direction: column; gap: 3px;
+  }
+  .snap-tile.accent { background: rgba(18,128,129,0.08); }
+  .snap-tile-label { font-size: 11px; color: #5b6785; font-weight: 500; }
+  .snap-tile-value {
+    font-family: 'Commissioner', sans-serif;
+    font-size: 18px; font-weight: 700; color: #193a43;
+  }
+  .snap-tile.accent .snap-tile-value { color: #128081; }
+
+  /* ── Panel cards ────────────────────────── */
+  .panel {
+    background: #fff; border-radius: 16px;
+    border: 1px solid #e9edf3; padding: 20px;
+    align-self: start;
+  }
+  .panel-title {
+    font-family: 'Commissioner', sans-serif;
+    font-weight: 700; font-size: 15px;
+    margin-bottom: 16px; color: #193a43;
+  }
+
+  /* ── Form fields (inline: label + input on same row) ── */
+  .field {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 8px; margin-bottom: 10px;
+  }
+  .field label {
+    font-size: 12px; color: #5b6785; font-weight: 500;
+    white-space: nowrap; flex-shrink: 0;
+    display: inline-flex; align-items: center; gap: 4px;
+    position: relative; cursor: default;
+  }
+  .field label .tip-i {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 14px; height: 14px; border-radius: 50%;
+    background: #e9edf3; font-size: 9px; font-weight: 700; color: #5b6785;
+    cursor: help; flex-shrink: 0;
+  }
+  .field label .field-tip {
+    display: none; position: absolute; top: calc(100% + 6px); left: 0;
+    background: #193a43; color: #fff; padding: 8px 12px;
+    border-radius: 8px; font-size: 11px; font-weight: 400;
+    width: 220px; line-height: 1.5; z-index: 20;
+    white-space: normal;
+  }
+  .field label:hover .field-tip { display: block; }
+  .field input, .field select {
+    width: 110px; flex-shrink: 0; padding: 8px 10px;
+    border: 1px solid #e9edf3; border-radius: 10px;
+    font-family: inherit; font-size: 13px; color: #193a43;
+    background: #fff; outline: none; transition: border-color .15s;
+    text-align: right;
+  }
+  .field input:focus, .field select:focus { border-color: #128081; }
+  .field input.input-error { border-color: #e53935; }
+  .field-input-wrap { display: flex; flex-direction: column; align-items: flex-end; }
+  .field .input-error-msg {
+    font-size: 11px; color: #e53935; margin-top: 4px;
+    text-align: right; display: none; width: 110px;
+  }
+  .field .input-error-msg.visible { display: block; }
+  .field-readonly {
+    width: 110px; flex-shrink: 0; padding: 8px 10px;
+    border: 1px solid #e9edf3; border-radius: 10px;
+    font-family: inherit; font-size: 13px; color: #193a43;
+    background: #f7f9fa; text-align: right; font-weight: 400;
+  }
+  .section-label {
+    font-size: 11px; font-weight: 600; color: #128081;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    margin-bottom: 6px; margin-top: 2px;
+  }
+  .divider {
+    border: none; border-top: 1px solid #e9edf3; margin: 10px 0;
+  }
+  .info-line {
+    font-size: 11px; color: #5b6785; margin-top: 6px; line-height: 1.55;
+  }
+  .info-line strong { color: #128081; font-weight: 600; }
+
+  /* ── Chart area ─────────────────────────── */
+  .chart-panel {
+    position: relative;
+    display: flex; flex-direction: column;
+    align-self: stretch;
+    flex: 1;
+  }
+  .chart-header {
+    display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;
+  }
+  .chart-header .panel-title { margin-bottom: 0; }
+  .chart-tabs { display: flex; gap: 4px; }
+  .chart-tab {
+    padding: 5px 12px; border: 1px solid #e9edf3; border-radius: 8px;
+    background: #fff; font-family: inherit; font-size: 12px; color: #5b6785;
+    cursor: pointer; font-weight: 500; transition: all .15s;
+  }
+  .chart-tab.active { background: #128081; color: #fff; border-color: #128081; }
+  .chart-container { flex: 1; min-height: 0; position: relative; }
+
+  /* ── Summary cards ──────────────────────── */
+  .summary-col { display: flex; flex-direction: column; gap: 8px; padding: 16px; align-self: stretch; }
+  .stat-card {
+    background: #fbfaf9; border-radius: 12px;
+    padding: 10px 14px; text-align: center;
+    flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  }
+  .stat-card .stat-label {
+    font-size: 12px; color: #5b6785; font-weight: 500; margin-bottom: 3px;
+  }
+  .stat-card .stat-value {
+    font-family: 'Commissioner', sans-serif;
+    font-size: 22px; font-weight: 700; color: #193a43;
+  }
+  .stat-card.highlight { background: rgba(18, 128, 129, 0.08); }
+  .stat-card.highlight .stat-value { color: #128081; }
+
+
+  .tip-wrap {
+    display: inline-flex; align-items: center; gap: 4px;
+    cursor: help; position: relative;
+  }
+  .tip-wrap .tip-i {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 15px; height: 15px; border-radius: 50%;
+    background: #e9edf3; font-size: 10px; font-weight: 700; color: #5b6785;
+  }
+  .tip-wrap .tip-body {
+    display: none; position: absolute; bottom: calc(100% + 8px);
+    left: 50%; transform: translateX(-50%);
+    background: #193a43; color: #fff; padding: 10px 14px;
+    border-radius: 8px; font-size: 12px; font-weight: 400;
+    width: 210px; line-height: 1.5; z-index: 10;
+  }
+  .tip-wrap:hover .tip-body { display: block; }
+
+  /* ── Schedule ───────────────────────────── */
+  .schedule-section {
+    background: #fff; border-radius: 16px;
+    border: 1px solid #e9edf3;
+    margin: 0 auto; max-width: 1200px; padding: 20px;
+  }
+  .schedule-header {
+    display: flex; align-items: center;
+    justify-content: space-between; margin-bottom: 14px;
+  }
+  .schedule-header .panel-title { margin-bottom: 0; }
+  .btn-group { display: flex; gap: 6px; }
+  .btn-toggle {
+    padding: 7px 16px; border: 1px solid #d7dee0; border-radius: 8px;
+    background: #fff; font-family: inherit; font-size: 13px; color: #5b6785;
+    cursor: pointer; font-weight: 500; transition: all .15s;
+  }
+  .btn-toggle.active { background: #128081; color: #fff; border-color: #128081; }
+  .btn-export {
+    padding: 7px 16px; border: 1px solid #d7dee0; border-radius: 8px;
+    background: #fff; font-family: inherit; font-size: 13px; color: #193a43;
+    cursor: pointer; font-weight: 500;
+  }
+  .btn-export:hover { background: #f7f4f2; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  thead th {
+    text-align: right; padding: 6px 8px; color: #5b6785;
+    font-weight: 700; font-size: 13px;
+    border-bottom: 1px solid #e9edf3; white-space: nowrap;
+  }
+  thead th:first-child { text-align: left; }
+  tbody td {
+    padding: 9px 8px; text-align: right;
+    border-bottom: 1px solid #f3f4f6; white-space: nowrap;
+  }
+  tbody td.col-date { text-align: left; }
+  tbody td.col-sep { text-align: left; }
+  tbody td.col-sep-right, thead th.col-sep { border-left: 2px solid #e9edf3; }
+  tbody td.col-sep, tbody td.col-sep-right,
+  thead th.col-sep, thead th.col-sep-right { padding-left: 14px; }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr.multi-event-row td { background: #f9f7f5; }
+
+  .badge {
+    display: inline-block; padding: 3px 10px;
+    border-radius: 6px; font-size: 11.5px;
+    font-weight: 600; white-space: nowrap;
+  }
+  .badge-advance { background: rgba(22, 161, 73, 0.12); color: #0d7a3a; }
+  .badge-collection { background: #fce4ec; color: #c62828; }
+  .badge-payout { background: #e3f2fd; color: #1565c0; }
+
+
+
+  /* ── Column separator & header tooltips ── */
+  .col-sep { border-left: 2px solid #e9edf3; }
+  th .th-tip {
+    display: inline-flex; align-items: center; gap: 3px;
+    position: relative; cursor: help;
+  }
+  th .th-tip .tip-i {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 14px; height: 14px; border-radius: 50%;
+    background: #e9edf3; font-size: 9px; font-weight: 700; color: #5b6785;
+    flex-shrink: 0;
+  }
+  th .th-tip .th-tip-body {
+    display: none; position: absolute; bottom: calc(100% + 6px);
+    right: 0; background: #193a43; color: #fff; padding: 8px 12px;
+    border-radius: 8px; font-size: 11px; font-weight: 400;
+    width: 200px; line-height: 1.5; z-index: 20;
+    white-space: normal; text-align: left;
+  }
+  th .th-tip:hover .th-tip-body { display: block; }
+
+  .disclaimer {
+    margin: 16px auto 0; padding: 0 12px; max-width: 1200px;
+    font-size: 12px; color: #8b95a5; line-height: 1.6;
+  }
+
+  @media (max-width: 1100px) {
+    .header-wrap, h1, .hero, main, .schedule-section, .disclaimer { margin-left: 20px; margin-right: 20px; }
+    main { grid-template-columns: 1fr; }
+    .snap-tiles { grid-template-columns: repeat(2, 1fr); }
+    .snap-group + .snap-group { border-left: none; border-top: 1px solid #e9edf3; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header-wrap">
+  <img src="https://static.weareuncapped.com/auth0-login-page/logo-uncapped.svg" alt="Uncapped">
+</div>
+
+<h1>Daily Payout Calculator</h1>
+
+<section class="hero">
+  <h2>Get paid today, not in two weeks</h2>
+  <p>Receive <span id="heroRate1"></span> of your total marketplace balance on Day 1, plus <span id="heroRate2"></span> of your net sales every day.<br>For businesses with deferred balances, Uncapped advances against both standard and deferred balances — even before the marketplace releases the deferred portion.</p>
+</section>
+
+<main>
+
+  <section class="panel">
+
+    <div class="section-label">Your Business</div>
+    <div class="field">
+      <label>Standard Balance <span class="tip-i">?</span>
+        <span class="field-tip">Unsettled sales already in your standard payout balance, available in the next payout.</span>
+      </label>
+      <div class="field-input-wrap">
+        <input type="text" id="standardBalance" value="$16,000">
+        <span class="input-error-msg" id="err-standardBalance">Must be 0 or above</span>
+      </div>
+    </div>
+    <div class="field">
+      <label>Deferred Balance <span class="tip-i">?</span>
+        <span class="field-tip">Unsettled sales held by the marketplace in a deferred reserve. These release into your standard balance after delivery date + 7 days.</span>
+      </label>
+      <div class="field-input-wrap">
+        <input type="text" id="deferredBalance" value="$8,000">
+        <span class="input-error-msg" id="err-deferredBalance">Must be 0 or above</span>
+      </div>
+    </div>
+    <div class="field">
+      <label>Total Balance <span class="tip-i">?</span>
+        <span class="field-tip">Total of Standard + Deferred Balance. This is the base Uncapped advances against.</span>
+      </label>
+      <div class="field-readonly" id="eligibleDisplay">$24,000</div>
+    </div>
+    <div class="field">
+      <label>Next Payout Date <span class="tip-i">?</span>
+        <span class="field-tip">When your next marketplace payout is due. Payouts repeat every 14 days.</span>
+      </label>
+      <input type="date" id="nextPayoutDate">
+    </div>
+    <div class="field">
+      <label>Daily Net Sales <span class="tip-i">?</span>
+        <span class="field-tip">Your average daily net revenue after marketplace fees and refunds.</span>
+      </label>
+      <div class="field-input-wrap">
+        <input type="text" id="dailyRevenue" value="$2,000">
+        <span class="input-error-msg" id="err-dailyRevenue">Must be 0 or above</span>
+      </div>
+    </div>
+
+    <hr class="divider">
+    <div class="section-label">Product Terms</div>
+    <div class="field">
+      <label>Advance Rate <span class="tip-i">?</span>
+        <span class="field-tip">The percentage of your total balance (standard + deferred) that Uncapped advances to you.</span>
+      </label>
+      <div class="field-input-wrap">
+        <input type="text" id="advanceRate" value="80%">
+        <span class="input-error-msg" id="err-advanceRate">Must be 0 or above</span>
+      </div>
+    </div>
+    <div class="field">
+      <label>Daily Fee Rate <span class="tip-i">?</span>
+        <span class="field-tip">The daily fee charged on your outstanding advance amount. Fees accrue daily and are collected from your next payout.</span>
+      </label>
+      <div class="field-input-wrap">
+        <input type="text" id="feeRate" value="0.30%">
+        <span class="input-error-msg" id="err-feeRate">Must be 0 or above</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="right-pane">
+    <div class="panel snapshot-bar" id="snapshotBar"></div>
+    <div class="panel chart-panel">
+      <div class="chart-header">
+        <div class="snap-group-label" id="chartTitle">Cash Advantage Over the Next 2 Months</div>
+        <div class="chart-tabs">
+          <button class="chart-tab active" data-chart="cashflow" onclick="setChart('cashflow')">Cashflow</button>
+          <button class="chart-tab" data-chart="balance" onclick="setChart('balance')">Balance &amp; Fees</button>
+        </div>
+      </div>
+      <div class="chart-container">
+        <canvas id="chart"></canvas>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<section class="schedule-section">
+  <div class="schedule-header">
+    <div class="section-label">Schedule</div>
+    <div class="btn-group">
+      <button class="btn-toggle active" data-view="detailed" onclick="setView('detailed')">Detailed</button>
+      <button class="btn-toggle" data-view="summary" onclick="setView('summary')">Per&#8209;Payout Summary</button>
+      <button class="btn-export" onclick="exportCSV()">Export CSV</button>
+    </div>
+  </div>
+  <div id="scheduleTable"></div>
+  <div style="text-align:center;padding:12px 0 4px;">
+    <button class="btn-export" id="scheduleExpandBtn" onclick="toggleScheduleExpand()">Show Full Year</button>
+  </div>
+</section>
+
+<p class="disclaimer">
+  This tool models daily fee accrual and balance-based advances for illustration purposes only.
+  Actual advances, fees, and repayments are governed by your Master Receivables Purchase Agreement
+  and the applicable Offer. Daily Fees accrue on the Outstanding Advance Amount and are not compounded.
+  When a payout reduces the total balance below the current advance, a repayment is triggered
+  on the same day for accrued fees plus the principal difference.
+  Advances over weekends may land on the next business day.
+  Deferred balance release timing is approximate; actual release schedules vary by marketplace.
+</p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/3.0.1/chartjs-plugin-annotation.min.js"></script>
+<script>
+const $ = id => document.getElementById(id);
+const fmt = n => n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+const fmtInt = n => n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+const parseNum = s => parseFloat(String(s).replace(/[$,]/g, '')) || 0;
+const parsePct = s => parseFloat(String(s).replace(/%/g, '')) || 0;
+function addDays(d, n) { const r = new Date(d); r.setDate(r.getDate() + n); return r; }
+function fmtDate(d) {
+  const m = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  return `${m[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+}
+function fmtDateISO(d) {
+  return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+}
+
+const today = new Date(); today.setHours(0,0,0,0);
+const payoutInput = $('nextPayoutDate');
+payoutInput.min = fmtDateISO(addDays(today, 1));
+payoutInput.max = fmtDateISO(addDays(today, 14));
+
+// URL query parameter support — all inputs can be set via URL
+// e.g. ?stdbal=16000&defbal=8000&payout=2026-04-01&revenue=3000&fee=0.30&rate=80
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.has('stdbal')) $('standardBalance').value = '$' + fmtInt(parseNum(urlParams.get('stdbal')));
+if (urlParams.has('defbal')) $('deferredBalance').value = '$' + fmtInt(parseNum(urlParams.get('defbal')));
+if (urlParams.has('revenue')) $('dailyRevenue').value = '$' + fmtInt(parseNum(urlParams.get('revenue')));
+if (urlParams.has('fee')) $('feeRate').value = parsePct(urlParams.get('fee')) + '%';
+if (urlParams.has('rate')) $('advanceRate').value = parsePct(urlParams.get('rate')) + '%';
+if (urlParams.has('payout')) {
+  const p = urlParams.get('payout');
+  if (p >= payoutInput.min && p <= payoutInput.max) payoutInput.value = p;
+  else payoutInput.value = fmtDateISO(addDays(today, 7));
+} else {
+  payoutInput.value = fmtDateISO(addDays(today, 7));
+}
+
+const PAYOUT_CYCLE = 14;
+const NUM_CYCLES = 4;
+const PRE_DAYS = 7;
+const SCHEDULE_DAYS = 365;
+const SNAP_DAYS = SCHEDULE_DAYS;
+
+function buildSchedule() {
+  const dailyRev = parseNum($('dailyRevenue').value);
+  const nextPayout = new Date($('nextPayoutDate').value + 'T00:00:00');
+  const feeRate = parsePct($('feeRate').value) / 100;
+  const advRate = parsePct($('advanceRate').value) / 100;
+  const initStdBal = parseNum($('standardBalance').value);
+  const initDefBal = parseNum($('deferredBalance').value);
+
+  const daysToNext = Math.max(1, Math.min(14, Math.round((nextPayout - today) / 86400000)));
+  const totalDays = SCHEDULE_DAYS;
+
+  // Initial lump sum — advance issued today based on current balances
+  const initAdvance = (initStdBal + initDefBal) * advRate;
+  const initDailyFee = initAdvance * feeRate;
+  const initTotalBalance = initAdvance + initDailyFee;
+
+  // State
+  let standardEligible = initStdBal;
+  const currentDeferredBal = initDefBal; // fixed throughout
+  let outstanding = initAdvance, accruedFees = initDailyFee;
+  let totalAdvanced = initAdvance, totalCollections = 0;
+  let runningFees = initDailyFee;
+  let cumCashDA = initAdvance, cumCashNo = 0;
+  let daysSinceLastPayout = Math.max(0, PAYOUT_CYCLE - daysToNext);
+  let snapAdvanced = null, snapFees = null;
+
+  const preRows = [];
+  for (let d = -PRE_DAYS; d <= 0; d++) {
+    const isToday = d === 0;
+    preRows.push({
+      day: d, date: addDays(today, d), advanceToday: isToday ? initAdvance : 0, feeToday: isToday ? initDailyFee : 0,
+      accruedFees: isToday ? initDailyFee : 0, outstanding: isToday ? initAdvance : 0,
+      totalBalance: isToday ? initTotalBalance : 0,
+      standardEligible: 0, deferredEligible: 0,
+      isPayout: false, payoutAmount: 0, collection: 0,
+      deferredRelease: 0,
+      cumCashDA: isToday ? initAdvance : 0, cumCashNo: 0, isPreDA: !isToday, isCollectionDay: false,
+    });
+  }
+
+  const rows = [];
+
+  for (let d = 1; d <= totalDays; d++) {
+    const date = addDays(today, d);
+    daysSinceLastPayout++;
+
+    let advanceToday = 0, collectionToday = 0, isCollectionDay = false;
+    let isPayout = false, payoutAmount = 0;
+    let outstandingAfterRepayment = outstanding;
+
+    // 1. Payout first (if due) — clears previous std balance before today's sales
+    if (daysSinceLastPayout >= PAYOUT_CYCLE) {
+      isPayout = true;
+      payoutAmount = standardEligible;
+      cumCashNo += payoutAmount;
+      standardEligible = 0;
+      daysSinceLastPayout = 0;
+
+      // Repayment: fees paid first, then principal gap to new target (deferred only)
+      const postPayoutTarget = currentDeferredBal * advRate;
+      if (postPayoutTarget < outstanding) {
+        const feeCollection = accruedFees;
+        const prinCollection = outstanding - postPayoutTarget;
+        collectionToday = prinCollection + feeCollection;
+        outstanding = postPayoutTarget;
+        accruedFees = 0;
+        totalCollections += collectionToday;
+        isCollectionDay = true;
+      }
+      outstandingAfterRepayment = outstanding;
+      cumCashDA += payoutAmount - collectionToday;
+    }
+
+    // 2. Today's sales accrue
+    standardEligible += dailyRev;
+
+    // 3. Daily advance to new eligible target
+    const closingEligible = standardEligible + currentDeferredBal;
+    const target = closingEligible * advRate;
+    if (target > outstanding) {
+      advanceToday = target - outstanding;
+      outstanding = target;
+      totalAdvanced += advanceToday;
+      cumCashDA += advanceToday;
+    }
+
+    // 4. Fee accrues on final outstanding
+    const feeToday = outstanding * feeRate;
+    accruedFees += feeToday;
+    runningFees += feeToday;
+    if (d === SNAP_DAYS) { snapAdvanced = totalAdvanced; snapFees = runningFees; }
+
+    // 5. Total balance
+    const totalBalance = outstanding + accruedFees;
+
+    rows.push({
+      day: d, date, advanceToday, feeToday, accruedFees, outstanding,
+      totalBalance, standardEligible, deferredEligible: currentDeferredBal,
+      isPayout, payoutAmount,
+      collection: collectionToday, isCollectionDay,
+      outstandingAfterRepayment,
+      deferredRelease: 0,
+      cumCashDA, cumCashNo, isPreDA: false,
+    });
+  }
+
+  return {
+    preRows, rows, totalAdvanced,
+    totalFees: runningFees,
+    snapAdvanced: snapAdvanced ?? totalAdvanced,
+    snapFees: snapFees ?? runningFees,
+    outstanding, accruedFees, daysToNext,
+    initStdBal, initDefBal, dailyRev, advRate, initAdvance, initDailyFee, initTotalBalance,
+  };
+}
+
+let currentView = 'detailed';
+let currentChart = 'cashflow';
+let chartInstance = null;
+let scheduleExpanded = false;
+const SCHEDULE_SHORT_DAYS = 30;
+
+function setView(v) {
+  currentView = v;
+  document.querySelectorAll('.btn-toggle').forEach(b => b.classList.toggle('active', b.dataset.view === v));
+  render();
+}
+function setChart(c) {
+  currentChart = c;
+  document.querySelectorAll('.chart-tab').forEach(b => b.classList.toggle('active', b.dataset.chart === c));
+  render();
+}
+
+function render() {
+  const data = buildSchedule();
+  renderSnapshot(data);
+  updateEligible();
+  updateHeroRate();
+  renderChart(data);
+  renderSchedule(data);
+}
+
+function updateHeroRate() {
+  const rate = parsePct($('advanceRate').value) + '%';
+  $('heroRate1').textContent = rate;
+  $('heroRate2').textContent = rate;
+}
+
+function updateEligible() {
+  const std = parseNum($('standardBalance').value);
+  const def = parseNum($('deferredBalance').value);
+  $('eligibleDisplay').textContent = '$' + fmtInt(std + def);
+}
+
+function renderSnapshot(data) {
+  const dailyAdv = data.dailyRev * data.advRate;
+  const feePct = data.snapAdvanced > 0
+    ? (data.snapFees / data.snapAdvanced * 100).toFixed(2) : '0.00';
+  const totalToRepay = data.snapAdvanced + data.snapFees;
+
+  $('snapshotBar').innerHTML = `
+    <div class="snap-group">
+      <div class="snap-group-label">Your Advance</div>
+      <div class="snap-tiles">
+        <div class="snap-tile">
+          <div class="snap-tile-label">Day 1 Advance</div>
+          <div class="snap-tile-value">$${fmtInt(data.initAdvance)}</div>
+        </div>
+        <div class="snap-tile">
+          <div class="snap-tile-label">Daily Advance</div>
+          <div class="snap-tile-value">$${fmtInt(dailyAdv)}</div>
+        </div>
+      </div>
+    </div>
+    <div class="snap-group">
+      <div class="snap-group-label">Over 12 Months</div>
+      <div class="snap-tiles">
+        <div class="snap-tile">
+          <div class="snap-tile-label">Total Advanced</div>
+          <div class="snap-tile-value">$${fmtInt(data.snapAdvanced)}</div>
+        </div>
+        <div class="snap-tile">
+          <div class="snap-tile-label">Total Fees</div>
+          <div class="snap-tile-value">$${fmtInt(data.snapFees)}</div>
+        </div>
+<div class="snap-tile">
+          <div class="snap-tile-label">
+            <span class="tip-wrap">Total Fees %<span class="tip-i">?</span><span class="tip-body">Total fees ÷ total advances over ${NUM_CYCLES} payout cycles. This is the all-in cost of using Daily Advance.</span></span>
+          </div>
+          <div class="snap-tile-value">${feePct}%</div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function renderChart(data) {
+  const ctx = $('chart').getContext('2d');
+  if (chartInstance) chartInstance.destroy();
+  if (currentChart === 'cashflow') {
+    $('chartTitle').textContent = 'Cash Advantage Over the Next 2 Months';
+    renderCashflowChart(ctx, data);
+  } else {
+    $('chartTitle').textContent = 'Total Balance (inc. Fees)';
+    renderBalanceChart(ctx, data);
+  }
+}
+
+function renderCashflowChart(ctx, data) {
+  const allRows = [...data.preRows, ...data.rows].slice(0, PRE_DAYS + 61);
+  const labels = allRows.map(r => fmtDate(r.date));
+  const daStartIdx = PRE_DAYS;
+
+  chartInstance = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [
+        {
+          label: 'With Daily Advance',
+          data: allRows.map(r => r.cumCashDA),
+          borderColor: '#128081',
+          backgroundColor: 'rgba(18, 128, 129, 0.10)',
+          fill: true, tension: 0.15,
+          pointRadius: 0, pointHoverRadius: 5, borderWidth: 2.5,
+        },
+        {
+          label: 'Without Daily Advance',
+          data: allRows.map(r => r.cumCashNo),
+          borderColor: '#c0c8d0',
+          fill: false, tension: 0,
+          pointRadius: 0, pointHoverRadius: 5, borderWidth: 2,
+          borderDash: [6, 4],
+        }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: {
+          position: 'bottom',
+          labels: { font: { family: 'Sora', size: 11 }, usePointStyle: true, pointStyle: 'circle', padding: 12 }
+        },
+        tooltip: {
+          backgroundColor: '#193a43',
+          titleFont: { family: 'Sora', size: 12 },
+          bodyFont: { family: 'Sora', size: 12 },
+          padding: 10, cornerRadius: 8,
+          callbacks: {
+            label: c => `${c.dataset.label}: $${fmt(c.parsed.y)}`,
+            afterBody: items => {
+              if (items.length >= 2) {
+                const diff = items[0].parsed.y - items[1].parsed.y;
+                if (diff > 0) return ['\nCash advantage: $' + fmt(diff)];
+              }
+              return [];
+            }
+          }
+        },
+        annotation: {
+          annotations: {
+            daLine: {
+              type: 'line',
+              xMin: daStartIdx, xMax: daStartIdx,
+              borderColor: '#128081', borderWidth: 1.5, borderDash: [4, 4],
+              label: {
+                display: true, content: 'Daily Payout Unlocked',
+                position: 'end', backgroundColor: '#128081', color: '#fff',
+                font: { family: 'Sora', size: 10, weight: '600' },
+                padding: { x: 8, y: 4 }, borderRadius: 4,
+              }
+            }
+          }
+        }
+      },
+      scales: {
+        x: { grid: { display: false }, ticks: { font: { family: 'Sora', size: 10 }, color: '#5b6785', maxTicksLimit: 10 } },
+        y: { grid: { color: '#f0f0f0' }, ticks: { font: { family: 'Sora', size: 10 }, color: '#5b6785', callback: v => v >= 1000 ? '$' + (v/1000).toFixed(0) + 'k' : '$' + v } }
+      }
+    }
+  });
+}
+
+function renderBalanceChart(ctx, data) {
+  const allRows = [...data.preRows, ...data.rows].slice(0, PRE_DAYS + 61);
+  const labels = allRows.map(r => fmtDate(r.date));
+  const daStartIdx = PRE_DAYS;
+
+  chartInstance = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [
+        {
+          label: 'Outstanding Advance',
+          data: allRows.map(r => r.outstanding),
+          backgroundColor: 'rgba(18, 128, 129, 0.65)',
+          borderWidth: 0, borderRadius: 1, stack: 'stack',
+        },
+        {
+          label: 'Accrued Fees',
+          data: allRows.map(r => r.accruedFees),
+          backgroundColor: 'rgba(232, 145, 12, 0.7)',
+          borderWidth: 0, borderRadius: 1, stack: 'stack',
+        }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: {
+          position: 'bottom',
+          labels: { font: { family: 'Sora', size: 11 }, usePointStyle: true, pointStyle: 'rectRounded', padding: 12 }
+        },
+        tooltip: {
+          backgroundColor: '#193a43',
+          titleFont: { family: 'Sora', size: 12 },
+          bodyFont: { family: 'Sora', size: 12 },
+          padding: 10, cornerRadius: 8,
+          callbacks: {
+            label: c => `${c.dataset.label}: $${fmt(c.parsed.y)}`,
+            afterBody: items => ['\nTotal balance: $' + fmt(items.reduce((s, i) => s + i.parsed.y, 0))]
+          }
+        },
+        annotation: {
+          annotations: {
+            daLine: {
+              type: 'line',
+              xMin: daStartIdx, xMax: daStartIdx,
+              borderColor: '#128081', borderWidth: 1.5, borderDash: [4, 4],
+              label: {
+                display: true, content: 'Daily Payout Unlocked',
+                position: 'end', backgroundColor: '#128081', color: '#fff',
+                font: { family: 'Sora', size: 10, weight: '600' },
+                padding: { x: 8, y: 4 }, borderRadius: 4,
+              }
+            }
+          }
+        }
+      },
+      scales: {
+        x: { grid: { display: false }, stacked: true, ticks: { font: { family: 'Sora', size: 10 }, color: '#5b6785', maxTicksLimit: 10 } },
+        y: { stacked: true, grid: { color: '#f0f0f0' }, ticks: { font: { family: 'Sora', size: 10 }, color: '#5b6785', callback: v => v >= 1000 ? '$' + (v/1000).toFixed(0) + 'k' : '$' + v } }
+      }
+    }
+  });
+}
+
+function toggleScheduleExpand() {
+  scheduleExpanded = !scheduleExpanded;
+  $('scheduleExpandBtn').textContent = scheduleExpanded ? 'Show 1 Month' : 'Show Full Year';
+  render();
+}
+
+function renderSchedule(data) {
+  currentView === 'detailed' ? renderDetailed(data) : renderPayoutSummary(data);
+  applyBalState();
+}
+
+let balExpanded = false;
+function applyBalState() {
+  document.querySelectorAll('.bal-agg').forEach(el => el.style.display = balExpanded ? 'none' : '');
+  document.querySelectorAll('.bal-std, .bal-def').forEach(el => el.style.display = balExpanded ? '' : 'none');
+  const agg = document.getElementById('th-bal-agg');
+  const std = document.getElementById('th-std');
+  const def = document.getElementById('th-def');
+  if (agg) agg.style.display = balExpanded ? 'none' : '';
+  if (std) std.style.display = balExpanded ? '' : 'none';
+  if (def) def.style.display = balExpanded ? '' : 'none';
+}
+function toggleBal() {
+  balExpanded = !balExpanded;
+  applyBalState();
+}
+
+function renderDetailed(data) {
+  let html = `<table>
+    <thead><tr>
+      <th style="text-align:left">Date</th>
+      <th id="th-bal-agg" style="cursor:pointer" onclick="toggleBal()">Total Balance <span style="display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;border-radius:50%;background:#e9edf3;font-size:10px;font-weight:700;color:#128081;flex-shrink:0">+</span></th>
+      <th id="th-std" style="display:none;cursor:pointer" onclick="toggleBal()">Std Balance <span style="display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;border-radius:50%;background:#e9edf3;font-size:10px;font-weight:700;color:#128081;flex-shrink:0">−</span></th>
+      <th id="th-def" style="display:none">Def Balance</th>
+      <th>Payout</th>
+      <th class="col-sep" style="text-align:left">Event</th>
+      <th>Advance</th>
+      <th>Repayment</th>
+      <th class="col-sep">Outstanding Advance</th>
+      <th>Daily Fee</th>
+      <th>Accrued Fee</th>
+    </tr></thead><tbody>`;
+
+  // Today row — initial lump sum issued today
+  const todayElig = data.initStdBal + data.initDefBal;
+  html += `<tr>
+    <td class="col-date">${fmtDate(today)}</td>
+    <td class="bal-agg">$${fmtInt(todayElig)}</td>
+    <td class="bal-std" style="display:none">$${fmtInt(data.initStdBal)}</td>
+    <td class="bal-def" style="display:none">$${fmtInt(data.initDefBal)}</td>
+    <td>—</td>
+    <td class="col-sep"><span class="badge badge-advance">Initial Lump Sum</span></td>
+    <td>$${fmtInt(data.initAdvance)}</td>
+    <td>—</td>
+    <td class="col-sep-right">$${fmtInt(data.initAdvance)}</td>
+    <td>$${fmt(data.initDailyFee)}</td>
+    <td>$${fmt(data.initDailyFee)}</td>
+  </tr>`;
+
+  const maxDay = scheduleExpanded ? Infinity : SCHEDULE_SHORT_DAYS;
+  let prevStdBalance = null;
+  for (const r of data.rows) {
+    if (r.day > maxDay) break;
+    // Build ordered event list
+    const evts = [];
+    if (r.isCollectionDay) evts.push({ type: 'collection', badge: '<span class="badge badge-collection">Payout</span>' });
+    if (r.advanceToday > 0) evts.push({ type: 'advance', badge: '<span class="badge badge-advance">Daily Advance</span>' });
+    else if (!r.isCollectionDay) evts.push({ type: 'accrual', badge: '<span class="badge badge-advance">Accrual</span>' });
+
+    const n = evts.length;
+    const isMultiEvent = n > 1;
+    // Payout amount = prior day's standard balance (what gets paid out)
+    const payoutAmount = (r.isPayout && prevStdBalance !== null) ? prevStdBalance : 0;
+    // Pre-payout eligible = prior std balance + deferred (before payout clears std to 0)
+    const prePayoutElig = (prevStdBalance !== null ? prevStdBalance : 0) + r.deferredEligible;
+    const prePayoutStd = prevStdBalance !== null ? prevStdBalance : 0;
+    // Post-sales eligible = end-of-day values (after payout cleared std, then sales accrued)
+    const postSalesElig = r.standardEligible + r.deferredEligible;
+
+    prevStdBalance = r.standardEligible;
+
+    evts.forEach((evt, i) => {
+      const advCell = evt.type === 'advance' && r.advanceToday > 0 ? '$' + fmtInt(r.advanceToday) : '—';
+      const colCell = evt.type === 'collection' && r.collection > 0 ? '$' + fmtInt(r.collection) : '—';
+      const isLast = i === n - 1;
+      const showRight = evt.type === 'collection' || isLast;
+
+      let rightCells;
+      if (!showRight) {
+        rightCells = `<td class="col-sep-right">—</td><td>—</td><td>—</td>`;
+      } else if (evt.type === 'collection') {
+        rightCells = `<td class="col-sep-right">$${fmtInt(r.outstandingAfterRepayment)}</td><td>—</td><td>$${fmt(0)}</td>`;
+      } else {
+        rightCells = `<td class="col-sep-right">$${fmtInt(r.outstanding)}</td><td>$${fmt(r.feeToday)}</td><td>$${fmt(r.accruedFees)}</td>`;
+      }
+
+      // Per-event values for eligible balance, net sales, payout
+      let evtElig, evtStd, evtPayout;
+      if (evt.type === 'collection') {
+        // Payout event: std balance is 0 after payout, show payout amount
+        evtElig = r.deferredEligible; // std cleared to 0, only deferred remains
+        evtStd = 0;
+        evtPayout = '$' + fmtInt(payoutAmount);
+      } else {
+        // Daily Advance / Accrual: show end-of-day balances, no payout
+        evtElig = postSalesElig;
+        evtStd = r.standardEligible;
+        evtPayout = '—';
+      }
+
+      const rowClasses = [];
+      if (r.isCollectionDay || r.isPayout) rowClasses.push('payout-row');
+      if (isMultiEvent) rowClasses.push('multi-event-row');
+      const rowCls = rowClasses.length ? ` class="${rowClasses.join(' ')}"` : '';
+
+      if (i === 0) {
+        html += `<tr${rowCls}>
+          <td class="col-date"${isMultiEvent ? ` rowspan="${n}"` : ''}>${fmtDate(r.date)}</td>
+          <td class="bal-agg">$${fmtInt(evtElig)}</td>
+          <td class="bal-std" style="display:none">$${fmtInt(evtStd)}</td>
+          <td class="bal-def" style="display:none">$${fmtInt(r.deferredEligible)}</td>
+          <td>${evtPayout}</td>
+          <td class="col-sep">${evt.badge}</td>
+          <td>${advCell}</td>
+          <td>${colCell}</td>
+          ${rightCells}
+        </tr>`;
+      } else {
+        html += `<tr${rowCls}>
+          <td class="bal-agg">$${fmtInt(evtElig)}</td>
+          <td class="bal-std" style="display:none">$${fmtInt(evtStd)}</td>
+          <td class="bal-def" style="display:none">$${fmtInt(r.deferredEligible)}</td>
+          <td>${evtPayout}</td>
+          <td class="col-sep">${evt.badge}</td>
+          <td>${advCell}</td>
+          <td>${colCell}</td>
+          ${rightCells}
+        </tr>`;
+      }
+    });
+  }
+  html += '</tbody></table>';
+  $('scheduleTable').innerHTML = html;
+}
+
+function renderPayoutSummary(data) {
+  const cycles = [];
+  let cycleRows = [];
+  let prevStdBalance = null;
+
+  const maxDay = scheduleExpanded ? Infinity : SCHEDULE_SHORT_DAYS;
+  for (const r of data.rows) {
+    if (r.day > maxDay) break;
+    cycleRows.push({ row: r, prevStd: prevStdBalance });
+    prevStdBalance = r.standardEligible;
+    if (r.isPayout) { cycles.push(cycleRows); cycleRows = []; }
+  }
+  if (cycleRows.length) cycles.push(cycleRows);
+
+  let html = `<table>
+    <thead><tr>
+      <th style="text-align:left">Payout Date</th>
+      <th>Days</th>
+      <th>Total Advanced</th>
+      <th>Fees Accrued</th>
+      <th>Marketplace Payout</th>
+      <th>Repaid to Uncapped</th>
+      <th>Outstanding Balance</th>
+    </tr></thead><tbody>`;
+
+  // Day 0 fee carries forward into cycle 1 (same as payout-day fee carries into next cycle)
+  let carryFee = data.initDailyFee;
+
+  for (let i = 0; i < cycles.length; i++) {
+    const cycle = cycles[i];
+    const last = cycle[cycle.length - 1].row;
+    const lastEntry = cycle[cycle.length - 1];
+    let totalAdv = cycle.reduce((s, e) => s + e.row.advanceToday, 0);
+    if (i === 0) totalAdv += data.initAdvance;
+    // Fees = carry-forward from previous payout day + all non-payout-day fees in this cycle
+    // (payout day's feeToday is post-repayment and carries into the next cycle)
+    let totalFees = carryFee + cycle.reduce((s, e) => e.row.isPayout ? s : s + e.row.feeToday, 0);
+    carryFee = last.isPayout ? last.feeToday : 0;
+    // Marketplace payout = prevStd on payout day (same as detailed table's payoutCell)
+    const marketplacePayout = last.isPayout && lastEntry.prevStd !== null ? lastEntry.prevStd : null;
+    // Repayment = collection on payout day (fees + principal shortfall)
+    const repaid = cycle.reduce((s, e) => s + e.row.collection, 0);
+    // Outstanding = total balance at end of cycle (outstanding advance + accrued fees)
+    const rollover = last.totalBalance;
+
+    html += `<tr${last.isPayout ? ' class="payout-row"' : ''}>
+      <td class="col-date">${last.isPayout ? fmtDate(last.date) : 'Ongoing'}</td>
+      <td>${cycle.length}</td>
+      <td>$${fmtInt(totalAdv)}</td>
+      <td>$${fmt(totalFees)}</td>
+      <td>${marketplacePayout !== null ? '$' + fmtInt(marketplacePayout) : '—'}</td>
+      <td>${repaid > 0 ? '$' + fmtInt(repaid) : '—'}</td>
+      <td>$${fmtInt(rollover)}</td>
+    </tr>`;
+  }
+  html += '</tbody></table>';
+  $('scheduleTable').innerHTML = html;
+}
+
+function exportCSV() {
+  const data = buildSchedule();
+  const cols = ['Date','Total Balance','Std Balance','Def Balance','Payout','Event','Advance','Repayment','Outstanding Advance','Daily Fee','Accrued Fee'];
+  const rows = [];
+
+  // Today row
+  const todayElig = data.initStdBal + data.initDefBal;
+  rows.push([
+    fmtDateISO(today),
+    Math.round(todayElig), Math.round(data.initStdBal), Math.round(data.initDefBal),
+    '',
+    'Initial Lump Sum',
+    Math.round(data.initAdvance), '',
+    Math.round(data.initAdvance),
+    data.initDailyFee.toFixed(2), data.initDailyFee.toFixed(2),
+  ]);
+
+  let prevStdBalance = null;
+  for (const r of data.rows) {
+    const payoutAmount = (r.isPayout && prevStdBalance !== null) ? prevStdBalance : 0;
+    const postSalesElig = r.standardEligible + r.deferredEligible;
+    prevStdBalance = r.standardEligible;
+
+    const evts = [];
+    if (r.isCollectionDay) evts.push('Payout');
+    if (r.advanceToday > 0) evts.push('Daily Advance');
+    if (evts.length === 0) evts.push('Accrual');
+
+    evts.forEach((evt) => {
+      const isPayout = evt === 'Payout';
+      const advance = evt === 'Daily Advance' ? Math.round(r.advanceToday) : '';
+      const repayment = isPayout && r.collection > 0 ? Math.round(r.collection) : '';
+      const outstanding = isPayout ? Math.round(r.outstandingAfterRepayment) : Math.round(r.outstanding);
+      const dailyFee = isPayout ? '' : r.feeToday.toFixed(2);
+      const accruedFee = isPayout ? (0).toFixed(2) : r.accruedFees.toFixed(2);
+
+      // Per-event values matching the table
+      const evtElig = isPayout ? Math.round(r.deferredEligible) : Math.round(postSalesElig);
+      const evtStd = isPayout ? 0 : Math.round(r.standardEligible);
+      const evtDef = Math.round(r.deferredEligible);
+      const evtPayout = isPayout ? Math.round(payoutAmount) : '';
+
+      rows.push([
+        fmtDateISO(r.date),
+        evtElig, evtStd, evtDef,
+        evtPayout,
+        evt, advance, repayment, outstanding, dailyFee, accruedFee,
+      ]);
+    });
+  }
+
+  const csv = [cols, ...rows].map(r => r.join(',')).join('\n');
+  const blob = new Blob([csv], { type: 'text/csv' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'daily-advance-schedule.csv';
+  a.click();
+}
+
+function validateNonNeg(id, getValue) {
+  const input = $(id);
+  const err = $('err-' + id);
+  const v = getValue(input.value);
+  if (v < 0) {
+    input.classList.add('input-error');
+    err.classList.add('visible');
+    input.value = getValue === parseNum ? '$0' : (getValue === parsePct ? '0%' : '0');
+    return false;
+  }
+  input.classList.remove('input-error');
+  err.classList.remove('visible');
+  return true;
+}
+
+// Format currency inputs on blur
+['dailyRevenue', 'standardBalance', 'deferredBalance'].forEach(id => {
+  $(id).addEventListener('blur', function() {
+    validateNonNeg(id, parseNum);
+    const v = parseNum(this.value);
+    if (v >= 0) this.value = '$' + fmtInt(v);
+  });
+  $(id).addEventListener('input', function() {
+    if (parseNum(this.value) >= 0) {
+      $(id).classList.remove('input-error');
+      $('err-' + id).classList.remove('visible');
+    }
+  });
+});
+
+['advanceRate', 'feeRate'].forEach(id => {
+  $(id).addEventListener('blur', function() {
+    validateNonNeg(id, parsePct);
+    const v = parsePct(this.value);
+    if (v >= 0) this.value = v + '%';
+  });
+  $(id).addEventListener('input', function() {
+    if (parsePct(this.value) >= 0) {
+      $(id).classList.remove('input-error');
+      $('err-' + id).classList.remove('visible');
+    }
+  });
+});
+document.querySelectorAll('input, select').forEach(el => {
+  el.addEventListener('input', render);
+  el.addEventListener('change', render);
+});
+
+render();
+</script>
+</body>
+</html>

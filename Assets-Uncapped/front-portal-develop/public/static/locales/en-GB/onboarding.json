@@ -1,0 +1,1391 @@
+{
+  "salesConnections": {
+    "title": "Revenue sources",
+    "titleAmazon": "Other revenue sources",
+    "description": "Connect all the sales platforms you receive revenue from. We’ll match these with the bank accounts you use to receive payouts in the next step",
+    "descriptionAmazon": "Connect all the other sales platforms you receive revenue from. We’ll match these with the bank accounts you use to receive payouts in the next step",
+    "revenue": "Your monthly revenue",
+    "arrow": "Where do you get revenue from?",
+    "arrowAmazon": "Where else do you get revenue from?",
+    "other": "Other options",
+    "submit": "I’ve connected all revenue sources",
+    "connectYourStoreRegion": "Connect your store region",
+    "addedAllAmazon": "I’ve added all my Amazon stores"
+  },
+  "accountingConnections": {
+    "titleEarly": "Connect accounting to access your full offer",
+    "title": "Connect accounting tools",
+    "titleAll": "Other accounting options",
+    "description": "Accounting data is required to access the highest offers",
+    "descriptionAll": "Using connections helps up provide you with the highest offer amount in the shortest time",
+    "card": {
+      "titleMax": "Unlock up to",
+      "titleMin": "Secure up to",
+      "subtitle": "and access top-ups later",
+      "descriptionMax": "Simply <b>connect your accounting software</b> or upload recent financials to <b>access your best funding offer</b>",
+      "descriptionMin": "<b>No accounting software? No problem!</b> Get an initial offer now and <b>unlock top-ups as you repay</b>"
+    },
+    "lowerOfferConfirmation": {
+      "title": "Are you sure you want to continue with a lower offer?",
+      "content": "You will not be able to return and connect your accounting platform to access a higher offer",
+      "cancel": "Go back",
+      "submit": "Continue with a lower offer"
+    },
+    "lowerOfferSelected": {
+      "title": "You chose to receive offers up to",
+      "description": "We don’t need accounting data for lower offers. You will still have <b>access to top-up offers after you start repayments</b>"
+    },
+    "actions": {
+      "continue": "Connect accounting",
+      "skip": "Skip accounting"
+    },
+    "skip": "I’ll do this later",
+    "other": "Other options",
+    "invite": {
+      "title": "Employ an accountant?",
+      "content": "They can reconcile your accounts and connect your accounting platform for you",
+      "button": "Securely invite your accountant"
+    },
+    "help": {
+      "title": "Need help?",
+      "inviteAccountant": "Securely invite your accountant",
+      "inviteUser": "Invite another team member",
+      "openChat": "Contact our support team"
+    },
+    "documents": {
+      "title": "Don’t use accounting software?",
+      "description": "You can upload your accounting information as documents instead. Please be aware this will slow down our underwriting time and could result in a lower offer.",
+      "button": "Upload accounting documents",
+      "buttonDesc": "Instead of using accounting connections",
+      "pageTitle": "Upload accounting documents",
+      "continue": "Continue"
+    }
+  },
+  "banking": {
+    "title": "Bank accounts",
+    "description": "Connect all the bank accounts you’ve used to run your business <b>in the last 12 months</b>. Starting with accounts used to receive revenue.",
+    "modals": {
+      "BankAccountsLabelingModal": {
+        "title": "Mark accounts as personal or unrecognized",
+        "content": "Marking relevant business accounts as personal or unrecognized <b>could result in your application being rejected</b>",
+        "itemTitle": "<b>Missing account ending in</b> - **** {{lastFourDigits}}",
+        "actions": {
+          "personal": "Personal",
+          "unrecognized": "Unrecognized"
+        },
+        "submit": "Done"
+      }
+    },
+    "connectCta": "Connect a bank",
+    "connectOther": "Banks from other countries",
+    "addAnotherBank": "Add another bank",
+    "whereDoSalesPayoutsGo": "Where do sales payouts go?",
+    "bankConnections": "Bank connections",
+    "security": {
+      "title": "Bank-Level Security",
+      "description": "Your data is encrypted and secure. We use secure connection providers trusted by millions of users worldwide"
+    },
+    "detectingOtherBanks": {
+      "title": "We’re detecting your other business banks",
+      "content": "Save time and connect other banks you use to run your business now"
+    },
+    "faq": {
+      "title": "Bank Connection FAQs",
+      "items": [
+        {
+          "question": "Why do I need to connect bank accounts to Uncapped?",
+          "answer": "Creating a read-only bank connection allows us to analyze your revenue using our underwriting models and provide you with much faster and higher offers compared to  slow, error-prone and insecure methods like bank statement uploads."
+        },
+        {
+          "question": "How do you secure my data?",
+          "answer": "We use trusted connection providers and best-in-class encryption protocols like the Advanced Encryption Standard (AES 256) and Transport Layer Security (TLS) to securely access read-only transaction data."
+        },
+        {
+          "question": "What can I do if my bank isn’t available?",
+          "answer": "If your bank isn’t available try using our <bank-search-link>other connection methods</bank-search-link> which support banks from other countries. We do not support submitting bank statements at this time."
+        }
+      ]
+    },
+    "missingBankNotice": {
+      "title": "Missing bank detection",
+      "content": "Speed up your application by connecting all your business banks now. We automatically detect banks that haven’t been connected during underwriting."
+    },
+    "payoneerAlternative": {
+      "title": "Looking for Payoneer?",
+      "description": "Payoneer isn’t available through our default provider, but you can connect it directly here — works for both UK and US businesses.",
+      "cta": "Connect Payoneer"
+    },
+    "submit": "I’ve connected all my business banks"
+  },
+  "bankingSearch": {
+    "title": "Bank accounts",
+    "description": "Connect all the bank accounts and credit cards you’ve used to run your business <b>in the last 12 months</b>. Starting with accounts used to receive revenue."
+  },
+  "businessDetails": {
+    "title": "Business details",
+    "content": "Complete any missing information we need to identify your business",
+    "editAddress": "Edit address",
+    "address": {
+      "title": "Registered address",
+      "description": "We need the legal business address <b>with the state that is on your certificate of incorporation or articles of association</b>"
+    },
+    "submit": "Confirm business details",
+    "businessInfo": {
+      "title": "Find your business",
+      "subtitle": "We need this information to prepare your offer contracts",
+      "businessCountry": "Country of incorporation",
+      "search": "Search",
+      "registeredBusinessName": "Registered business name",
+      "legalCorporateName": "Legal corporate name",
+      "entityType": "Entity type",
+      "companiesHouseNumber": "Companies House Number",
+      "selectYourBusiness": "Select your business",
+      "companyRegistrationNo": "Company registration no.",
+      "companyEinNo": "Company or EIN number",
+      "dateOfCreation": "Date of incorporation",
+      "goToManual": "Enter company manually",
+      "goToAutomatic": "Search company name",
+      "cantFindBusiness": "I can’t find my business",
+      "submit": "Confirm business",
+      "noData": "No results"
+    },
+    "registeredAddress": {
+      "title": "Add registered address",
+      "titleUsa": "Add legal business address",
+      "infoUsa": "We need the legal business address <b>with the state</b> that is on your certificate of incorporation or articles of association",
+      "goToManual": "Enter address manually",
+      "submit": "Confirm registered address",
+      "submitUsa": "Confirm business address"
+    },
+    "reviewBusiness": {
+      "title": "Review business details",
+      "editBusinessInfo": "Edit information",
+      "legalBusinessName": "Legal business name",
+      "legalCorporateName": "Legal corporate name",
+      "companiesHouseNumber": "Companies House Number",
+      "companyRegistrationNo": "Company registration no.",
+      "einNumber": "Company or EIN number",
+      "registeredAddress": "Registered address",
+      "legalBusinessAddress": "Legal business address",
+      "dateOfCreation": "Incorporation date",
+      "submit": "Confirm business"
+    }
+  },
+  "offers": {
+    "setupFeeDescription": {
+      "conditional": "This <b>{{amount}}</b> fee is a one-off fee charged only if you don’t draw at least {{percentage}} of your Maximum Credit Limit within {{days}} days of activation.",
+      "unconditional": "This <b>{{amount}}</b> fee is a one-off fee charged once your application is approved."
+    },
+    "LocFirstDraw": {
+      "title": "Request a first draw",
+      "copy": "Do you want your first draw to be available to spend immediately once your application is approved?",
+      "copyAmazon": "Please choose the amount you’d like to have deposited as your first draw once your application is approved",
+      "requestLater": "Request draw later",
+      "sidebarTitle": "About this plan"
+    },
+    "LocFirstDrawV2": {
+      "title": "Request a first draw",
+      "description": "Please choose the amount you’d like to have deposited as your first draw once your application is approved",
+      "firstDrawAmount": "First draw amount",
+      "widgetTitle": "Choose draw amount",
+      "widgetDescription": "Choose the amount you’d like to have deposited as your first draw once your application is approved",
+      "availableToDraw": "Available to draw",
+      "growToUnlock": "Grow to unlock",
+      "existingBalance": "Existing balance",
+      "unlockWithHigherPayouts": "Unlock with higher payouts",
+      "drawAmount": "Draw amount",
+      "setupFeeWarning": "You will be charged the set-up fee unless you draw a total of at least {{amount}} ({{percentage}} of your facility limit) within the first X business days after your loan is activated. This total can be reached through one or multiple draws.",
+      "repaymentDetails": {
+        "title": "Repayment details",
+        "initialRepayment": "Initial repayment",
+        "firstRepayment": "First repayment ({{percentage}} of {{amount}})",
+        "firstDrawAmount": "First draw amount",
+        "firstRepaymentDescription": "Calculated against your existing balance plus your new draw amount",
+        "subsequentRepayments": "Subsequent repayments will be {{percentage}} of the remaining principal balance",
+        "frequency": {
+          "DAILY": "On day 1",
+          "WEEKLY": "On day 7",
+          "EVERY_14_DAYS": "On day 14",
+          "EVERY_15_DAYS": "On day 15",
+          "MONTHLY": "On day 30",
+          "ON_DEMAND": "On demand",
+          "UNKNOWN": "N/A"
+        }
+      },
+      "actions": {
+        "continue": "Continue",
+        "requestLater": "Request draw later"
+      }
+    },
+    "PreOffer": {
+      "title": "Underwriting offers up to",
+      "subtitle": "Repayment term <b>up to 12 months</b>",
+      "eta": {
+        "title": "ETA",
+        "unknown": "Unknown",
+        "awaitingUpdates": "Awaiting updates",
+        "hours": "{{hours}} hours"
+      },
+      "stages": {
+        "ERROR": {
+          "title": "Underwriting paused",
+          "subtitle": "Waiting for you to complete the gaps in your data"
+        },
+        "BANK_VERIFICATION": {
+          "title": "Checking for missing bank accounts..."
+        },
+        "DATA_COMPLETENESS": {
+          "title": "Checking we have all the data we need..."
+        },
+        "UNDERWRITING": {
+          "title": "Underwriting your application..."
+        }
+      },
+      "overdue": "We are currently experiencing high demand which has resulted in your application taking longer than expected.",
+      "bookCall": "Schedule a call to discuss your application",
+      "documents": {
+        "title": "Our team have requested more information",
+        "content": "Our team have requested more information before we can present you with an offer. <b>Upload the following documents to proceed with your application.</b>"
+      },
+      "missingBank": {
+        "title": "Missing banks",
+        "content": "We’ve detected missing bank accounts during our analysis. <b>Connect all bank accounts used in the last 12 months</b> to continue with your application",
+        "types": {
+          "SALES_PAYOUT_BANK_ACCOUNT": "Connect missing Amazon payout account",
+          "MISSING_BANK_ACCOUNTS": "Connect missing accounts"
+        },
+        "button": "Connect",
+        "notes": {
+          "MISSING_BANK_ACCOUNTS": "If some accounts are not relevant you can <0>mark them as personal or unrecognized</0>"
+        }
+      },
+      "connectionErrors": {
+        "title": "Connection error",
+        "content": "We’ve discovered an error with some of your connections. In order to continue underwriting your application, please resolve all connection errors."
+      },
+      "subscribe": {
+        "title": "Get notified about next steps",
+        "content": "We’ll notify you when underwriting is complete or we need more information. The quickest way to receive updates is via SMS",
+        "consent": "Agree to receive SMS messages from Uncapped. Message frequency varies. Standard message and data rates apply. <0>Privacy policy</0>",
+        "submit": "I Agree"
+      },
+      "notification": {
+        "title": "What happens now?",
+        "content": "We’ll notify you via SMS and email when underwriting is complete or if we need more information. In rare cases, our analysis can take longer than expected due to high demand, this does not mean your application will be rejected."
+      }
+    },
+    "selected": {
+      "title": "Selected offer",
+      "button": "Continue"
+    },
+    "goBack": "Go back",
+    "title_one": "Your offer",
+    "title_other": "Select your offer",
+    "yourApplication": "Your application",
+    "automatic": "<b>Your offer is pre-approved!</b> You can access your cash now with no wait for underwriting. If you need a higher amount, you can always top-up your loan later",
+    "refinancingTopup": "Refinancing & Top-Up {{symbol}}",
+    "refinanceToLineOfCredit": "Refinance to Line of Credit {{symbol}}",
+    "refinancing": "Refinancing {{symbol}}",
+    "businessLoan": "Term Loan {{symbol}}",
+    "dailyPayouts": "Daily Payouts {{symbol}}",
+    "loc": "Line of Credit {{symbol}}",
+    "revolvingLineOfCredit": "Revolving Line of Credit {{symbol}}",
+    "flexibleCreditLine": "Flexible Credit Line {{symbol}}",
+    "cashAdvance": "Cash Advance {{symbol}}",
+    "editOffer": "Editable offer",
+    "collections": "Collections",
+    "repaymentDetails": "Repayment details",
+    "term": "Repayment term",
+    "month_one": "{{count}} month",
+    "month_other": "{{count}} months",
+    "convenienceFees": "Convenience fees when you spend",
+    "fee": "fee",
+    "fixedFee": "Fixed fee",
+    "paymentHolidayFee": "Payment holiday fee",
+    "totalFixedFee": "Total fixed fee",
+    "amount": "Amount",
+    "totalRepayable": "Total repayable",
+    "repayEarlyWithNoFees": "Repay early with no fees",
+    "exclusive": "Exclusive",
+    "ifYouChooseToRepayEarly": "If you choose to repay early, you will be entitled to a fee rebate in line with the APR equivalent of your fixed fees",
+    "noOfRepayments": "No of repayments",
+    "repaymentFrequency": "Repayment frequency",
+    "repayment": {
+      "DAILY": "Daily repayment",
+      "WEEKLY": "Weekly repayment",
+      "EVERY_14_DAYS": "Every 14 days repayment",
+      "EVERY_15_DAYS": "Every 15 days repayment",
+      "MONTHLY": "Monthly repayment",
+      "ON_DEMAND": "On demand repayment",
+      "UNKNOWN": "Unknown"
+    },
+    "aprEquivalent": "APR equivalent of {{percentage}}",
+    "collectedFromRevenue": "Collected from revenue",
+    "collectionSchedule": {
+      "title": "Repayment schedule",
+      "DAILY": "Daily",
+      "WEEKLY": "Weekly",
+      "EVERY_14_DAYS": "Every 14 days",
+      "EVERY_15_DAYS": "Every 15 days",
+      "MONTHLY": "Monthly",
+      "ON_DEMAND": "On demand",
+      "UNKNOWN": "Unknown"
+    },
+    "estTimeForRepayment": "Est. time for repayment",
+    "billPayFee": {
+      "title": "BillPay",
+      "descriptionShort": "When you make a payment using the Uncapped payment tool",
+      "descriptionLong": "When you make a payment using the Uncapped payment tool. This acts like a bank transfer, except the payment is made using your Uncapped advance"
+    },
+    "cashFee": {
+      "title": "Cash",
+      "descriptionShort": "When you transfer your loan into your primary bank account",
+      "descriptionLong": "When you transfer your loan into your primary bank account. This can be the whole amount or part of it"
+    },
+    "more": "Learn more",
+    "moreAboutPlan": "About this plan",
+    "viewBreakdown": "View breakdown",
+    "spendFundsInCash": "Spend your funds in cash using our bill payment tool at no additional fee",
+    "selectOffer": "Select offer",
+    "finishOnboarding": "Finish onboarding to select an offer",
+    "selectAndCustomise": "Select and customise draw",
+    "offerAmount": "Offer amount",
+    "termLoanDescription": "This is a <b>Term Loan</b>. You can borrow up to a maximum of {{amount}} and pay a simple fixed fee. You’ll repay in fixed equal installments.",
+    "whyWeBetter": {
+      "title": "Why we’re better",
+      "items": [
+        "Able to scale with you, thanks to our $200M debt line",
+        "Unlock more top up funding as you repay",
+        "Simple fixed fee",
+        "Dedicated Customer Success Manager",
+        "Payback through direct debits"
+      ],
+      "itemsLoc": [
+        "Only pay for what you draw",
+        "Monthly reviews to increase facility",
+        "Dedicated Customer Success Manager",
+        "Payback through direct debits"
+      ]
+    },
+    "knowCost": "Know your costs upfront",
+    "fundingScales": "Our funding scales as you grow",
+    "noInterest": "No interest or hidden fees",
+    "graph": {
+      "title": "Your balance over time",
+      "description": "If all payments are using BillPay (0%)"
+    },
+    "feesDetails": {
+      "title": "Convenience fees",
+      "description": "These fees give you the flexibility to spend your money how you want, without having to commit to a higher fee for all purchases",
+      "billPayFee": {
+        "title": "BillPay {{fee}}",
+        "description": "When you make a payment using the Uncapped payment tool. This acts like a bank transfer, except the payment is made from your Uncapped loan."
+      },
+      "cashFee": {
+        "title": "Cash {{fee}}",
+        "description": "When you take out your loan or parts of your loan into your primary bank account."
+      }
+    },
+    "collectionsDetails": {
+      "title": "About this plan",
+      "alert": "Weekend repayments will show up on your bank account the following Monday.",
+      "howCalculated": "How your repayments are calculated",
+      "idealFor": "Ideal for businesses that…",
+      "orRepayEarlyWithNoFees": "Or repay early with no fees",
+      "repaymentSchedule": {
+        "title": "Repayment schedule",
+        "initialRepayment": "Initial repayment",
+        "onDay": "On day {{value}}",
+        "DAILY_one": "{{count}} daily repayment",
+        "DAILY_other": "{{count}} daily repayments",
+        "WEEKLY_one": "{{count}} weekly repayment",
+        "WEEKLY_other": "{{count}} weekly repayments",
+        "EVERY_14_DAYS_one": "{{count}} biweekly repayment",
+        "EVERY_14_DAYS_other": "{{count}} biweekly repayments",
+        "EVERY_15_DAYS_one": "{{count}} repayment every 15 days",
+        "EVERY_15_DAYS_other": "{{count}} repayments every 15 days",
+        "MONTHLY_one": "{{count}} monthly repayment",
+        "MONTHLY_other": "{{count}} monthly repayments",
+        "ON_DEMAND_one": "{{count}} on demand repayment",
+        "ON_DEMAND_other": "{{count}} on demand repayments",
+        "UNKNOWN_one": "{{count}} unknown repayment",
+        "UNKNOWN_other": "{{count}} unknown repayments"
+      },
+      "fixedTerm": {
+        "description": "Your repayments are made as equal payments on a repeating schedule.",
+        "example": {
+          "minTotalRepayable": "Min. total repayable",
+          "fixedFee": "Fixed fee",
+          "NoOfRepayments": "No of repayments"
+        },
+        "idealFor": {
+          "items": [
+            "Have predictable cashflow",
+            "Sales are normally spread out throughout the year",
+            "Want a simple repayment plan"
+          ]
+        }
+      },
+      "loc": {
+        "example": {
+          "drawFee": "Draw fee",
+          "minimumDraw": "Minimum draw"
+        },
+        "idealFor": {
+          "items": [
+            "Need long-term working capital",
+            "Don’t want to commit to a large advance"
+          ]
+        }
+      }
+    },
+    "offersEdit": {
+      "capital": "Capital",
+      "term": "Repayment term",
+      "fee": "Fee"
+    },
+    "lineOfCredit": {
+      "yourOffer": "Your offer",
+      "facilityLimit": "Facility limit",
+      "facilityDetails": "Facility details",
+      "drawDetails": "Draw details",
+      "availableToDrawLabel": "Available to draw",
+      "growToUnlockLabel": "Grow to unlock",
+      "drawDuration": {
+        "title": "Repayment term",
+        "value": "{{duration}} months",
+        "description": "The numbers of months which you repay each draw amount"
+      },
+      "repaymentFrequency": {
+        "title": "Repayment frequency",
+        "description": "How often we will collect for your facility-related fees"
+      },
+      "drawFee": {
+        "title": "Draw fee per month",
+        "description": "One-time fee calculated as a percentage of each draw amount"
+      },
+      "minDraw": "Minimum draw",
+      "repaymentDrawAmount": "(on {{amount}} draw)",
+      "drawdownPeriod": {
+        "title": "Drawdown period",
+        "description": "If you make a draw on the last day of the drawdown period your final repayment will be {{term}} from that date"
+      },
+      "feesLoanActivated": "Fees charged when your loan is activated",
+      "setupFee": {
+        "title": "Set-up fee",
+        "description": "One-time fee collected 60 days after facility activation if at least 40% of the facility limit is not drawn"
+      },
+      "feesLoan": "Fees charged during your loan",
+      "facilityFee": {
+        "title": "Facility fee",
+        "description": "Calculated against the total facility limit. We will charge this {{repaymentFrequency}} over the drawdown period"
+      },
+      "detailsTitle": "Line of Credit details",
+      "V2nudge": {
+        "title": "How it Works",
+        "content": "This is a <b>Revolving Line of Credit</b>. You can borrow up to a maximum of {{amount}}. As you repay, you will be able to re-borrow."
+      },
+      "lineOfCreditV2Tool": "Calculate your balance and payments over time",
+      "viewCta": "View",
+      "V2details": {
+        "understandingCreditLimit": "Understanding Your Credit Limit",
+        "pricingDetails": "Pricing Details",
+        "repaymentDetails": "Repayment Details",
+        "maximumCreditLimitDetails": {
+          "title": "Maximum Credit Limit"
+        },
+        "availableCreditLimitDetails": {
+          "title": "Available Credit Limit",
+          "value": "{{multiplier}}x Monthly Payouts",
+          "cta": "Learn how we calculate your limit",
+          "description": "Your current availability is <b>{{amount}}</b>, based on payouts from approved e-commerce platforms over the last 6 months. Your availability is updated every 14 days."
+        },
+        "interestRateDetails": {
+          "title": "Annual Interest Rate (APR)"
+        },
+        "minimumDrawDetails": {
+          "title": "Minimum Draw",
+          "description": "The minimum amount you can draw from your Line of Credit in one transaction during the draw phase."
+        },
+        "setupFee": {
+          "title": "Set-Up Fee",
+          "titleConditional": "Set-Up Fee (conditional)",
+          "value": "{{percentage}} of Maximum Credit Limit"
+        },
+        "repaymentFrequencyDetails": {
+          "title": "Repayment Frequency",
+          "description": "Your first repayment is {{days}} days after activation, then every {{days}} days thereafter."
+        },
+        "earlyRepaymentFee": {
+          "title": "No early repayment fee",
+          "new": "New"
+        },
+        "drawPeriodDetails": {
+          "title": "Draw Period",
+          "value": "Initial {{months}} months",
+          "description": "Borrow up to the Available Credit Limit at any time.<br/> Repay {{amount}} of the principal balance every {{days}} days."
+        },
+        "repaymentPeriodDetails": {
+          "title": "Repayment Period",
+          "value": "Following {{months}} months",
+          "description": "After the Draw Period, you will no longer be able to borrow further funds. Your outstanding balance, including future interest, will be repaid in {{instalments}} equal instalments, every 14 days."
+        }
+      },
+      "CreditLimitCalculationWidget": {
+        "title": "How we calculate your Available Credit Limit",
+        "description": "Your Available Credit Limit is based on <b>{{multiplier}}x</b> your Monthly Payouts over the last 6 months. This amount can grow to <b>{{amount}}</b> as your sales grow.",
+        "monthlyPayouts": "Monthly payouts",
+        "availableCreditLimit": "Available Credit Limit ({{multiplier}}x Monthly Payouts)"
+      }
+    },
+    "deferredRepaymentSelection": {
+      "firstRepayment": "First repayment",
+      "copyRangedOffer": "The available options for delaying your first repayment <b>will depend</b> on the <b>repayment term</b> you select",
+      "copyLoc": "The available options for delaying your first draw repayment <b>will depend</b> on the <b>repayment term</b> you select",
+      "startRepayingOnDay": "Start repaying on day",
+      "paymentHolidayFee": "payment holiday fee",
+      "fixedFee": "fixed fee",
+      "default": "Default",
+      "paymentHoliday": "Payment holiday"
+    },
+    "LocV2OfferSidebar": {
+      "title": "Why brands choose Uncapped",
+      "items": [
+        "A credit line that grows with your sales",
+        "Revolving access as you repay",
+        "Only pay interest on what you draw",
+        "Flexible draws controlled by you",
+        "No early repayment charges"
+      ]
+    },
+    "RefinanceOfferSidebar": {
+      "title": "Why refinance?",
+      "items": [
+        "Lower payments with extended terms",
+        "One simple repayment schedule to manage",
+        "Additional funds to grow your business",
+        "Flexible repayment options",
+        "Transparent fee structure"
+      ]
+    },
+    "RefinanceLocV2": {
+      "accessUpTo": "Access up to",
+      "andRefinanceExistingBalance": "and refinance your existing balance",
+      "understandingCreditLimit": "Understanding Your Credit Limit",
+      "description": "Refinance your existing balance into a <b>Revolving Line of Credit</b>. You can borrow up to a maximum of {{amount}}. As you repay, you will be able to re-borrow.",
+      "maximumCreditLimit": "Maximum Credit Limit",
+      "availableCreditLimit": "Available Credit Limit",
+      "availableCreditLimitValue": "{{multiplier}}x Monthly Payouts",
+      "availableCreditLimitDescription": "Your current availability is <b>{{amount}}</b>, calculated from your average payouts over the <b>last {{months}} months</b>. We recalculate your available limit every {{days}} days.",
+      "learnHowWeCalculateLimit": "Learn how we calculate your limit",
+      "existingBalance": "Existing balance",
+      "existingBalanceDescription": "Your current active loan will be paid off.",
+      "learnHowWeCalculateBalance": "Learn how we calculate your existing balance",
+      "existingBalanceLabel": "Existing balance",
+      "availableToDrawLabel": "Available to draw",
+      "unlockWithHigherPayoutsLabel": "Unlock with higher payouts",
+      "pricingDetails": "Pricing Details",
+      "setupFee": "Set-Up Fee",
+      "setupFeeConditional": "Set-Up Fee (conditional)",
+      "setupFeeValue": "{{percentage}} of Maximum Credit Limit",
+      "annualInterestRate": "Annual Interest Rate (APR)",
+      "noEarlyRepaymentFee": "No early repayment fee",
+      "new": "New",
+      "repaymentDetails": "Repayment Details",
+      "drawPeriod": "Draw Period",
+      "drawPeriodValue": "Initial {{months}} months (option to renew)",
+      "drawPeriodDescription": "Borrow as often as you need during the {{months}} months draw period, up to your Available Credit Limit. You repay {{percentage}} of your balance every {{days}} days, and as you repay, your credit replenishes so you can draw again.",
+      "repaymentPeriod": "Repayment Period",
+      "repaymentPeriodValue": "Following {{months}} months",
+      "repaymentPeriodDescription": "After the Draw Period, you will no longer be able to borrow further funds. Your outstanding balance, including future interest, will be repaid in {{instalments}} equal instalments, every {{days}} days.",
+      "exploreCalculator": "Explore how your Line of Credit works",
+      "calculatorDescription": "Use our calculator to model draws, repayments, and your balance over time",
+      "viewCalculator": "View calculator"
+    },
+    "RefinanceBalanceModal": {
+      "title": "Learn how we calculate your existing balance",
+      "description": "This existing balance is shown as of <strong>{{date}}</strong> and may change depending on your loan start date and any additional repayments made.",
+      "existingBalance": "Existing balance",
+      "businessLoan": "Business Loan",
+      "feesWaived": "Fees waived",
+      "loanDetails": "{{amount}} - Activated {{date}}"
+    },
+    "OfferRefinance": {
+      "capital": "Capital",
+      "topUpAdditional": "Top-up an additional",
+      "andRefinanceExistingBalance": "and refinance your existing balance",
+      "refinanceAndTopUp": "Refinance & Top-Up",
+      "totalNewLoan": "Total new loan",
+      "totalNewLoanDescription": "Your existing loan and the additional funds will be refinanced into one loan. <strong>Your repayments</strong> will be combined into <strong>one simple schedule</strong> with fixed repayments.",
+      "additionalFunds": "Additional funds",
+      "additionalFundsDescription": "This amount will be sent to your bank account <strong>once</strong> your existing balance has been paid off.",
+      "balanceToPayOff": "Balance to pay off existing loan",
+      "balanceToPayOffDescription": "Your current active loan will be paid off.",
+      "learnHowWeCalculate": "Learn how we calculate your existing balance",
+      "repayments": "Repayments",
+      "repaymentOptionsDescription": "The available options <strong>will depend</strong> on the <strong>repayment term</strong> you select",
+      "offerSummary": "Offer Summary",
+      "noEarlyRepaymentFee": "No early repayment fee",
+      "new": "New",
+      "monthlyRepayments": "{{count}} monthly repayments",
+      "repaymentsByFrequency": {
+        "DAILY": "{{count}} daily repayments",
+        "WEEKLY": "{{count}} weekly repayments",
+        "EVERY_14_DAYS": "{{count}} biweekly repayments",
+        "EVERY_15_DAYS": "{{count}} every 15 days repayments",
+        "MONTHLY": "{{count}} monthly repayments",
+        "ON_DEMAND": "{{count}} on demand repayments"
+      }
+    },
+    "refinancingOfExistingGoldmanSachsLoan": "Refinancing of existing Goldman-Sachs loan",
+    "additionalCapital": "Additional capital",
+    "offerExpiresIn": "Offer expires in {{days}} days on <strong>{{date}}</strong>",
+    "offerExpiredOn": "Offer expired on <strong>{{date}}</strong>",
+    "rbf": {
+      "title": "Your offer, up to",
+      "variants": {
+        "select": "Select an offer",
+        "repayments": "Payments"
+      },
+      "summary": {
+        "title": "Offer summary",
+        "description": "Cash upfront. Flexible payments. Pay back with a percentage of your sales, so slow periods mean smaller payments.",
+        "details": {
+          "capital": "Capital you receive",
+          "fee": "Fixed fee",
+          "total": "Total payable",
+          "frequency": "Payment frequency",
+          "frequencyValue": "$t(frequency.{{frequency}})",
+          "amount": "Payment amount",
+          "amountValue": "{{percentage}} of $t(salesFrequency.{{frequency}})"
+        }
+      },
+      "sidebar": {
+        "title": "Example of how payments are charged",
+        "repayments": "Payments",
+        "noRepayment": "No payment",
+        "period": {
+          "DAILY": "Day",
+          "WEEKLY": "Week",
+          "EVERY_14_DAYS": "Period",
+          "EVERY_15_DAYS": "Period",
+          "MONTHLY": "Month",
+          "ON_DEMAND": "Period",
+          "UNKNOWN": "Unknown"
+        }
+      }
+    },
+    "dailyPayout": {
+      "banner": {
+        "title": "Get Paid Every Day",
+        "subtitle": "Daily Payouts allows you to <b>receive {{rate}} of your marketplace balance</b> every business day"
+      },
+      "details": {
+        "title": "Understanding your Daily Payouts",
+        "advanceRate": {
+          "title": "Advance rate",
+          "description": "Receive an initial {{rate}} lump sum of your available and deferred balance, then {{rate}} of your net daily sales, with up to {{limit}} advanced at any time"
+        },
+        "dailyFee": {
+          "title": "Daily fee",
+          "description": "This is applied to the principal balance each day"
+        },
+        "repayments": {
+          "title": "Repayments",
+          "description": "When your marketplace pays out, we collect our fees and only what\u2019s needed to keep us at {{rate}} of your new marketplace balance."
+        }
+      },
+      "example": {
+        "title": "Example",
+        "subtitle": "Amazon holds all 14 days of your sales for one lump sum payout"
+      },
+      "calculatorLink": "Calculate your advances and repayments over time",
+      "viewCta": "View",
+      "animation": {
+        "titleHeading": "Get paid today,<br/>not in 2 weeks.",
+        "subtitle": "Daily Payouts from Uncapped",
+        "activationLabel": "Daily Payouts Activated",
+        "step1": "Your competitors get paid every 14 days. <span class=\"text-brand-600 font-semibold\">You don't have to.</span>",
+        "step2": "Unlock up to <span class=\"text-brand-600 font-semibold\">{{rate}} of your payout</span> and <span class=\"text-brand-600 font-semibold\">deferred balance</span> today, so you can reinvest in growth while your competition waits.",
+        "step3": "Continue to receive up to <span class=\"text-brand-600 font-semibold\">{{rate}} of your net revenue</span> each day of your payout cycle.",
+        "step4": "When your marketplace payout is received, you keep the remainder minus our fees <span class=\"text-brand-600 font-semibold\">(~1-3%)</span>.",
+        "step5": "This continues until you tell us to stop. <span class=\"text-brand-600 font-semibold\">Anytime.</span>",
+        "legendMarketplacePayout": "Marketplace Payout",
+        "legendDailyPayout": "Daily Payout",
+        "legendDeferredBalancePayout": "Deferred Balance Payout",
+        "dayLabel": "Day"
+      }
+    },
+    "dailyPayoutSidebar": {
+      "marketplace": {
+        "title": "Marketplace"
+      },
+      "whyWeBetter": {
+        "title": "Why we're better",
+        "items": [
+          "Unlock your available and deferred balance today",
+          "Payout sent to your bank account every business day",
+          "No need to change the bank account connected to your marketplace"
+        ]
+      }
+    }
+  },
+  "directDebit": {
+    "title": "Set up your Direct Debit",
+    "subtitle": "Set up your Direct Debit before submitting your application so we can automatically collect repayments in the future",
+    "connectBankAccount": "Connect bank account",
+    "setupDirectDebit": "Set up and authorize Direct Debit",
+    "stepRequiredToDeposit": "We will only be able to deposit your funds once this step has been completed",
+    "continue": "Continue",
+    "usCopy": {
+      "title": "Set up your ACH Debit",
+      "subtitle": "Set up your ACH Debit before submitting your application so we can automatically collect repayments in the future",
+      "setupACH": "Set up and authorize ACH Debit",
+      "amazonAlert": "Your ACH Debit must be set up using the <b>same bank account</b> that is linked to your Amazon seller account",
+      "amazonModalTitle": "We couldn’t set up your ACH Debit",
+      "amazonModalContent": "Your ACH Debit must be set up using the <b>same bank account</b> that is linked to your Amazon seller account"
+    },
+    "canadaCopy": {
+      "title": "Set up your Pre-Authorized Debit (PAD)",
+      "subtitle": "Set up your Pre-Authorized Debit (PAD) before submitting your application so we can automatically collect repayments in the future",
+      "setupPAD": "Set up and authorize your Pre-Authorized Debit",
+      "amazonAlert": "Your Pre-Authorized Debit must be set up using the <b>same bank account</b> that is linked to your Amazon seller account",
+      "amazonModalTitle": "We couldn’t set up your Pre-Authorized Debit",
+      "amazonModalContent": "Your Pre-Authorized Debit must be set up using the <b>same bank account</b> that is linked to your Amazon seller account"
+    },
+    "amazonAlert": "Your ACH Debit must be set up using the <b>same bank account</b> that is linked to your Amazon seller account",
+    "amazonModal": {
+      "cancel": "Cancel",
+      "tryAgain": "Try again"
+    },
+    "UnableToProceed": {
+      "title": "Unable to proceed",
+      "content": [
+        "You are unable to continue with your Uncapped funding application because you are in the process of applying for funding with another Amazon partner.",
+        "You are only able to choose one funding offer from one Amazon partner at a time."
+      ]
+    }
+  },
+  "connections": {
+    "title": "Connections",
+    "connectionsCount_one": "{{count}} connection",
+    "connectionsCount_other": "{{count}} connections"
+  },
+  "actions": {
+    "continue": "Continue",
+    "unableToConnect": "I’m unable to connect my accounts",
+    "viewAll": "View all"
+  },
+  "menu": {
+    "banking": "Bank accounts",
+    "sales": "Revenue sources",
+    "accounting": "Accounting",
+    "softCreditCheck": "Applicant information",
+    "businessDetails": "Business details",
+    "review": "Your application",
+    "offers": "Your offers",
+    "offersSelected": "Your offer",
+    "signing": "Sign your agreement",
+    "directDebit": "Withdraw & Direct Debit",
+    "achDebit": "Withdraw & ACH Debit",
+    "padAcc": "Withdraw & set up PAD",
+    "verifyOwners": "Verify owners",
+    "amazonConsent": "Link Loan to Amazon",
+    "reviewBankDetails": "Review bank details"
+  },
+  "list": {
+    "header": "Connections",
+    "sales": "Sales",
+    "accounting": "Accounting",
+    "banking": "Banking"
+  },
+  "platformsList": {
+    "showAll": "Show all",
+    "invite": "Don’t have access? <bold><href>Invite your team</href></bold>"
+  },
+  "readyToSubmit": {
+    "header": "Ready to submit?",
+    "subtitle": "Please confirm you’re happy to submit your application",
+    "cancel": "I need to change something",
+    "continue": "Yes, submit"
+  },
+  "bankAccount": "Bank account",
+  "connectionErrors": {
+    "409": "This connection was already added.",
+    "default": "Cannot create connection within provided data."
+  },
+  "manualConnectCta": "Connect {{platform}}",
+  "documents": {
+    "titleSingle": "Upload {{title}}",
+    "customMessageTitle": "Important message from our team",
+    "exampleLink": "Need help? <0>Download our template</0>",
+    "submitSingle": "Continue",
+    "skipSingle": "Skip",
+    "outstandingDebt": {
+      "DocumentsDebt": {
+        "header": "Debt information",
+        "headerUpdate": "Update debt",
+        "loanProvider": "Loan provider",
+        "currency": "Currency",
+        "remainingBalance": "Remaining balance",
+        "remainingBalanceError": "{{field}} must be a valid amount",
+        "repaymentType": "Repayment type",
+        "repaymentTypeOptions": {
+          "amortising": {
+            "title": "Amortising",
+            "noDebt": "No amortising loans",
+            "description": "Regular repayments of principal and interest are made until the loan is repaid in full"
+          },
+          "bullet": {
+            "title": "Bullet",
+            "noDebt": "No bullet loans",
+            "description": "The loan balance is repaid at the end of the loan term, low or no repayments are made until then"
+          },
+          "revolving": {
+            "title": "Revolving Line of Credit",
+            "noDebt": "No lines of credit",
+            "description": "Credit facility that enables you to draw on the facility when you needs funds"
+          },
+          "convertible": {
+            "title": "Convertible Loan",
+            "noDebt": "No convertible loans",
+            "description": "A form of unsecured debt that give the investor an option to convert their loan to equity in the future"
+          },
+          "revenueBasedFinancing": {
+            "title": "Revenue Based Financing (MCA)",
+            "noDebt": "No revenue based financing (MCA)",
+            "description": "Funding in exchange for a pre-agreed percentage of future revenue"
+          },
+          "other": {
+            "title": "Other debt type",
+            "noDebt": "No other debt types",
+            "description": "This could be items such as Purchase order financing, invoice factoring, or other debt like items"
+          }
+        },
+        "finalRepayment": "Final repayment date",
+        "expectedFinalRepayment": "Expected final repayment date",
+        "expectedMaturity": "Expected maturity date",
+        "renewalDate": "Renewal date",
+        "securityType": "Security type",
+        "securityTypeOptions": {
+          "secured": "Secured",
+          "secured_description": "Includes a promise to transfer assets to the lender if you can’t pay back the debt",
+          "unsecured": "Unsecured",
+          "unsecured_description": "Based only on your commitment to pay back the debt"
+        },
+        "payMethod": "Is this paid down in one go?",
+        "payMethodYes": "Yes",
+        "payMethodNo": "No",
+        "revenueShare": "% of collected revenue",
+        "maximumLimit": "Maximum limit",
+        "deleteModal": {
+          "title": "Do you want to delete this outstanding debt?",
+          "no": "No, take me back",
+          "yes": "Yes, delete this debt"
+        },
+        "submit": "Submit and add another debt",
+        "submitUpdate": "Confirm changes",
+        "finish": "I’ve added all my outstanding debt",
+        "delete": "Delete debt",
+        "why": {
+          "title": "Why disclosing debt is the only way to get an offer",
+          "points": [
+            "Our system detects missing debt information",
+            "We understand the financing needs of our customers and already work with thousands of businesses who have outstanding debt",
+            "We reject more customers due to undisclosed debt than outstanding debt"
+          ]
+        }
+      },
+      "DocumentsDebtList": {
+        "header": "Outstanding debt",
+        "description": "We are unable to work with businesses who don’t disclose all of the outstanding debts we detect during our analysis",
+        "add": {
+          "title": "Tell us about your outstanding debts",
+          "description": "From other funding providers including Merchant Cash Advance and SBA loans"
+        },
+        "skip": {
+          "title": "Declare your business has no outstanding debt",
+          "description": "Undisclosed debt can result in a rejected application. We detect undisclosed debt during our analysis."
+        },
+        "continue": "Continue",
+        "addNew": "Add another loan",
+        "title": "Outstanding Debts",
+        "debtItemUpdated": "{{amount}} updated: {{date}}",
+        "debtItemRequested": "Update required"
+      },
+      "DocumentsDebtNoDebt": {
+        "title": "Declare your business has no outstanding debt",
+        "description": "Only continue with this declaration if you are sure you don’t have any of the following debt types. We detect undisclosed debt during our analysis.",
+        "submit": "Confirm declaration",
+        "back": "Go back and add outstanding debt"
+      },
+      "updated": "Debt updated successfully",
+      "deleted": "Debt deleted successfully",
+      "added": "Debt added successfully"
+    },
+    "grossMarginForm": {
+      "label": "Gross profit margin (%)",
+      "provideAverage": "Provide your average gross profit margin over the last 3 months",
+      "example": "Example:",
+      "exampleList": [
+        "You sell a product for £100",
+        "Inventory costs you £20",
+        "Gross profit = £80",
+        "Therefore gross profit margin = 80%"
+      ],
+      "inboundCosts": "Include any inbound costs incurred to get the inventory to you within inventory cost (e.g. freight costs, duty etc.) - exclude costs to ship this to your customers, e.g. FBA fees.",
+      "supportingData": "We may ask you to provide supporting data"
+    },
+    "totalCashBalance": {
+      "form": {
+        "currency": "Currency",
+        "balance": "Total cash balance",
+        "cash": "Additional cash",
+        "cashOptions": {
+          "WAITING_FOR_PAYMENTS_IN_2_WEEKS": "I’m waiting on payments coming into my account in the next 2 weeks",
+          "NOT_WAITING_ON_PAYMENTS_IN_2_WEEKS": "I’m <b>not</b> waiting on any payments coming into my account in the next 2 weeks"
+        },
+        "amountDue": "Total amount due in",
+        "submit": "Confirm",
+        "alert": "If you have accounts in multiple currencies convert them into one currency",
+        "cashBalanceInformation": "Provide an approximate cash balance for all your bank accounts"
+      }
+    },
+    "virtualDocuments": {
+      "applicantInformation": {
+        "title": "Applicant information",
+        "subtitle": "To help us check your details",
+        "nudge": {
+          "title": "Our Credit Score promise",
+          "content": "The checks we make will never impact your credit score"
+        },
+        "form": {
+          "firstName": "First name",
+          "lastName": "Last name",
+          "nationality": "Nationality",
+          "dob": "Date of birth",
+          "homeAddress": "Home Address"
+        },
+        "alert": "By clicking continue you understand and agree that we are authorized to obtain a personal credit bureau report using your details. This is a soft credit check and won’t affect your credit score. <href>Privacy policy</href>.",
+        "submit": "Continue",
+        "sidebar": {
+          "title": "How we use your credit data to boost your application",
+          "items": [
+            "Credit data allows us to provide better, faster offers to more businesses",
+            "We only conduct “soft” credit checks to provide a high level view of your credit history"
+          ]
+        },
+        "submitted": {
+          "title": "Complete",
+          "content": "Applicant information cannot be changed while we’re checking your details"
+        }
+      }
+    }
+  },
+  "review": {
+    "title": "You’re applying for up to",
+    "subtitle": "with a repayment term <b>up to 12 months</b>",
+    "nudge": {
+      "title": "Time to check your data",
+      "content": "We identify data gaps during underwriting that can lead to being rejected. Please complete any missing data prior to submission."
+    },
+    "add": "Add",
+    "missingData": {
+      "title": "Missing data",
+      "content": "Based on the information you’ve already completed, we need some additional details"
+    },
+    "revenueSources": {
+      "title": "Revenue sources",
+      "content": "We need to know about all of the places your business receives revenue from",
+      "button": {
+        "add": "Add a revenue source",
+        "addAnother": "Add another revenue source"
+      }
+    },
+    "bankConnections": {
+      "title": "Bank connections",
+      "content": "We need full coverage of your payout accounts and all bank accounts or credit cards used to run your business in the last 12 months",
+      "button": {
+        "add": "Add a bank connection",
+        "addAnother": "Add another bank connection"
+      }
+    },
+    "accountingPlatforms": {
+      "title": "Accounting platforms",
+      "content": "We need to connect with your accounting platform. Transactions only need to be reconciled up to the end of last month and you can invite your accountant to help",
+      "button": {
+        "add": "Add an accounting platform",
+        "addAnother": "Add another accounting platform"
+      }
+    },
+    "businessDetails": {
+      "title": "Business details",
+      "content": "Check your business details are up to date and accurate",
+      "button": "Edit"
+    },
+    "applicantInformation": {
+      "title": "Applicant information",
+      "alert": {
+        "title": "Complete",
+        "content": "Applicant information cannot be changed while we’re checking your details"
+      }
+    },
+    "missingDataAlert": "You must add {{items}} to continue",
+    "submit": "Apply for up to {{amount}}"
+  },
+  "signing": {
+    "agreementSignatory": "Agreement signatory",
+    "summaryTitle": "Summary",
+    "sentModal": {
+      "agreementSent": "Agreement sent via email",
+      "agreementsSent": "Agreements sent via email",
+      "copy": "Application is still subject to due diligence checks",
+      "cta": "Got it!"
+    },
+    "summary": {
+      "businessLoan": {
+        "title": "Agreement summary",
+        "advanceAmount": "Advance amount",
+        "fixedFee": "Fixed fee ({{fee}})",
+        "repaymentFrequency": "{{frequency}} repayment",
+        "term": "Repayment term",
+        "termMonths": "{{length}} months",
+        "revenueShare": "Revenue share",
+        "repaymentSchedule": "Repayment schedule"
+      },
+      "loc": {
+        "title": "{{type}} Agreement summary",
+        "loc": "Line of Credit",
+        "flexibleCreditLine": "Flexible Credit Line",
+        "facilityLimit": "Facility limit",
+        "drawFee": "Draw fee per month",
+        "setupFee": "Set-up fee",
+        "facilityFee": "Facility fee",
+        "drawdownPeriod": "Drawdown period",
+        "repaymentTermPerDraw": "Repayment term per draw",
+        "repaymentTermPerDrawValue": "{{value}} months",
+        "repaymentFrequency": "Repayment frequency"
+      },
+      "FirstDrawSummary": {
+        "firstDraw": "First Draw Amount",
+        "drawAmount": "Draw Amount",
+        "repaymentTerm": "Repayment term",
+        "repaymentTermValue_one": "{{count}} month",
+        "repaymentTermValue_other": "{{count}} months",
+        "drawFee": "Draw fee",
+        "totalDrawFee": "Total draw fee ({{fee}})",
+        "totalRepayable": "Total repayable",
+        "noOfRepayments": "No of repayments",
+        "repaymentsFrequency": {
+          "DAILY": "{{count}} daily repayments",
+          "WEEKLY": "{{count}} weekly repayments",
+          "EVERY_14_DAYS": "{{count}} biweekly repayments",
+          "EVERY_15_DAYS": "{{count}} every 15 days repayments",
+          "MONTHLY": "{{count}} monthly repayments",
+          "ON_DEMAND": "{{count}} on demand repayments"
+        }
+      },
+      "locV2": {
+        "creditLimit": {
+          "title": "Your Credit Limit",
+          "maximumCreditLimit": "Maximum Credit Limit",
+          "availableCreditLimit": "Available Credit Limit",
+          "availableCreditLimitValue": "{{multiplier}}x Monthly Payouts"
+        },
+        "pricingDetails": {
+          "title": "Pricing Details",
+          "setupFee": "Set-Up Fee",
+          "setupFeeConditional": "Set-Up Fee (conditional)",
+          "interestRate": "Annual Interest Rate (APR)"
+        },
+        "repaymentDetails": {
+          "title": "Repayment Details",
+          "drawPeriod": "Draw Period",
+          "repaymentPeriod": "Repayment Period"
+        },
+        "firstDraw": {
+          "title": "First Draw Amount",
+          "amount": "Draw Amount",
+          "initialRepayment": "Initial Repayment",
+          "firstRepayment": "First Repayment",
+          "onDay": "On day {{day}}"
+        },
+        "month_one": "Initial {{count}} month",
+        "month_other": "Initial {{count}} months",
+        "repaymentMonth_one": "Following {{count}} month",
+        "repaymentMonth_other": "Following {{count}} months"
+      },
+      "dailyPayout": {
+        "title": "Agreement summary",
+        "advanceRate": "Advance rate",
+        "dailyFee": "Daily fee",
+        "repayments": "Repayments",
+        "repaymentsValue": "After marketplace pay out"
+      },
+      "rbf": {
+        "capitalYouReceive": "Capital you receive",
+        "fixedFee": "Fixed fee",
+        "totalRepayable": "Total payable",
+        "repaymentFrequency": "Payment frequency",
+        "repaymentAmount": "Payment amount",
+        "repaymentAmountValueAlternative": "{{percentage}} of sales {{frequency}}",
+        "repaymentAmountValue": "{{percentage}} of {{frequency}} sales"
+      }
+    },
+    "nextStepsTitle": "What happens next?",
+    "nextSteps": [
+      "Sign the agreement on our partner site Dropbox Sign",
+      "We will complete our due diligence checks",
+      "Your funds will be available in your account to start spending once your application has been approved"
+    ],
+    "nextStepsNoAuth": [
+      "Authorised signatory will sign the agreement on our partner site Dropbox Sign",
+      "We will complete our due diligence checks",
+      "Your funds will be available in your account to start spending once your application has been approved"
+    ],
+    "amazonConsent": {
+      "pageBarTitle": "Link {{productType}} to your Amazon Seller account",
+      "intro": "To start accessing your funds, we need you to link your {{productType}} to your Amazon Seller account.",
+      "whatHappensNext": "What happens next?",
+      "steps": [
+        "Authorize Uncapped to view your sales data",
+        "Confirm your disbursement account. This is where we’ll send your funds and collect repayment via ACH debit"
+      ],
+      "toDo": "To do",
+      "linkItem": "Link {{productType}} to Amazon Seller Account",
+      "linkCta": "Link",
+      "goBack": "Go back",
+      "productType": {
+        "termLoan": "Term Loan",
+        "cashAdvance": "Cash Advance",
+        "lineOfCredit": "Line of Credit"
+      },
+      "accountDisclaimer": "Sign in with the same Amazon Seller account you used to apply to Uncapped. This is where the {{productType}} offer will appear."
+    },
+    "signingSent": {
+      "title": "Agreement has been sent",
+      "notice": "Your agreement has been sent to the authorised signatory. They will have received an email from our partner Dropbox Sign.",
+      "details": "Contact details",
+      "submit": "Continue"
+    },
+    "signingCompleted": {
+      "title": "Your agreement is signed",
+      "submit": "Continue",
+      "notice": "Please allow 1 business day for us to complete our review."
+    },
+    "reviewBankDetails": {
+      "title": "Review bank details",
+      "subtitleAmazon": "Funds can <b>only be sent</b> to the bank account that is linked to your Amazon seller account",
+      "subtitleAch": "Funds can <b>only be sent</b> to the same bank account that you originally linked for ACH debit payments",
+      "cardTitle": "Where we’ll send your funds",
+      "advanceAmount": "Advance amount",
+      "verifiedWithAmazon": "Verified with Amazon",
+      "supportNotice": "If you wish to change the bank account where we’ll send your funds please <0>contact our support</0>",
+      "submit": "Continue",
+      "missingBankAccount": "We couldn’t find your bank account. Please contact support."
+    }
+  },
+  "verifyOwners": {
+    "detailsForm": {
+      "titleOwner": "Owner’s personal details",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email address",
+      "submit": "Continue"
+    },
+    "reviewForm": {
+      "edit": "Edit"
+    },
+    "ownersList": {
+      "title": "Beneficial owners",
+      "content": "Please <b>list all shareholders who own 25% or more</b> of your business",
+      "add": "Add an owner",
+      "provideDetails": "<b>If no one owns 25% or more</b> of your business, please provide the details of the individual who has the <b>most ownership</b> in your business.",
+      "submit": "I’ve added all owners",
+      "continue": "Continue",
+      "titleCompleted": "Summary of individuals",
+      "contentCompleted": "The following individuals have been sent a link via email to verify their identity",
+      "submitCompleted": "Continue",
+      "beneficialOwners": "Beneficiary owners",
+      "identityVerification": "Identity verification must be completed by all individuals listed above before continuing",
+      "stepRequiredToDeposit": "We will only be able to deposit your funds once this step has been completed",
+      "complete": "Complete",
+      "verified": "Verified"
+    },
+    "modalLinksSent": {
+      "title": "Identity verification link sent",
+      "subtitle": "To comply with regulations we have sent an email link for the CEO and any owners to verify their identity",
+      "button": "Got it!"
+    }
+  },
+  "submit": {
+    "title": "Thank you for submitting!",
+    "subtitle": "We’re now processing your final verification checks",
+    "content": "This will normally take 24 hours. We will notify you by email once completed. If you need to change any information, please contact <0>support@weareuncapped.com</0>."
+  },
+  "bookCall": {
+    "title": "Select a date for us to call",
+    "button": {
+      "cta": "Book a call"
+    }
+  },
+  "SkipStepButton": {
+    "cta": "I’ll do this later"
+  },
+  "informationRequired": {
+    "title": "More information required",
+    "copy": "To submit your application please complete the following steps",
+    "steps": {
+      "offer": "Select your offer",
+      "signing": "Sign your contract",
+      "owners": "Verify owners",
+      "directDebit": "Withdraw & Direct Debit",
+      "achDebit": "Withdraw & ACH Debit",
+      "padAcc": "Withdraw & set up PAD"
+    }
+  },
+  "PlatformBoxes": {
+    "alreadyUsed": "This provider only allows 1 connection"
+  },
+  "WelcomeBack": {
+    "title": "Welcome back to Uncapped",
+    "copy": "Reapply for funding with Uncapped today by updating your information",
+    "cta": "Continue"
+  },
+  "ApplicationBlocked": {
+    "rejected": {
+      "title": "No funding available",
+      "content": [
+        "Thanks for completing your application. We are unable to provide funding at this stage because {{reason}}.",
+        "Please consider re-applying whenever your business circumstances change. You will need to wait until {{reapplyDate}} before being able to apply again.",
+        "In the meantime read our <a href=\"https://www.weareuncapped.com/blog\" target=\"_blank\">guides to funding your growth</a>."
+      ]
+    },
+    "rejectedWithReapply": {
+      "title": "Welcome back to Uncapped",
+      "content": [
+        "We were unable to previously provide funding because {{reason}}.",
+        "If your circumstances have changed, you can easily re-apply through our portal. We are here to support you every step of the way so if you have any questions or need a helping hand, please reach out to us via live chat."
+      ]
+    },
+    "expired": {
+      "title": "Your offer has expired",
+      "content": [
+        "The funding offer that was previously available has unfortunately expired.",
+        "You can easily re-apply through our portal. We are here to support you every step of the way so if you have any questions or need a helping hand, please reach out to us via live chat."
+      ]
+    },
+    "lost": {
+      "title": "Welcome back to Uncapped",
+      "content": [
+        "Your previous application was left incomplete so we’ve closed your application for now.",
+        "You can easily re-apply through our portal. We are here to support you every step of the way so if you have any questions or need a helping hand, please reach out to us via live chat."
+      ]
+    },
+    "reapplyButton": "Re-apply for funding",
+    "reapplyForm": {
+      "description": "<b>We’ve saved the progress of your last application,</b> so there’s no need to start from scratch",
+      "fundingAmountLabel": "How much money are you looking for?",
+      "fundingAmountPlaceholder": "How much money are you looking for?",
+      "requiredFundingTimeHorizonLabel": "When do you need funding?",
+      "applicationTypeOptions": [
+        "As soon as possible",
+        "Within the next week",
+        "Within the next month",
+        "Within 2-4 months",
+        "Not sure yet"
+      ],
+      "fundingTypesTitle": "What types of funding are available from Uncapped?",
+      "fundingTypes": {
+        "close": "Close",
+        "learnMore": "Learn more",
+        "lineOfCredit": {
+          "label": "Line of Credit",
+          "bullets": [
+            "Draw, repay, and reuse funds as needed",
+            "Scale faster with a credit limit that grows as your revenue does",
+            "Built for 7-figure sellers with 2+ years of trading"
+          ]
+        },
+        "termLoan": {
+          "label": "Term Loan",
+          "bullets": [
+            "Low fixed cost with clear, predictable repayments",
+            "Keep growing with top-ups as you pay down your balance",
+            "Built for sellers who value control and predictable growth"
+          ]
+        },
+        "cashAdvance": {
+          "label": "Cash Advance",
+          "bullets": [
+            "Flexible repayments with no fixed cash flow pressure",
+            "Receive cash upfront to invest, and repay as you earn",
+            "Built for sellers who plan for the ups and downs"
+          ]
+        }
+      },
+      "eligibility": {
+        "heading": "You could be eligible for up to",
+        "subtext": "Your final offer will be based on the data you submit when you complete your application"
+      },
+      "testimonials": {
+        "freeriders": {
+          "tags": ["Funded $120,000", "Used to purchase inventory"],
+          "quote": "“Only Uncapped would give us the capital to order 3X more stock. The team moved quickly, helping us fulfill orders and double our revenue”"
+        },
+        "nutripaw": {
+          "tags": ["Scaled their business 5x", "Used to purchase inventory"],
+          "quote": "“Uncapped were the obvious choice. They provided us with the necessary capital at a pivotal time to fuel the growth we were forecasting”"
+        },
+        "freja": {
+          "tags": ["200% Revenue Growth", "Used for working capital"],
+          "quote": "“Uncapped were the obvious choice. They provided us with the necessary capital at a pivotal time to fuel the growth we were forecasting”"
+        }
+      }
+    }
+  },
+  "PartnerBlocked": {
+    "title": "Welcome back to Uncapped",
+    "content": [
+      "It looks like you’ve already started an application with Uncapped. That means we’re unable to create a new application from a partner account at this time.",
+      "We’ve saved the progress of your existing application. Complete it now to receive an offer in as little as 24 hours."
+    ],
+    "contentActive": [
+      "It looks like you’re already an Uncapped customer. That means we’re unable to create a new application from a partner account at this time.",
+      "If you need access to more funding, you’ll be offered the chance to top-up once you start making repayments on your existing Uncapped loan."
+    ],
+    "button": "Continue application",
+    "buttonActive": "Your Uncapped portal"
+  },
+  "PartnershipWelcomeModal": {
+    "title": "Welcome to your new Uncapped account",
+    "copy": "Apply for additional funding by connecting your sales and bank accounts. You can also manage your existing {{sourceType}} loan and all your repayments",
+    "viewLoan": "View transferred {{sourceType}} loan",
+    "apply": "Apply for additional funding",
+    "goldmanSachs": "Goldman Sachs",
+    "sellersfi": "SellersFi"
+  },
+  "OfferNudge": {
+    "title": "You’ve already been approved for {{amount}}",
+    "content": "Skip ahead and <0>view your offers</0>"
+  },
+  "salesFrequency": {
+    "DAILY": "$t(frequency.DAILY) sales",
+    "WEEKLY": "$t(frequency.WEEKLY) sales",
+    "EVERY_14_DAYS": "$t(frequency.EVERY_14_DAYS) sales",
+    "EVERY_15_DAYS": "sales $t(frequency.EVERY_15_DAYS)",
+    "MONTHLY": "$t(frequency.MONTHLY) sales",
+    "ON_DEMAND": "$t(frequency.ON_DEMAND) sales",
+    "UNKNOWN": "$t(frequency.UNKNOWN) sales"
+  },
+  "frequency": {
+    "DAILY": "daily",
+    "WEEKLY": "weekly",
+    "EVERY_14_DAYS": "biweekly",
+    "EVERY_15_DAYS": "every 15 days",
+    "MONTHLY": "monthly",
+    "ON_DEMAND": "on demand",
+    "UNKNOWN": "unknown"
+  },
+  "logout": "Log out"
+}

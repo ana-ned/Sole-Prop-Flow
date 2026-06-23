@@ -1,0 +1,100 @@
+{
+  "invitation": {
+    "welcome": "Welcome to",
+    "title": "Invitation",
+    "description": "To activate your Uncapped account for <b>{{organisationName}}</b> please set a password below.",
+    "descriptionEmail": "The email address you’ll use to login:",
+    "passwordInput": "Your new Uncapped password",
+    "repeatPasswordInput": "Repeat your password",
+    "cta": "Activate",
+    "loginToAccount": "Login to my account",
+    "resendLink": "Resend invite link",
+    "invitationLinkSent": "New invite link has been sent to your email",
+    "consent": {
+      "sms": "I agree to receive SMS messages from Uncapped. Message frequency varies. Standard message and data rates apply. <href>Privacy policy</href>"
+    },
+    "errors": {
+      "passwordsDontMatch": "Passwords don’t match",
+      "INVITATION_REGISTERED_USER": {
+        "title": "Invitation link used",
+        "description": "Looks like you’ve already signed up using this invite link, please go to our login page to login"
+      },
+      "INVITATION_EXPIRED": {
+        "title": "Invitation link expired",
+        "description": "This link has expired. Please contact support"
+      },
+      "INVITATION_FAILED": {
+        "title": "Invitation link expired",
+        "description": "This link has expired. Please contact support"
+      },
+      "DEFAULT_ERROR": {
+        "title": "Invitation error",
+        "description": "Unknown invitation error. Please contact support"
+      }
+    }
+  },
+  "invite-members": {
+    "title": "Invite team members",
+    "header": "Invite your team and they will receive an invitation via email to create an account",
+    "info": "All colleagues will be given full access rights",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "email": "Email address",
+    "sendInvite": "Send invite via email",
+    "t&c": "By continuing you agree to our <href><bold>Terms & Conditions</bold></href>",
+    "success": {
+      "title": "Invite sent",
+      "cta": "Got it"
+    }
+  },
+  "invitations-list": {
+    "title": "Your team members",
+    "pendingInvite": "Pending invite",
+    "yourTeam": "Your team",
+    "add": "Add team member",
+    "modals": {
+      "prompt": {
+        "title": "This invite is pending",
+        "copy": "Invite has been sent to {{email}}",
+        "resend": "Resend invite",
+        "delete": "Delete invite"
+      },
+      "delete": {
+        "title": "Invite deleted",
+        "cta": "Got it"
+      },
+      "resend": {
+        "title": "Invite resent",
+        "copy": "Invite has been sent to {{email}}",
+        "cta": "Got it"
+      }
+    }
+  },
+  "button": {
+    "yourTeam": "Your team",
+    "inviteTeam": "Invite team"
+  },
+  "PartnerInvitationSidebar": {
+    "headerList": [
+      "Experience unbeatable customer service, <b>rated Excellent on Trustpilot</b>",
+      "Easily manage your loan via your <b>Uncapped Portal</b>",
+      "Quickly connect your accounts and <b>request new draws</b>"
+    ],
+    "questionsHeader": "Your questions answered",
+    "questionsAnswered": [
+      {
+        "label": "Why do I need to activate my Uncapped Account?",
+        "content": "Activate your Uncapped Account to easily manage your loan and request more funding. Connect your accounts to unlock tailored, best-in-class offers. Plus, enjoy faster support whenever you need it."
+      },
+      {
+        "label": "How do I request additional capital or draws?",
+        "content": "Once activated, you can log in at any time and click on the option to request new funding. While additional draws on your original line of credit aren’t available, you can still apply for fresh capital based on Uncapped’s terms and conditions."
+      },
+      {
+        "label": "How is my data secured with Uncapped?",
+        "content": "Uncapped uses bank-level encryption, hardware modules for key protection, and is FIPS 140-2 Level 3 certified. We guarantee data confidentiality and never sell your information."
+      }
+    ],
+    "knowMore": "Want to know more? <href>Read our full FAQ section</href>"
+  }
+}

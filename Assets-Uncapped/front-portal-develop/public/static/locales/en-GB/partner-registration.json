@@ -1,0 +1,54 @@
+{
+  "partnerRegistrationCredentials": {
+    "title": "Become a partner",
+    "checkbox": "I agree to Uncapped contacting me and carrying out due diligence on the companies I refer",
+    "mustBeAccepted": "Must be accepted",
+    "tc": "By continuing you agree to our <href>Terms & Conditions</href>",
+    "createAccount": "Create account",
+    "form": {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email address",
+      "password": "Password"
+    }
+  },
+  "partnerRegistrationBusinessDetails": {
+    "title": "Your business details",
+    "continue": "Continue",
+    "form": {
+      "country": "Country",
+      "contactNumber": "Contact number",
+      "businessName": "Business name (optional)",
+      "businessWebsite": "Business website (optional)",
+      "partnerType": "Partner type",
+      "partnerTypeOptions": {
+        "affilate": "Affiliate",
+        "broker": "Broker",
+        "other": "Other"
+      }
+    }
+  },
+  "partnerRegistrationSidebar": {
+    "title": "What’s <bold>next?</bold>",
+    "footer": "Chosen by 1,000s of founders",
+    "points": [
+      {
+        "title": "Check eligibity in minutes",
+        "copy": "Find out if your client is eligible for funding in less than 2 minutes"
+      },
+      {
+        "title": "Client completes application",
+        "copy": "We’ll notify your client and will star generating their offer"
+      },
+      {
+        "title": "Earn commission",
+        "copy": "When your client accepts our funding, you’ll earn your agreed commission"
+      }
+    ]
+  },
+  "partnerRegistrationSuccess": {
+    "title": "Welcome to Uncapped! Get started by <b>introducing a client</b>",
+    "notNow": "Not right now",
+    "introduce": "Introduce a client"
+  }
+}

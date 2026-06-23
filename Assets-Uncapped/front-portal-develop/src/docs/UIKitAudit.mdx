@@ -1,0 +1,17 @@
+import { Meta, Markdown } from "@storybook/addon-docs/blocks"
+import RawContent from "../../docs/specs/ui-kit-audit.md?raw"
+
+export const AuditContent = RawContent.replace(
+  /^#[^\n]*\n+(?:>[^\n]*\n)+\n*---\n*/,
+  "",
+)
+
+<Meta title="UI Kit Audit" />
+
+# UI Kit 2025 — Component Audit
+
+**Date:** 2026-04-03 | **Figma:** [UI Kit 2025](https://www.figma.com/design/yi1vHrojH9MV6AckmROOQx/UI-Kit-2025?node-id=1173-45854) | **Codebase:** `src/components/` | **Standard:** Figma name = code name, zero mapping.
+
+---
+
+<Markdown>{AuditContent}</Markdown>

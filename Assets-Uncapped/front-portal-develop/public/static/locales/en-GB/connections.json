@@ -1,0 +1,208 @@
+{
+  "index": {
+    "title": "Connections",
+    "descriptions": {
+      "amazon": "Securely connect all your Amazon stores, sales accounts, credit cards, bank accounts, and accounting platforms.",
+      "core": "Securely connect all your sales accounts, credit cards, bank accounts, and accounting platforms."
+    },
+    "groups": {
+      "amazon": {
+        "title": "Amazon",
+        "connect": "Connect Amazon store"
+      },
+      "sales": {
+        "title": "Sales accounts",
+        "connect": "Connect sales account"
+      },
+      "otherSales": {
+        "title": "Other sales accounts",
+        "connect": "Connect sales account"
+      },
+      "bank": {
+        "title": "Credit Cards & Banks",
+        "connect": "Connect credit card/bank account"
+      },
+      "accounting": {
+        "title": "Accounting",
+        "connect": "Connect accounting platform"
+      }
+    },
+    "buttons": {
+      "submit": "Continue",
+      "skip": "I’ll do this later"
+    },
+    "sidebarBlocks": [
+      {
+        "title": "Why do I need to provide connections?",
+        "list": [
+          "<b>Faster Funding:</b> Securely sharing account connections speeds up additional funding requests.",
+          "<b>Personalized Support:</b> Helps us plan for your future funding needs with tailored solutions",
+          "<b>Flexible Collection:</b> Enables adaptable collection services aligned with your goals."
+        ]
+      },
+      {
+        "title": "Is it secure to connect my accounts?",
+        "list": [
+          "We use the best security features available like strong customer authentication and regulated Open Banking APIs",
+          "Connections are read-only, it’s impossible to control or make changes to your accounts"
+        ]
+      }
+    ]
+  },
+  "add": {
+    "title-amazon": "Connect your store regions",
+    "title-sales": "Connect sales account",
+    "title-bank": "Connect bank account",
+    "title-accounting": "Connect accounting platform",
+    "title-bank-search": "Connect bank accounts"
+  },
+  "components": {
+    "ConnectionBox": {
+      "resolve": "Resolve",
+      "status": {
+        "connecting": "Processing data…",
+        "connected": "Connected",
+        "error": "Error",
+        "analyzing": "Analyzing…"
+      }
+    },
+    "ConnectionDetailsModal": {
+      "titleBank_one": "Connected account",
+      "titleBank_other": "Connected accounts",
+      "delete": "Delete",
+      "deleteBank_one": "Delete connected account",
+      "deleteBank_other": "Delete connected accounts"
+    },
+    "ConnectionErrorModal": {
+      "title": "How to resolve your connection error",
+      "content": "Try reconnecting this account again. If the problem persists, chat to our support team.",
+      "contentNoReconnect": "Try deleting and connecting this account again. If the problem persists, chat to our support team.",
+      "contentTroubleshooting": "Try reconnecting this account again. If the problem persists, read our troubleshooting guide or chat to our support team.",
+      "troubleshootingGuide": "Troubleshooting guide",
+      "delete": "Delete",
+      "reconnect": "Reconnect"
+    }
+  },
+  "modals": {
+    "ConnectionDuplicate": {
+      "title": "This {{platform}} account is already connected",
+      "bank": "Bank",
+      "subtitle": "Looks like you’ve already connected this account with us",
+      "connectAnother": "Connect another account",
+      "addedAll": "I’ve added all my accounts"
+    },
+    "ConnectionDelete": {
+      "title": "Are you sure you want to delete this connection?",
+      "cancel": "No, go back",
+      "submit": "Yes, delete connection"
+    },
+    "PlatformInstructionsAmazon": {
+      "title": "Connect Amazon",
+      "select": "Select the marketplace you want to connect. We automatically add all the marketplaces for that region- so for each store, you only need to connect one marketplace per region",
+      "region": "Region",
+      "marketplaces": "Marketplaces",
+      "northAmerica": "North America",
+      "europe": "Europe",
+      "farEast": "Far East",
+      "signIn": "Sign in with your Amazon seller credentials",
+      "tick": "Tick the box to grant Uncapped access to your account and data and click Confirm",
+      "watch": "Watch ’How to connect Amazon’",
+      "connect": "Connect"
+    }
+  },
+  "bankErrors": {
+    "plaidLinkError": "Plaid link connection could not be established please refresh the page.",
+    "tokenError": "Incorrect Plaid token. Please try again later.",
+    "saveError": "Bank connection couldn’t be saved. Please try again later."
+  },
+  "consents": {
+    "saltedge": {
+      "header": "Connect bank account with Salt Edge",
+      "p1": "For institutions that require compliance with PSD2 regulations, we partner with Salt Edge Limited to access and retrieve your account information.",
+      "p2": "By using the service, you indicate that you have read and agree with the Salt Edge <0>Terms of Service</0> and <1>Privacy Policy<1>."
+    },
+    "yapily": {
+      "header": "Connect bank account with Yapily",
+      "p1": "We have partnered with Yapily Connect to access your bank data at {{bank}}",
+      "p2": "You will now be securely redirected to {{bank}} to give access to the following information:",
+      "list": ["Account(s) details", "Balances", "Transaction history"],
+      "p3": "By using the service, you agree to Yapily Connect accessing your bank data, the <0>Terms & Conditions</0> and <1>Privacy Notice</1>. This consent will be valid until {{date}}."
+    },
+    "confirm": "Connect"
+  },
+  "manual": {
+    "walmart": {
+      "header": "Connect your seller markets",
+      "description": "Connect all your Seller Center accounts for each market. You can connect more than one account for each market.",
+      "connected_one": "{{ count }} shop connected",
+      "connected_other": "{{ count }} shops connected",
+      "countries": {
+        "US": "USA",
+        "MX": "Mexico",
+        "CA": "Canada"
+      }
+    },
+    "braintree": {
+      "header": "Connect your Braintree account",
+      "cta": "Connect Braintree Account",
+      "instructions": [
+        "Login into your <href> Braintree </href> account ",
+        "Click on the <bold>settings icon</bold> and select <bold>API</bold> from the list ",
+        "Get the credentials from the section <bold>API Keys</bold> or generate a new set by clicking <bold>Generate New API Key</bold> ",
+        "Paste the matching values on this page"
+      ]
+    },
+    "checkout": {
+      "header": "Connect your Checkout account",
+      "cta": "Connect Checkout.com",
+      "instructions": [
+        "Login to your <href > Checkout.com Hub </href>",
+        "Click on <bold>Settings</bold>",
+        "Select <bold>Channels</bold>",
+        "Under <bold>Website</bold> locate the entry <bold>Secret Key</bold> and copy the key shown",
+        "Paste the key you’ve just copied in the field on this page"
+      ]
+    },
+    "amazon": {
+      "header": "Connect store region",
+      "copy": "We automatically add <b>all the marketplaces</b> for your store when you connect to a region",
+      "cta": "Connect Amazon account"
+    },
+    "shopify": {
+      "header": "Connect your Shopify account",
+      "cta": "Connect",
+      "instructions": [
+        "Copy your Shopify store subdomain and paste it to the form on the left ie. <b>example</b>.myshopify.com",
+        "Click <b>Connect</b>"
+      ]
+    },
+    "klarna": {
+      "header": "Connect your Klarna account",
+      "cta": "Connect Klarna account",
+      "instructions": [
+        "Sign in to your <href> Klarna Portal </href>",
+        "Go to <bold>Settings</bold> and click <bold>Generate new Klarna API credentials</bold>",
+        "Copy your <bold>Username (UID)</bold> and <bold>Password</bold> or download as a .txt",
+        "Check <bold>I’ve saved the credentials on my device</bold> and click <bold>Close</bold>",
+        "Enter the saved credentials into the fields on this page"
+      ]
+    }
+  },
+  "BankAccountCountrySearchableList": {
+    "search": "Search for more banks",
+    "searchMobile": "Search for more",
+    "searchResults": "Search results",
+    "noResults": "It looks like your bank isn’t supported yet. Please check the spelling or your search term. You can <0>skip bank connections</0> and upload bank statements later but this will slow down your application.",
+    "noResultsPortal": "It looks like your bank isn’t supported yet. Please check the spelling or your search term.",
+    "noResultsAlternative": "It looks like your bank isn’t available through our default connection provider. You can try an alternative provider with a wider range of bank connections.",
+    "alternativeProviders": "Alternative connection providers"
+  },
+  "AmazonRegionCards": {
+    "northAmerica": "North America",
+    "europe": "Europe",
+    "farEast": "Far East",
+    "choose": "Choose if your store is located in:",
+    "connected_one": "{{ count }} shop connected",
+    "connected_other": "{{ count }} shops connected"
+  }
+}

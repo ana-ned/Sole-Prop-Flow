@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "FILE=$(node -e \"let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{try{const j=JSON.parse(d);if(j&&j.tool_input&&j.tool_input.file_path){console.log(j.tool_input.file_path);}else{console.log('');}}catch(e){console.log('');}});\"); case \"$FILE\" in *.tsx|*.ts|*.jsx|*.js) pnpm prettier --write \"$FILE\" && pnpm eslint --fix \"$FILE\" 2>/dev/null ;; esac; exit 0"
+          }
+        ]
+      }
+    ]
+  }
+}

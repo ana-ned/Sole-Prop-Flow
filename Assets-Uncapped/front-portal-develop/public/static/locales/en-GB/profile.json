@@ -1,0 +1,28 @@
+{
+  "teamMembers": "Your team members",
+  "leaveFeedback": "Leave feedback",
+  "resetPassword": "Reset password",
+  "faqs": "FAQs",
+  "resetPasswordModal": {
+    "title": "Are you sure you want to reset your password?",
+    "subtitle": "We’ll send you an email with instructions",
+    "cancel": "Cancel",
+    "submit": "Reset my password",
+    "confirmation": "We’ve just sent you an email to reset your password"
+  },
+  "electonicDisclosureAndConsent": "Electronic Disclosure and Consent",
+  "privacyStatement": "Privacy Statement",
+  "help": "Help",
+  "contactUs": "Contact us",
+  "logout": "Log out",
+  "supportTitle": "How can we help?",
+  "documents": {
+    "title": "Documents",
+    "loanDocuments": "Loan documents",
+    "accountStatements": "Account statements"
+  },
+  "DocumentListItem": {
+    "generatedOn": "Generated on",
+    "statement": "Statement"
+  }
+}

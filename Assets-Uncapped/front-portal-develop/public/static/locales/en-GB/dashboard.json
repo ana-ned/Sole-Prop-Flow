@@ -1,0 +1,204 @@
+{
+  "greeting": "Hi",
+  "moreOptions": {
+    "title": "Do more with Uncapped",
+    "pay": "Pay a bill/invoice with Uncapped BillPay",
+    "withdrawCash": "Withdraw funds to your bank account",
+    "referAndEarn": "Refer brands to Uncapped and earn up to $1,000"
+  },
+  "widgets": {
+    "balances": {
+      "loans": {
+        "title": "Total outstanding",
+        "button": "View agreement details"
+      },
+      "nextRepayment": {
+        "title": "Next payment",
+        "emptyState": "No scheduled payments",
+        "button": "View payments",
+        "ofSales": "of $t(widgets.balances.nextRepayment.frequency.{{frequency}})",
+        "frequency": {
+          "DAILY": "daily sales",
+          "WEEKLY": "weekly sales",
+          "EVERY_14_DAYS": "biweekly sales",
+          "EVERY_15_DAYS": "sales every 15 days",
+          "MONTHLY": "monthly sales",
+          "ON_DEMAND": "on demand",
+          "UNKNOWN": "unknown"
+        }
+      },
+      "lastTransaction": {
+        "title": "Last transaction",
+        "emptyState": "No transactions",
+        "button": "View transactions"
+      },
+      "overdueRepayments": {
+        "title": "Overdue payments",
+        "button": "Settle overdue amount"
+      }
+    },
+    "lineOfCredit": {
+      "title": "Line of credit",
+      "titleRevolvingLineOfCredit": "Revolving Line of Credit",
+      "action": "View",
+      "copy": "available to draw",
+      "paused": "Paused",
+      "cta": "New draw",
+      "newDraw": "New Draw",
+      "pending": "Draw pending",
+      "pendingCopy": "Your recent draw request is pending until you <cta>sign your contract</cta>",
+      "viewAllDraws": "View all draws",
+      "availableCredit": "Available credit",
+      "drawRequestsInReview": "Draw requests in review",
+      "availableToDraw": "Available to draw",
+      "drawn": "Drawn",
+      "requested": "Requested",
+      "growToUnlock": "Grow to unlock",
+      "recalculationNoticeTitle_one": "Your Available Credit Limit will be recalculated in {{count}} day",
+      "recalculationNoticeTitle_other": "Your Available Credit Limit will be recalculated in {{count}} days",
+      "recalculationNoticeContent": "As your payouts increase, your credit limit will increase up to {{maxCreditLimit}}. <cta>Learn how we calculate your Available Credit Limit</cta>"
+    },
+    "businessInsights": {
+      "title": "Business insights",
+      "titleVariant": "Inventory insights",
+      "comingSoon": "Coming soon",
+      "onWaitlist": "You’re on the waitlist",
+      "join": "Join the waitlist",
+      "joinShort": "Join",
+      "description": "Get business insights in your Uncapped dashboard. Track revenue, expenses, and growth all in one place. See where your money’s going and get visibility of vital projections to keep your growth on track.",
+      "descriptionVariant": "Get inventory insights in your Uncapped dashboard. Understand how your inventory is valued, track stock levels, and identify slow-moving products.",
+      "joinedDescription": "Thanks for joining the waitlist! We’ll notify you when {{title}} is ready."
+    }
+  },
+  "modals": {
+    "accountManagerWillContact": {
+      "title": "Great! Your account manager will be in touch within 24 hours",
+      "subtitle": "Keep an eye on the inbox at {{email}}",
+      "cta": "Got it!"
+    }
+  },
+  "banners": {
+    "welcome": {
+      "title": "Welcome to Uncapped",
+      "content": "We believe in long term partnerships with our customers. <b>If you keep your data sources connected</b> and your business remains healthy, we’ll offer you additional funding to help scale your business."
+    },
+    "topUp": {
+      "title": "You’ve unlocked up to",
+      "progress": "Ready to launch...",
+      "content": "It’s great to see your business doing so well! You can now access a new top-up offer based on your recent performance",
+      "button": "Get more funding"
+    },
+    "applyFromPartnership": {
+      "title": "You’ve unlocked up to",
+      "content": "Welcome to Uncapped! Based on your previous loan information you could be eligible for additional funding",
+      "button": "Get more funding"
+    },
+    "amazonConsent": {
+      "subtitle": "You’ve selected additional funding of",
+      "content": "We need you to link your {{productType}} to your Amazon Seller account before we can deposit your funds into your account",
+      "button": "Continue",
+      "productType": {
+        "termLoan": "Term Loan",
+        "cashAdvance": "Cash Advance",
+        "lineOfCredit": "Line of Credit"
+      }
+    },
+    "continueOnboarding": {
+      "pre-offer": {
+        "title": "You’ve unlocked up to",
+        "content": "Welcome to Uncapped! Based on your previous loan information you could be eligible for additional funding"
+      },
+      "post-offer": {
+        "title": "You’ve selected additional funding of",
+        "content": "We require a few more details before we can deposit your funds into your account"
+      },
+      "button": "Continue application"
+    },
+    "offerAvailable": {
+      "title": "Funding approved! Up to",
+      "content": "Great news! Your new funding application has been approved. Select an offer to disburse your cash.",
+      "button": "Select an offer"
+    },
+    "missingMonthlyFinancialData": {
+      "title": "Missing monthly financial data",
+      "content": "Keeping your financial data up to date helps us monitor your business for additional capital and ensures a smoother process when you take a draw. As your financials weren’t submitted on time, <b>draw requests</b> may take up to <b>5 additional business days to process.</b>"
+    },
+    "missingData": {
+      "title": "Missing data",
+      "content": "Some of the data we need to continue offering you funding in future either needs to be reconnected or updated. <b>You could miss out on top-ups or refinancing opportunities if you don’t keep your information up to date</b>",
+      "checks": {
+        "soft_credit": "Applicant information required",
+        "bank_error": "Resolve your Banking connection error",
+        "bank_missing": "Connect at least one bank",
+        "amazon_error": "Resolve your Amazon connection error",
+        "amazon_missing": "Connect at least one Amazon account",
+        "sales_error": "Resolve your Revenue source connection error",
+        "sales_missing": "Connect at least one Revenue source"
+      }
+    },
+    "eligibleMissingData": {
+      "title": "Top-Up unlocked up to",
+      "content": "It’s great to see your business doing so well! We’re ready to offer you more funding to help support your continued growth. <b>Complete the gaps in your data to generate an offer</b>"
+    },
+    "rejected": {
+      "title": "New funding isn’t available at this time",
+      "subtitle": "This is because {{reason}}",
+      "progressFail": "No offer available",
+      "status": "Underwriting complete",
+      "content": "Please consider reapplying whenever your business circumstances change. <b>You can apply again in {{days}}.</b>",
+      "day_one": "{{count}} day",
+      "day_other": "{{count}} days"
+    },
+    "awaitingActivation": {
+      "title": "We’re processing your funding",
+      "content": "We’re completing our final verification checks, this normally takes 24 hours. We will notify you by email once completed. If you need to change any information, please contact <b>hello@weareuncapped.com</b>"
+    },
+    "dailyPayout": {
+      "title": "You’ve unlocked an offer where you can",
+      "heading": "Get Paid Every Day",
+      "content": "With Daily Payouts you no longer need to wait up to 35 days to receive your marketplace payout",
+      "button": "View offer"
+    }
+  },
+  "notifications": {
+    "title": "Notifications",
+    "lateFees": {
+      "title": "Payments are overdue",
+      "content": "Late fees are added to your account daily when you miss payments. <button>Contact customer support</button> to make a payment or discuss next steps.",
+      "cta": "View overdue payments"
+    },
+    "sellersFi": {
+      "title": "Payments will continue to be collected by SellersFi until July 16th 2025",
+      "copy": "You may notice some discrepancies between the balance shown on SellersFi and Uncapped. We’ll reconcile your balance in the Uncapped portal when we receive confirmation of payments from SellersFi."
+    },
+    "locMissingDocuments": {
+      "title": "Submit your monthly financial data",
+      "copy": "Failure to do so may mean that it takes us longer to process your draw by up to 5 business days. You can also upload this when submitting a new draw request.",
+      "cta": "Upload"
+    },
+    "repaymentPhase": {
+      "future": {
+        "title": "Your payment amount has changed",
+        "increasing": "Under the <href>loan agreement</href> that you signed with {{ source }} , your loan transitioned to the Payment Period on {{ date }} resulting in your regular payments increasing.",
+        "frequency": "Your payment frequency will remain the same ({{period}}) and your next upcoming payment is on {{date}}.",
+        "frequencyNoUpcoming": "Your payment frequency will remain the same ({{period}}).",
+        "faq": "Want to know more? <href>Read our full FAQ section</href>"
+      },
+      "past": {
+        "title": "Your payment amount will change from {{date}}",
+        "increasing": "As detailed in the Disclosure Table of your <href>loan agreement</href> with {{ source }}, your loan will transition to the Payment Period and your regular payments will increase from {{month}}.",
+        "frequency": "Your payment frequency will remain the same ({{period}}).",
+        "faq": "Want to know more? <href>Read our full FAQ section</href>"
+      },
+      "sellersfi": "SellersFi",
+      "goldmanSachs": "Goldman Sachs Bank USA"
+    }
+  },
+  "SmsConsentModal": {
+    "title": "Funding updates on the go",
+    "content": "We’re releasing new features to help you stay on top of your finances. Message frequency varies. Standard message and data rates apply. <href>Privacy policy</href>",
+    "label": "Personal contact number",
+    "submit": "I agree to receive SMS messages",
+    "cancel": "I don’t want SMS updates"
+  }
+}

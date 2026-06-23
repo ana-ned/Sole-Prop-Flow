@@ -1,0 +1,113 @@
+{
+  "index": {
+    "choosePayeeStep": {
+      "title": "Choose payee",
+      "search": "Search",
+      "allPayees": "All payees",
+      "numbers": {
+        "iban": "IBAN no.",
+        "accountNumber": "Account no."
+      }
+    },
+    "detailsStep": {
+      "subtitle": "{{category}} purchase",
+      "amount": "Amount",
+      "exchangeAmount": "In your account currency",
+      "reference": "Reference",
+      "referenceAchHelper": "10 character limit for ACH payments",
+      "sendDate": "Send date",
+      "swift": "Proceed with SWIFT payment",
+      "alertTrusted": "Payments are usually processed within the next hour, but can take up to 1 day",
+      "alertSwiftTitle": "Your payment will be sent via SWIFT",
+      "alertSwiftContent": "Our default payment method (ACH) has a 10 character reference limit. If you use a longer reference we’ll send via SWIFT which may incur an additional charge",
+      "alertNew": "Set up new payees at least 1 business day before the payments due date to ensure it is processed on time",
+      "submit": "Review payment"
+    },
+    "reviewStep": {
+      "title": "Review payment",
+      "sender": "Uncapped Ltd",
+      "sendDate": "Send date",
+      "routingNumber": "Routing number",
+      "sortCode": "Sort code",
+      "accountNumber": "Account number",
+      "iban": "IBAN",
+      "swiftBic": "SWIFT/BIC",
+      "reference": "Reference",
+      "amount": "Amount",
+      "exchangeRate": "Exchange rate",
+      "exchangedAmount": "In your account currency",
+      "convenienceFee": "Convenience fee ({{rate}})",
+      "exchangeFee": "Exchange fee ({{rate}})",
+      "estimatedTotal": "Estimated total",
+      "total": "Total",
+      "alertExchangeRate": "Exchange rate and fee is subject to change until payment has been sent",
+      "alertSwift": "This SWIFT payment may incur additional fees once your payment has been processed. Any fees will be added to the amount you have left to repay",
+      "submit": "Confirm payment"
+    },
+    "confirmationStep": {
+      "titleSent": "Payment sent",
+      "titleScheduled": "Payment confirmed",
+      "titleRequested": "Payment request sent for approval",
+      "contentSent": "Payments are usually processed within the next hour, but can take up to 1 day",
+      "contentScheduled": "This will be sent on {{date}}",
+      "contentRequested": "Approving a new payee usually takes us 1 business day",
+      "submit": "Got it!"
+    },
+    "deleteConfirmation": {
+      "title": "Are you sure you want to delete this payment?",
+      "confirm": "Yes, delete payment",
+      "cancel": "No, take me back"
+    },
+    "deleteConfirmed": {
+      "title": "Payment deleted",
+      "proceed": "Got it!"
+    }
+  },
+  "newVendor": {
+    "vendorDetailsStep": {
+      "title": "Payee details",
+      "name": "Payee name",
+      "email": "Payee email",
+      "typeOfPurchase": "Type of purchase",
+      "feeRate": "{{rate}} convenience fee",
+      "submit": "Confirm payee"
+    },
+    "addressStep": {
+      "title": "Payee address",
+      "submit": "Confirm address"
+    },
+    "paymentDetailsStep": {
+      "title": "Payee payment details",
+      "countryOfAccount": "Country of account",
+      "currency": "Currency",
+      "bankDetails": "Bank details",
+      "iban": "IBAN",
+      "transferTypes": {
+        "SORT_CODE": "Sort code",
+        "IBAN": "IBAN"
+      },
+      "accountNumber": "Account number",
+      "swiftBic": "SWIFT/BIC",
+      "sortCode": "Sort code",
+      "routingNumber": "Routing number",
+      "branchCode": "Branch code",
+      "bankCode": "Bank code",
+      "ifscCode": "IFSC code",
+      "bsbCode": "BSB code",
+      "submit": "Confirm payment details"
+    },
+    "reviewStep": {
+      "title": "Review payee",
+      "submit": "Save payee"
+    },
+    "deleteConfirmation": {
+      "title": "Are you sure you want to delete this payment?",
+      "confirm": "Yes, delete payment",
+      "cancel": "No, take me back"
+    },
+    "deleteConfirmed": {
+      "title": "Payment deleted",
+      "proceed": "Got it!"
+    }
+  }
+}

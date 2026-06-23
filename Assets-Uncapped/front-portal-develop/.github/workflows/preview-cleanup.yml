@@ -1,0 +1,57 @@
+name: preview-cleanup
+
+on:
+  schedule:
+    - cron: "0 15 * * 1" # Runs every Monday at 15:00 UTC (3 PM)
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  preview-cleanup:
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - uses: google-github-actions/auth@v3
+        with:
+          workload_identity_provider: ${{ vars.WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ vars.WORKLOAD_IDENTITY_PROVIDER_SVC }}
+
+      - uses: google-github-actions/setup-gcloud@v3
+
+      - name: Set gcloud config
+        run: |
+          gcloud config set core/project uncapped-ci-cd
+          gcloud config set run/region europe-west2
+
+      - name: Delete services older than 14 days since last deploy & matching repo name
+        env:
+          REPO_NAME: ${{ github.event.repository.name }}
+        run: |
+          CUTOFF=$(date -u -d '14 days ago' +%s)
+
+          services=$(gcloud run services list --format="value(metadata.name)")
+
+          for svc in $services; do
+            if [[ "$svc" == *"$REPO_NAME"* ]]; then
+
+              # Cloud Run does not expose a "last deployed" timestamp directly.
+              # However, every deployment creates a new revision, and revisions
+              # include a `creationTimestamp`. So, we use the latest revision's
+              # creation time as a proxy for "last deployed time".
+              last_rev_time=$(gcloud run revisions list \
+                --service="$svc" \
+                --sort-by="~metadata.creationTimestamp" \
+                --limit=1 \
+                --format="value(metadata.creationTimestamp)")
+
+              if [[ -n "$last_rev_time" ]]; then
+                last_rev_ts=$(date -d "$last_rev_time" +%s)
+                if [ "$last_rev_ts" -lt "$CUTOFF" ]; then
+                  echo "Deleting $svc (last deployed: $last_rev_time)..."
+                  gcloud run services delete "$svc" --quiet --async
+                fi
+              fi
+            fi
+          done

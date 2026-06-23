@@ -1,0 +1,252 @@
+{
+  "index": {
+    "title": "Find out if you’re eligible for funding in less&nbsp;than&nbsp;<b>2&nbsp;minutes</b>",
+    "continueGoogle": "Sign up with Google",
+    "continueAmazon": "Sign up with Amazon",
+    "continueEmail": "Sign up with email",
+    "alert": "By continuing you agree to our Uncapped <1>Terms & Conditions</1>",
+    "alertExperiment": "By continuing you agree to our <1>Terms & Conditions</1>",
+    "haveAccount": "Already have an account?",
+    "logIn": "Log in",
+    "signupEmail": "or sign up with email"
+  },
+  "RegistrationForm": {
+    "firstName": "First name",
+    "lastName": "Last name",
+    "email": "Email address",
+    "password": "Password",
+    "signUp": "Sign up with email"
+  },
+  "clientApplication": {
+    "title": "What can we help you with today?",
+    "subtitle": "Confirm what you’re interested in and then we’ll need some information",
+    "nextBtn": "Next",
+    "banking": "Banking",
+    "funding": "Funding",
+    "bankingDescription": "Grow your business faster with bespoke account tools",
+    "fundingDescription": "Funding for marketing, inventory or hiring"
+  },
+  "eligibility": {
+    "infoScreens": {
+      "buttons": {
+        "chatToUs": "Chat to us",
+        "reapply": "Re-apply for funding"
+      },
+      "UNSUPPORTED_CANADA_PROVINCE": {
+        "title": "Province not currently supported",
+        "content": [
+          "Unfortunately there are some limits to who we can support. We are unable to provide funding as we don’t currently operate in the following Canadian provinces: {{unsupportedProvinces}}.",
+          "If you have entities in other provinces please re-apply for funding."
+        ]
+      },
+      "UNSUPPORTED_US_STATE": {
+        "title": "State not currently supported",
+        "content": [
+          "Unfortunately there are some limits to who we can support. We are unable to provide funding as we don’t currently operate in the following states: {{unsupportedStates}}.",
+          "If you have entities in other states please re-apply for funding."
+        ]
+      },
+      "SOLE_TRADER": {
+        "title": "Sole Proprietorship (sole trader) not supported",
+        "content": [
+          "Unfortunately there are some limits to who we can support. We don’t currently work with Sole Proprietorships.",
+          "If this changes or if you think we’ve made a mistake; please re-apply for funding."
+        ]
+      },
+      "UNSUPPORTED_COUNTRY": {
+        "title": "Country not supported",
+        "content": [
+          "Unfortunately there are some limits to who we can support. We currently only operate in the UK, USA, Canada and Poland.",
+          "If you have entities within these countries please re-apply for funding."
+        ]
+      },
+      "LOW_REVENUE": {
+        "title": "Minimum monthly revenue amount not met",
+        "content": [
+          "Unfortunately there are some limits to who we can support. We are unable to provide funding to businesses with under {{minimumRequiredRevenue}} monthly revenue.",
+          "Once you meet our minimum amount, or think we’ve made a mistake? Please re-apply for funding."
+        ]
+      },
+      "UNSUPPORTED_BUSINESS_TYPE": {
+        "title": "Business type not supported",
+        "content": [
+          "Unfortunately there are some limits to who we can support. We currently only lend to Ecommerce brands and Amazon sellers.",
+          "Have we made a mistake? Please re-apply for funding."
+        ]
+      },
+      "eligibleBallparkOffer": {
+        "title": "You’re eligible for up to",
+        "copy": "This amount is based on the data you have provided so far. Your full offer will be subject to the rest of your application.",
+        "continue": "Continue your application"
+      },
+      "sidebar": {
+        "header": "Apply now",
+        "description": "It won’t affect your credit score!",
+        "points": [
+          {
+            "point": "Check eligibility in minutes",
+            "desc": "Find out if you’re eligible for funding in less than 2 minutes"
+          },
+          {
+            "point": "Connect your accounts",
+            "desc": "Quickly share your revenue data so we can start preparing your offer"
+          },
+          {
+            "point": "View offers",
+            "desc": "We’ll generate a funding offer for you in just 24 hours"
+          }
+        ],
+        "footer": "Chosen by 1,000s of founders like you"
+      }
+    },
+    "checkForm": {
+      "businessEntityTypes": {
+        "GBR_PRIVATE_LIMITED_COMPANY": "Private Limited Company (LTD)",
+        "GBR_PUBLIC_LIMITED_COMPANY": "Public Limited Company (PLC)",
+        "GBR_COMPANY_LIMITED_BY_GUARANTEE": "Company Limited by Guarantee",
+        "GBR_UNLIMITED_COMPANY": "Unlimited Company (UNLTD)",
+        "GBR_LIMITED_LIABILITY_PARTNERSHIP": "Limited Liability Partnership (LLP)",
+        "GBR_COMMUNITY_INTEREST_COMPANY": "Community Interest Company",
+        "GBR_INDUSTRIAL_AND_PROVIDENT_SOCIETY": "Industrial and Provident Society (IPS)",
+        "GBR_SOLE_TRADER": "Sole Trader",
+        "GBR_OTHER": "Other",
+        "USA_SOLE_PROPRIETORSHIP": "Sole Proprietorship",
+        "USA_PARTNERSHIP": "Partnership",
+        "USA_C_CORPORATION": "C corporation",
+        "USA_S_CORPORATION": "S corporation",
+        "USA_LIMITED_LIABILITY_COMPANY": "Limited Liability Company (LLC)",
+        "USA_LIMITED_LIABILITY_PARTERSHIP": "Limited Liability Partnership (LLP)",
+        "USA_OTHER": "Other",
+        "POLAND_REGISTERED_PARTNERSHIP": "Registered Partnership",
+        "POLAND_PROFESSIONAL_PARTNERSHIP": "Professional Partnership",
+        "POLAND_LIMITED_PARTNERSHIP": "Limited Partnership",
+        "POLAND_LIMITED_JOINT_STOCK_PARTNERSHIP": "Limited Joint-Stock Partnership",
+        "POLAND_LIMITED_LIABILITY_COMPANY": "Limited Liability Company",
+        "POLAND_JOINT_STOCK_COMPANY": "Joint-Stock Company",
+        "POLAND_SOLE_PROPRIETORSHIP": "Sole Proprietorship",
+        "POLAND_OTHER": "Other",
+        "GERMANY_LIMITED_LIABILITY_COMPANY": "Limited Liability Company (GmbH)",
+        "GERMANY_LIMITED_LIABILITY_ENTREPRENEURIAL_COMPANY": "Limited Liability Entrepreneurial Company (“Mini GmbH”)",
+        "GERMANY_STOCK_CORPORATION": "Stock Corporation (AG)",
+        "GERMANY_GENERAL_PARTNERSHIP": "General Partnership (OHG)",
+        "GERMANY_LIMITED_PARTNERSHIP": "Limited Partnership (KG)",
+        "GERMANY_SOLE_PROPRIETORSHIP": "Sole Proprietorship (EK)",
+        "GERMANY_OTHER": "Other",
+        "SOLE_TRADER": "Sole trader",
+        "NOT_SOLE_TRADER": "Not sole trader"
+      }
+    },
+    "FindBusiness": {
+      "title": "Find your business",
+      "businessName": "Search for registered business name",
+      "businessNameReadonly": "Registered business name",
+      "country": "Country of incorporation",
+      "searchHelp": "If you’re part of a group use the parent company.",
+      "addAllStates": "Add all {{region}} of legal registration",
+      "stateUnsupported": "{{state}} not currently supported. Add all registered {{region}}",
+      "bespokeMortagageFunding": "In the states of California and Utah, the lending services described on this website are provided by Uncapped US LLC (NMLS ID 2403491), a wholly owned subsidiary of Uncapped Ltd",
+      "statesUnsupported": "Some {{region}} not currently supported. Add all registered {{region}}",
+      "stateRequired": "Adding at least 1 registered state is required",
+      "states": "states",
+      "provinces": "provinces",
+      "next": "Next",
+      "variant": {
+        "title": "Check your eligibility",
+        "titlePreQualified": "Confirm your details",
+        "smsNudge": "We use SMS to notify you about offer updates",
+        "contactEmail": "Personal contact email",
+        "submit": "Check your eligibility",
+        "submitPreQualified": "Confirm and continue",
+        "submitAlt": "Continue"
+      },
+      "createOption": {
+        "title": "Manually enter your business name instead",
+        "description": "If you can’t find your business name you can enter it manually"
+      }
+    },
+    "EligibilityCheck": {
+      "title": "Additional details",
+      "businessWebsite": "Main sales website",
+      "phoneNumber": "Personal contact number",
+      "businessEntity": "Business entity",
+      "averageRevenue": "Average monthly revenue",
+      "requiredFundingTimeHorizon": "When do you need funding?",
+      "requiredFundingTimeHorizonOptions": [
+        "As soon as possible",
+        "Within the next week",
+        "Within the next month",
+        "Within 2-4 months",
+        "Not sure yet"
+      ],
+      "businessModel": "Business model",
+      "businessModelOptions": {
+        "ECOMMERCE_AMAZON_MARKETPLACE": "Ecommerce / Marketplace / Amazon",
+        "RETAIL_WHOLESALE": "Retail stores / Wholesale",
+        "SUBSCRIPTION_SAAS": "Subscription / SaaS",
+        "OTHER": "Other"
+      },
+      "businessModelHelpText": "Select all that apply to your business",
+      "soleTrader": "What is your business entity type?",
+      "soleTraderOptions": {
+        "no": "LLC / Corporation / LLP",
+        "noCanada": "Corporation / LLP",
+        "yes": "Sole Proprietorship (Sole Trader)",
+        "yesCanada": "Sole Trader / Partnership",
+        "yesHelpText": "Select this if you are an individual operating a business and have not registered it as an LLC, Corporation or LLP",
+        "yesHelpTextCanada": "Select this if you are individual or partnership operating a business and have not registered it as a Corporation or LLP"
+      },
+      "salePlatform": "Main sales platform",
+      "submit": "Let’s find out",
+      "submitAlt": "Continue",
+      "businessWebsiteHints": {
+        "amazon": "Include your Amazon store name (e.g. amazon.com/shops/yourstore). <href>Learn how to find your store name</href>",
+        "shopify": "Include your Shopify store name (e.g. yourstore.myshopify.com). <href>Learn how to find your store name</href>",
+        "ebay": "Include your Ebay store name (e.g. ebay.com/str/yourstore). <href>Learn how to find your store name</href>"
+      },
+      "consent": {
+        "sms": "I agree to receive SMS messages from Uncapped. Message frequency varies. Standard message and data rates apply. <href>Privacy policy</href>"
+      },
+      "variant": {
+        "title": "Discover your funding potential",
+        "titleAmazon": "Funding tailored to you",
+        "mainRevenueSource": "Main revenue source",
+        "fundingAmount": "How much money are you looking for?",
+        "fundingAmountHelpText": "You can control your maximum amount on the offer screen",
+        "mainRevenueSourceHelpText": "If you use multiple platforms, select the one with the highest revenue",
+        "businessWebsite": {
+          "other": "What is the address of your main sales website?"
+        },
+        "businessWebsiteHelpText": {
+          "other": "Update if this is different to the domain used in your email address"
+        },
+        "mostImportantForYou": "What’s most important to you?",
+        "mostImportantForYouOptions": [
+          "Fastest decision",
+          "Highest amount",
+          "Longest repayment term",
+          "Lowest fees",
+          "Flexible repayment"
+        ]
+      }
+    },
+    "logout": "Log out"
+  },
+  "GallerySidebar": {
+    "reviews": [
+      "Uncapped were efficient, fast and easy to deal with",
+      "Competitive financing rates and extremely thoughtful support",
+      "Truly a 5-star experience. I strongly recommend Uncapped",
+      "Awesome - We had an offer within 48 hours of submitting",
+      "Fast turnaround on making a lending decision",
+      "Perfect partner for a growing online</br> company",
+      "Uncapped provides and delivers on exactly what they say",
+      "I was very impressed with the process & how easy everything was",
+      "In a crowded market, Uncapped are top, top drawer",
+      "First conversation to cash in the bank in 72 hours",
+      "Swift & efficient<br/> process, very friendly people!",
+      "I loved working with the team and they moved fast",
+      "Transparent,<br/> responsive,<br/> professional, fast"
+    ],
+    "chosenByFounders": "Chosen by 1,000s of founders like you"
+  }
+}

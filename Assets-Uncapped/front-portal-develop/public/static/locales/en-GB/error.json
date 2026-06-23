@@ -1,0 +1,19 @@
+{
+  "auth": {
+    "title": "Permission Denied",
+    "content": "You do not have the rights to access this page. Please contact your administrator."
+  },
+  "404": {
+    "title": "Page not found",
+    "content": "We can’t seem to find the page you are looking for."
+  },
+  "500": {
+    "title": "Something went wrong",
+    "content": "We are working on fixing the problem. Please try again later!"
+  },
+  "links": {
+    "goBack": "Go back",
+    "separator": "to the previous page or visit our",
+    "goHome": "homepage"
+  }
+}

@@ -1,0 +1,4 @@
+body .react-tel-input .flag-dropdown.open {
+  z-index: 3;
+  user-select: none;
+}

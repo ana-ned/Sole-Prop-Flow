@@ -1,0 +1,70 @@
+{
+  "cards": {
+    "noCards": "No cards assigned to this account",
+    "view": "View",
+    "fundingCard": "Funding Card",
+    "virtualCard": "Virtual Card",
+    "physicalCard": "Physical Card",
+    "validThru": "GOOD\nTHRU",
+    "cvv": "CVV",
+    "cards": "Cards",
+    "activate": "Activate my card"
+  },
+  "summary": {
+    "noSuchCard": "No such card found",
+    "availableToSpend": "Available to spend",
+    "disableUseOfThisCard": "Disable use of this card",
+    "freezeCard": "Freeze card",
+    "madeWithThisCard": "Made with this card",
+    "associatedAddress": "Associated address",
+    "cardStatus": {
+      "frozen": "Your card has been frozen",
+      "unfrozen": "Your card has been unfrozen"
+    },
+    "card": "Card",
+    "loadingAccountInfo": "…Loading…",
+    "setPinTitle": "Set PIN",
+    "setPinSubtitle": "To use with this card",
+    "changePinTitle": "Change PIN",
+    "changePinSubtitle": "To use with this card"
+  },
+  "activation": {
+    "title": "Enter card details",
+    "content": "To activate, enter your card details",
+    "explanation": "The 3 digit code on the back of your card",
+    "next": "Next",
+    "cvv": "CVV",
+    "expiration": "Expiration date",
+    "networkError": "Unexpected network error occured. Please, try again later.",
+    "submitError": "Something went wrong. Please, check expiration date and CVV or try again later.",
+    "confirmation": {
+      "title": "Your card is activated and ready to use!",
+      "subtitle": "Find your card details by clicking ’View’ in the top right-hand corner",
+      "button": "Got it!"
+    },
+    "pin": {
+      "title": "Set card PIN",
+      "subtitle": "Set the 4 digit PIN for your card",
+      "confirmSubtitle": "Re-enter the 4 digit PIN to confirm",
+      "label": "PIN",
+      "confirmLabel": "Confirm PIN",
+      "confirmation": "Your PIN is now set"
+    }
+  },
+  "pinChange": {
+    "title": "Set your new PIN",
+    "subtitle": "Enter your current PIN code for your Uncapped card ending **{{last4Digits}}",
+    "oldLabel": "Current PIN",
+    "currentPinError": "Incorrect or invalid Current PIN",
+    "subtitleNew": "Set the new 4 digit PIN for your card",
+    "newLabel": "New PIN",
+    "subtitleConfirm": "Re-enter the 4 digit PIN to confirm",
+    "confirmNewLabel": "Confirm PIN",
+    "button": "Got it!",
+    "confirmPinError": "The two new PINs entered do not match",
+    "confirmation": {
+      "title": "Your new PIN was changed successfully",
+      "button": "Got it!"
+    }
+  }
+}

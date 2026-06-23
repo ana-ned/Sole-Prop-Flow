@@ -1,0 +1,187 @@
+{
+  "main": {
+    "title": {
+      "available": "Available credit",
+      "paused": "Credit line paused",
+      "closed": "Credit line closed"
+    },
+    "cta": "New draw",
+    "draws": {
+      "pendingDraws": "Pending draws",
+      "yourDraws": "Your draws",
+      "closedDraws": "Closed draws"
+    },
+    "outOfAmount": "out of {{amount}}",
+    "viewDetails": "View details"
+  },
+  "details": {
+    "title": "Your credit line",
+    "titleFlexibleCreditLine": "Your flexible credit line",
+    "overview": "Overview",
+    "available": "Available",
+    "pending": "Pending",
+    "drawn": "Drawn",
+    "drawFeeMonthly": "Draw fee per month",
+    "repaymentsPerDraw": "Repayment term",
+    "repaymentsPerDrawValue": "{{range}} months",
+    "repaymentFrequency": {
+      "title": "Repayment frequency",
+      "DAILY": "Daily",
+      "WEEKLY": "Weekly",
+      "EVERY_14_DAYS": "Every 14 days",
+      "EVERY_15_DAYS": "Every 15 days",
+      "MONTHLY": "Monthly",
+      "ON_DEMAND": "On demand",
+      "UNKNOWN": "Unknown"
+    },
+    "minimumDraw": "Minimum draw",
+    "facilityFee": "Facility fee ({{percent}})",
+    "activationDate": "Activation date",
+    "drawUntil": "Draw funds until",
+    "fees": "Convenience fees",
+    "billPayFee": "BillPay",
+    "cashFee": "Cash"
+  },
+  "NewDraw": {
+    "title": "New draw",
+    "amount": "Amount to draw",
+    "minDrawValidationError": "Minimum draw must be at least {{amount}}",
+    "maxDrawValidationError": "Maximum draw must be at most {{amount}}",
+    "repaymentsTerms": "Repayment term",
+    "repaymentsTermsValue_one": "{{count}} month",
+    "repaymentsTermsValue_other": "{{count}} months",
+    "repaymentFrequency": "Repayment frequency",
+    "drawFeeMonthly": "Draw fee per month",
+    "drawFee": "Draw fee ({{rate}})",
+    "totalPayback": "Total to payback",
+    "cta": "Continue",
+    "scheduleTitle": "About this plan",
+    "repaymentDetails": "Repayment details",
+    "totalDrawFee": "Total draw fee",
+    "paymentHolidayFee": "Payment holiday fee",
+    "totalRepayable": "Total repayable"
+  },
+  "NewLoc2Draw": {
+    "title": "New draw",
+    "widgetTitle": "Choose draw amount",
+    "amount": "Draw amount",
+    "copy": "Please choose the amount you’d like to have deposited to your bank account",
+    "drawn": "Drawn",
+    "availableToDraw": "Available to draw",
+    "growToUnlock": "Grow to unlock",
+    "cta": "Continue"
+  },
+  "Loc2DrawSummary": {
+    "title": "New draw",
+    "widgetTitle": "Draw details",
+    "principalBalanceAfterDraw": "Principal balance after this draw",
+    "thisDraw": "This draw",
+    "currentPrincipalBalance": "Current principal balance",
+    "annualInterestRate": "Annual Interest Rate (APR)",
+    "nextRepaymentDueDate": "Next repayment due date",
+    "nextRepayment": "Next repayment ({{percentage}} of {{amount}})",
+    "bankAccountSection": {
+      "title": "Where we’ll send your funds",
+      "description": "Funds can <b>only be sent</b> to the bank account that is set up to your direct debit",
+      "descriptionAmazon": "Funds can <b>only be sent</b> to the bank account that is linked to your Amazon seller account",
+      "verifiedWithAmazon": "Verified with Amazon",
+      "noVerifiedAccount": "No verified bank account found. Please verify your bank account before requesting a draw."
+    },
+    "cta": "Continue",
+    "drawRequestSubmitted": "Draw request submitted",
+    "pleaseAllowUpTo2BusinessDays": "Please allow up to 2 business days for us to process your draw request",
+    "gotIt": "Got it"
+  },
+  "DrawDepositMethod": {
+    "drawRequestSubmitted": "Draw request submitted",
+    "pleaseAllowUpTo2BusinessDays": "Please allow up to 2 business days for us to process your draw request",
+    "gotIt": "Got it"
+  },
+  "draw-signing": {
+    "authorityStep": {
+      "title": "Review & sign agreement"
+    },
+    "childTitle": "Draw overview"
+  },
+  "DrawStepHeader": {
+    "amountToDraw": "Amount to draw",
+    "more": "What happens now?"
+  },
+  "DrawSummary": {
+    "title": "Agreement summary",
+    "minTotalRepayable": "Min. total repayable",
+    "drawFee": "Draw fee",
+    "repaymentsNumber": "No. of repayments",
+    "repaymentSchedule": "{{value}} repayment",
+    "deferredRepayment": {
+      "totalDrawFee": "Total draw fee",
+      "totalRepayable": "Total repayable",
+      "initialRepayment": "Initial repayment",
+      "onDay": "On day {{value}}",
+      "DAILY_one": "{{count}} daily repayment",
+      "DAILY_other": "{{count}} daily repayments",
+      "WEEKLY_one": "{{count}} weekly repayment",
+      "WEEKLY_other": "{{count}} weekly repayments",
+      "EVERY_14_DAYS_one": "{{count}} biweekly repayment",
+      "EVERY_14_DAYS_other": "{{count}} biweekly repayments",
+      "EVERY_15_DAYS_one": "{{count}} repayment every 15 days",
+      "EVERY_15_DAYS_other": "{{count}} repayments every 15 days",
+      "MONTHLY_one": "{{count}} monthly repayment",
+      "MONTHLY_other": "{{count}} monthly repayments",
+      "ON_DEMAND_one": "{{count}} on demand repayment",
+      "ON_DEMAND_other": "{{count}} on demand repayments",
+      "UNKNOWN_one": "{{count}} unknown repayment",
+      "UNKNOWN_other": "{{count}} unknown repayments"
+    }
+  },
+  "DrawEmailSentModal": {
+    "title": "Agreement sent via email",
+    "copy": "Once the agreement is signed, please allow 1 business day for us to complete our review, we’ll contact you at <b>{{email}}</b>",
+    "cta": "Got it!"
+  },
+  "DrawSignedModal": {
+    "title": "Agreement signed",
+    "copy": "Please allow 1 business day for us to complete our review, we’ll contact you at <b>{{email}}</b>",
+    "cta": "Got it!"
+  },
+  "missingLocDocumentsModal": {
+    "title_one": "Draw requests will be paused in {{count}} day until you provide financial information",
+    "title_other": "Draw requests will be paused in {{count}} days until you provide financial information",
+    "skipForNow": "Skip for now",
+    "uploadDocuments": "Upload documents"
+  },
+  "MissingDocumentsAlert": {
+    "message": "Provide monthly reporting before you can request your next draw",
+    "link": "Provide latest information"
+  },
+  "LocListItem": {
+    "activated": "Activated: {{date}}",
+    "statuses": {
+      "pending": "Pending",
+      "draft": "Draft",
+      "waitingForSignature": "Waiting for signature"
+    }
+  },
+  "missingDocuments": {
+    "title": "Provide information",
+    "copy": "We need an update to the following information",
+    "later": "Do this later",
+    "continue": "Continue",
+    "pauseAlert": "Draw requests may take 2-5 business days to review as we also need to review your monthly financial information",
+    "thankYou": "Thank you, all the information we require to process your draw request has been provided.",
+    "modals": {
+      "DocumentsSubmittedModal": {
+        "title": "Thank you for submitting your reporting",
+        "done": "Done",
+        "newDraw": "New draw request"
+      },
+      "DoThisLaterModal": {
+        "title_other": "Are you sure? There are still {{count}} items missing",
+        "title_one": "Are you sure? There is still {{count}} item missing",
+        "copy": "You will not be able to request more funds until this is resolved",
+        "supply": "Supply missing information",
+        "later": "Do this later"
+      }
+    }
+  }
+}

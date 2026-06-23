@@ -1,0 +1,47 @@
+{
+  "buttons": {
+    "addApplication": "Introduce client",
+    "userGuide": "User guide"
+  },
+  "noResults": {
+    "points": [
+      {
+        "title": "Check eligibility in minutes",
+        "content": "Find out if your client is eligible for funding in less than 2 minutes"
+      },
+      {
+        "title": "Client completes application",
+        "content": "We’ll notify your client and will start generating their offer"
+      },
+      {
+        "title": "Earn commission",
+        "content": "When your client accepts our funding, you’ll earn your agreed commission"
+      }
+    ]
+  },
+  "referrals": {
+    "title": "Refer a customer!",
+    "copyTitle": "Copy referral link",
+    "subtitle": "<b>How</b> it works",
+    "points": [
+      "Copy and share the link above with clients who are interested in Uncapped funding",
+      "You can track the status of your clients application on your dashboard",
+      "Once your clients application is approved for funding, we’ll pay you commission!"
+    ]
+  },
+  "stories": {
+    "IntroductionComplete": {
+      "title": "You’ve <b>completed</b> your introduction",
+      "cta": "Track progress on dashboard"
+    },
+    "PartialIntroduction": {
+      "title": "You’ve <b>completed</b> your introduction",
+      "cta": "Track progress on dashboard"
+    },
+    "ProvideDetails": {
+      "title": "Can you provide some <b>additional details?</b>",
+      "complete": "Complete business details",
+      "skip": "Skip and let client complete"
+    }
+  }
+}

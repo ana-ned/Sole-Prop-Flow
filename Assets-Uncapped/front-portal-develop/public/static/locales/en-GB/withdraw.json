@@ -1,0 +1,23 @@
+{
+  "AmountToWithdraw": {
+    "bankAccount": "Bank account",
+    "title": "Withdraw cash",
+    "amountToWithdraw": "Amount to withdraw",
+    "availableToWithdraw": "Available to withdraw",
+    "verified": "Verified",
+    "unverified": "Unverified (bank statement required)",
+    "addNewBank": "Add new bank account",
+    "alert": "Funds arrive on average within 1 business day",
+    "continue": "Continue"
+  },
+  "VeryfingDocumentsModal": {
+    "title": "We’re verifying your account",
+    "copy": "Please allow 1 business day for us to review your request",
+    "cta": "Got it!"
+  },
+  "WithdrawSuccessModal": {
+    "title": "Funds are on the way",
+    "copy": "Please allow 1 business day for us to process your request",
+    "cta": "Got it!"
+  }
+}

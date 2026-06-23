@@ -1,0 +1,29 @@
+{
+  "topupReengagement": {
+    "title": "Preparing offers...",
+    "box": {
+      "title": "Sit back and relax...",
+      "subtitle": "Offers should be ready in 24 hours"
+    },
+    "nextTitle": "<b>What</b> happens now?",
+    "nextList": [
+      "We’ll review your data and create your personalized offers",
+      "You’ll receive an email when it’s time to log back in and review your offers",
+      "Select an offer and prepare to access your capital"
+    ],
+    "expectTitle": "What to <b>expect</b>",
+    "expectList": [
+      "Lower rates locked in for 12 months",
+      "Immediate capital to help you respond to market volatility",
+      "Fast, simple offers with no paperwork required"
+    ]
+  },
+  "reapply": {
+    "title": "Welcome back to Uncapped",
+    "content": [
+      "Your previous application wasn’t completed — but you’re closer than you think",
+      "We can <b>fast-track your new application</b> using the information you’ve already provided. Just complete a few quick checks and you could <b>get a new offer within 24 business hours.</b>"
+    ],
+    "button": "Apply for a new offer"
+  }
+}
