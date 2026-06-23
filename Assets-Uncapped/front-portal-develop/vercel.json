@@ -1,5 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "pnpm build",
+  "outputDirectory": "build",
   "redirects": [
     { "source": "/", "destination": "/prototypes/asc-sole-prop", "permanent": false }
   ],
